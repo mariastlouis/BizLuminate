@@ -1,8 +1,18 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
-import './App.css';
+import './App.scss';
 
 class App extends Component {
+  constructor(props: any) {
+    super(props);
+  }
+
+  componentDidMount() {
+    fetch('/api/v1/test')
+    .then(res => {
+      console.log(res);
+    });
+  }
   render() {
     return (
       <div className="App">
