@@ -1,11 +1,17 @@
 {
-  "name": "best_go_code",
+  "name": "client",
+  "proxy": "http://localhost:5000",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "react": "^16.8.3",
-    "react-dom": "^16.8.3",
-    "react-scripts": "2.1.5"
+    "@types/jest": "24.0.11",
+    "@types/node": "11.11.2",
+    "@types/react": "16.8.8",
+    "@types/react-dom": "16.8.2",
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4",
+    "react-scripts": "2.1.8",
+    "typescript": "3.3.3333"
   },
   "scripts": {
     "start": "react-scripts start",
