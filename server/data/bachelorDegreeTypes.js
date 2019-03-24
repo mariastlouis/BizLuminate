@@ -1,6 +1,6 @@
 module.exports =[
   {
-    "placdId": 800760,
+    "placeId": 800760,
     "placeName": "Aguilar",
     "placeGeoId": "1600000US0800760",
     "censusName": "Aguilar town, Colorado",
@@ -17,7 +17,7 @@ module.exports =[
     "pctArtsHumanities": 42.6
   },
   {
-    "placdId": 800925,
+    "placeId": 800925,
     "placeName": "Akron",
     "placeGeoId": "1600000US0800925",
     "censusName": "Akron town, Colorado",
@@ -34,7 +34,7 @@ module.exports =[
     "pctArtsHumanities": 19.8
   },
   {
-    "placdId": 801090,
+    "placeId": 801090,
     "placeName": "Alamosa",
     "placeGeoId": "1600000US0801090",
     "censusName": "Alamosa city, Colorado",
@@ -51,7 +51,7 @@ module.exports =[
     "pctArtsHumanities": 22.7
   },
   {
-    "placdId": 801530,
+    "placeId": 801530,
     "placeName": "Alma",
     "placeGeoId": "1600000US0801530",
     "censusName": "Alma town, Colorado",
@@ -68,7 +68,7 @@ module.exports =[
     "pctArtsHumanities": 27.3
   },
   {
-    "placdId": 802355,
+    "placeId": 802355,
     "placeName": "Antonito",
     "placeGeoId": "1600000US0802355",
     "censusName": "Antonito town, Colorado",
@@ -85,7 +85,7 @@ module.exports =[
     "pctArtsHumanities": 10
   },
   {
-    "placdId": 803235,
+    "placeId": 803235,
     "placeName": "Arriba",
     "placeGeoId": "1600000US0803235",
     "censusName": "Arriba town, Colorado",
@@ -102,7 +102,7 @@ module.exports =[
     "pctArtsHumanities": 30.8
   },
   {
-    "placdId": 803455,
+    "placeId": 803455,
     "placeName": "Arvada",
     "placeGeoId": "1600000US0803455",
     "censusName": "Arvada city, Colorado",
@@ -119,7 +119,7 @@ module.exports =[
     "pctArtsHumanities": 22.7
   },
   {
-    "placdId": 803620,
+    "placeId": 803620,
     "placeName": "Aspen",
     "placeGeoId": "1600000US0803620",
     "censusName": "Aspen city, Colorado",
@@ -136,7 +136,7 @@ module.exports =[
     "pctArtsHumanities": 31
   },
   {
-    "placdId": 803950,
+    "placeId": 803950,
     "placeName": "Ault",
     "placeGeoId": "1600000US0803950",
     "censusName": "Ault town, Colorado",
@@ -153,7 +153,7 @@ module.exports =[
     "pctArtsHumanities": 21.4
   },
   {
-    "placdId": 804000,
+    "placeId": 804000,
     "placeName": "Aurora",
     "placeGeoId": "1600000US0804000",
     "censusName": "Aurora city, Colorado",
@@ -170,7 +170,7 @@ module.exports =[
     "pctArtsHumanities": 23.5
   },
   {
-    "placdId": 804110,
+    "placeId": 804110,
     "placeName": "Avon",
     "placeGeoId": "1600000US0804110",
     "censusName": "Avon town, Colorado",
@@ -187,7 +187,7 @@ module.exports =[
     "pctArtsHumanities": 43.7
   },
   {
-    "placdId": 804935,
+    "placeId": 804935,
     "placeName": "Basalt",
     "placeGeoId": "1600000US0804935",
     "censusName": "Basalt town, Colorado",
@@ -204,7 +204,7 @@ module.exports =[
     "pctArtsHumanities": 39.7
   },
   {
-    "placdId": 805265,
+    "placeId": 805265,
     "placeName": "Bayfield",
     "placeGeoId": "1600000US0805265",
     "censusName": "Bayfield town, Colorado",
@@ -221,7 +221,7 @@ module.exports =[
     "pctArtsHumanities": 18.9
   },
   {
-    "placdId": 806090,
+    "placeId": 806090,
     "placeName": "Bennett",
     "placeGeoId": "1600000US0806090",
     "censusName": "Bennett town, Colorado",
@@ -238,7 +238,7 @@ module.exports =[
     "pctArtsHumanities": 22.3
   },
   {
-    "placdId": 806255,
+    "placeId": 806255,
     "placeName": "Berthoud",
     "placeGeoId": "1600000US0806255",
     "censusName": "Berthoud town, Colorado",
@@ -255,7 +255,7 @@ module.exports =[
     "pctArtsHumanities": 18.6
   },
   {
-    "placdId": 806530,
+    "placeId": 806530,
     "placeName": "Bethune",
     "placeGeoId": "1600000US0806530",
     "censusName": "Bethune town, Colorado",
@@ -272,7 +272,7 @@ module.exports =[
     "pctArtsHumanities": 9.1
   },
   {
-    "placdId": 807025,
+    "placeId": 807025,
     "placeName": "Black Hawk",
     "placeGeoId": "1600000US0807025",
     "censusName": "Black Hawk city, Colorado",
@@ -289,7 +289,7 @@ module.exports =[
     "pctArtsHumanities": 0
   },
   {
-    "placdId": 807190,
+    "placeId": 807190,
     "placeName": "Blanca",
     "placeGeoId": "1600000US0807190",
     "censusName": "Blanca town, Colorado",
@@ -306,7 +306,7 @@ module.exports =[
     "pctArtsHumanities": 15.8
   },
   {
-    "placdId": 807410,
+    "placeId": 807410,
     "placeName": "Blue River",
     "placeGeoId": "1600000US0807410",
     "censusName": "Blue River town, Colorado",
@@ -323,7 +323,7 @@ module.exports =[
     "pctArtsHumanities": 27.1
   },
   {
-    "placdId": 807571,
+    "placeId": 807571,
     "placeName": "Bonanza",
     "placeGeoId": "1600000US0807571",
     "censusName": "Bonanza town, Colorado",
@@ -340,7 +340,7 @@ module.exports =[
     "pctArtsHumanities": 100
   },
   {
-    "placdId": 807795,
+    "placeId": 807795,
     "placeName": "Boone",
     "placeGeoId": "1600000US0807795",
     "censusName": "Boone town, Colorado",
@@ -357,7 +357,7 @@ module.exports =[
     "pctArtsHumanities": 0
   },
   {
-    "placdId": 807850,
+    "placeId": 807850,
     "placeName": "Boulder",
     "placeGeoId": "1600000US0807850",
     "censusName": "Boulder city, Colorado",
@@ -374,7 +374,7 @@ module.exports =[
     "pctArtsHumanities": 26.8
   },
   {
-    "placdId": 808070,
+    "placeId": 808070,
     "placeName": "Bow Mar",
     "placeGeoId": "1600000US0808070",
     "censusName": "Bow Mar town, Colorado",
@@ -391,7 +391,7 @@ module.exports =[
     "pctArtsHumanities": 20.2
   },
   {
-    "placdId": 808345,
+    "placeId": 808345,
     "placeName": "Branson",
     "placeGeoId": "1600000US0808345",
     "censusName": "Branson town, Colorado",
@@ -408,7 +408,7 @@ module.exports =[
     "pctArtsHumanities": 30.4
   },
   {
-    "placdId": 808400,
+    "placeId": 808400,
     "placeName": "Breckenridge",
     "placeGeoId": "1600000US0808400",
     "censusName": "Breckenridge town, Colorado",
@@ -425,7 +425,7 @@ module.exports =[
     "pctArtsHumanities": 40.2
   },
   {
-    "placdId": 808675,
+    "placeId": 808675,
     "placeName": "Brighton",
     "placeGeoId": "1600000US0808675",
     "censusName": "Brighton city, Colorado",
@@ -442,7 +442,7 @@ module.exports =[
     "pctArtsHumanities": 25.5
   },
   {
-    "placdId": 809115,
+    "placeId": 809115,
     "placeName": "Brookside",
     "placeGeoId": "1600000US0809115",
     "censusName": "Brookside town, Colorado",
@@ -459,7 +459,7 @@ module.exports =[
     "pctArtsHumanities": 34.3
   },
   {
-    "placdId": 809280,
+    "placeId": 809280,
     "placeName": "Broomfield",
     "placeGeoId": "1600000US0809280",
     "censusName": "Broomfield city, Colorado",
@@ -476,7 +476,7 @@ module.exports =[
     "pctArtsHumanities": 20.5
   },
   {
-    "placdId": 809555,
+    "placeId": 809555,
     "placeName": "Brush",
     "placeGeoId": "1600000US0809555",
     "censusName": "Brush city, Colorado",
@@ -493,7 +493,7 @@ module.exports =[
     "pctArtsHumanities": 24.8
   },
   {
-    "placdId": 810105,
+    "placeId": 810105,
     "placeName": "Buena Vista",
     "placeGeoId": "1600000US0810105",
     "censusName": "Buena Vista town, Colorado",
@@ -510,7 +510,7 @@ module.exports =[
     "pctArtsHumanities": 28.9
   },
   {
-    "placdId": 810600,
+    "placeId": 810600,
     "placeName": "Burlington",
     "placeGeoId": "1600000US0810600",
     "censusName": "Burlington city, Colorado",
@@ -527,7 +527,7 @@ module.exports =[
     "pctArtsHumanities": 18
   },
   {
-    "placdId": 811260,
+    "placeId": 811260,
     "placeName": "Calhan",
     "placeGeoId": "1600000US0811260",
     "censusName": "Calhan town, Colorado",
@@ -544,7 +544,7 @@ module.exports =[
     "pctArtsHumanities": 21.5
   },
   {
-    "placdId": 811645,
+    "placeId": 811645,
     "placeName": "Campo",
     "placeGeoId": "1600000US0811645",
     "censusName": "Campo town, Colorado",
@@ -561,7 +561,7 @@ module.exports =[
     "pctArtsHumanities": 0
   },
   {
-    "placdId": 811810,
+    "placeId": 811810,
     "placeName": "Canon City",
     "placeGeoId": "1600000US0811810",
     "censusName": "CaÔøΩon City city, Colorado",
@@ -578,7 +578,7 @@ module.exports =[
     "pctArtsHumanities": 18.9
   },
   {
-    "placdId": 812045,
+    "placeId": 812045,
     "placeName": "Carbondale",
     "placeGeoId": "1600000US0812045",
     "censusName": "Carbondale town, Colorado",
@@ -595,7 +595,7 @@ module.exports =[
     "pctArtsHumanities": 24.7
   },
   {
-    "placdId": 812415,
+    "placeId": 812415,
     "placeName": "Castle Rock",
     "placeGeoId": "1600000US0812415",
     "censusName": "Castle Rock town, Colorado",
@@ -612,7 +612,7 @@ module.exports =[
     "pctArtsHumanities": 22.5
   },
   {
-    "placdId": 812635,
+    "placeId": 812635,
     "placeName": "Cedaredge",
     "placeGeoId": "1600000US0812635",
     "censusName": "Cedaredge town, Colorado",
@@ -629,7 +629,7 @@ module.exports =[
     "pctArtsHumanities": 18
   },
   {
-    "placdId": 812815,
+    "placeId": 812815,
     "placeName": "Centennial",
     "placeGeoId": "1600000US0812815",
     "censusName": "Centennial city, Colorado",
@@ -646,7 +646,7 @@ module.exports =[
     "pctArtsHumanities": 21.6
   },
   {
-    "placdId": 812855,
+    "placeId": 812855,
     "placeName": "Center",
     "placeGeoId": "1600000US0812855",
     "censusName": "Center town, Colorado",
@@ -663,7 +663,7 @@ module.exports =[
     "pctArtsHumanities": 19.3
   },
   {
-    "placdId": 812910,
+    "placeId": 812910,
     "placeName": "Central City",
     "placeGeoId": "1600000US0812910",
     "censusName": "Central City city, Colorado",
@@ -680,7 +680,7 @@ module.exports =[
     "pctArtsHumanities": 57
   },
   {
-    "placdId": 813460,
+    "placeId": 813460,
     "placeName": "Cheraw",
     "placeGeoId": "1600000US0813460",
     "censusName": "Cheraw town, Colorado",
@@ -697,7 +697,7 @@ module.exports =[
     "pctArtsHumanities": 22.2
   },
   {
-    "placdId": 813845,
+    "placeId": 813845,
     "placeName": "Cherry Hills Village",
     "placeGeoId": "1600000US0813845",
     "censusName": "Cherry Hills Village city, Colorado",
@@ -714,7 +714,7 @@ module.exports =[
     "pctArtsHumanities": 18.3
   },
   {
-    "placdId": 814175,
+    "placeId": 814175,
     "placeName": "Cheyenne Wells",
     "placeGeoId": "1600000US0814175",
     "censusName": "Cheyenne Wells town, Colorado",
@@ -731,7 +731,7 @@ module.exports =[
     "pctArtsHumanities": 10.8
   },
   {
-    "placdId": 814765,
+    "placeId": 814765,
     "placeName": "City of Creede",
     "placeGeoId": "1600000US0814765",
     "censusName": "City of Creede town, Colorado",
@@ -748,7 +748,7 @@ module.exports =[
     "pctArtsHumanities": 44.3
   },
   {
-    "placdId": 815330,
+    "placeId": 815330,
     "placeName": "Coal Creek",
     "placeGeoId": "1600000US0815330",
     "censusName": "Coal Creek town, Colorado",
@@ -765,7 +765,7 @@ module.exports =[
     "pctArtsHumanities": 0
   },
   {
-    "placdId": 815550,
+    "placeId": 815550,
     "placeName": "Cokedale",
     "placeGeoId": "1600000US0815550",
     "censusName": "Cokedale town, Colorado",
@@ -782,7 +782,7 @@ module.exports =[
     "pctArtsHumanities": 7.7
   },
   {
-    "placdId": 815605,
+    "placeId": 815605,
     "placeName": "Collbran",
     "placeGeoId": "1600000US0815605",
     "censusName": "Collbran town, Colorado",
@@ -799,7 +799,7 @@ module.exports =[
     "pctArtsHumanities": 27
   },
   {
-    "placdId": 816000,
+    "placeId": 816000,
     "placeName": "Colorado Springs",
     "placeGeoId": "1600000US0816000",
     "censusName": "Colorado Springs city, Colorado",
@@ -816,7 +816,7 @@ module.exports =[
     "pctArtsHumanities": 22.7
   },
   {
-    "placdId": 816385,
+    "placeId": 816385,
     "placeName": "Columbine Valley",
     "placeGeoId": "1600000US0816385",
     "censusName": "Columbine Valley town, Colorado",
@@ -833,7 +833,7 @@ module.exports =[
     "pctArtsHumanities": 21.9
   },
   {
-    "placdId": 816495,
+    "placeId": 816495,
     "placeName": "Commerce City",
     "placeGeoId": "1600000US0816495",
     "censusName": "Commerce City city, Colorado",
@@ -850,7 +850,7 @@ module.exports =[
     "pctArtsHumanities": 23.4
   },
   {
-    "placdId": 817375,
+    "placeId": 817375,
     "placeName": "Cortez",
     "placeGeoId": "1600000US0817375",
     "censusName": "Cortez city, Colorado",
@@ -867,7 +867,7 @@ module.exports =[
     "pctArtsHumanities": 19.5
   },
   {
-    "placdId": 817760,
+    "placeId": 817760,
     "placeName": "Craig",
     "placeGeoId": "1600000US0817760",
     "censusName": "Craig city, Colorado",
@@ -884,7 +884,7 @@ module.exports =[
     "pctArtsHumanities": 27.6
   },
   {
-    "placdId": 817925,
+    "placeId": 817925,
     "placeName": "Crawford",
     "placeGeoId": "1600000US0817925",
     "censusName": "Crawford town, Colorado",
@@ -901,7 +901,7 @@ module.exports =[
     "pctArtsHumanities": 30.8
   },
   {
-    "placdId": 818310,
+    "placeId": 818310,
     "placeName": "Crested Butte",
     "placeGeoId": "1600000US0818310",
     "censusName": "Crested Butte town, Colorado",
@@ -918,7 +918,7 @@ module.exports =[
     "pctArtsHumanities": 36.7
   },
   {
-    "placdId": 818420,
+    "placeId": 818420,
     "placeName": "Crestone",
     "placeGeoId": "1600000US0818420",
     "censusName": "Crestone town, Colorado",
@@ -935,7 +935,7 @@ module.exports =[
     "pctArtsHumanities": 0
   },
   {
-    "placdId": 818530,
+    "placeId": 818530,
     "placeName": "Cripple Creek",
     "placeGeoId": "1600000US0818530",
     "censusName": "Cripple Creek city, Colorado",
@@ -952,7 +952,7 @@ module.exports =[
     "pctArtsHumanities": 10.2
   },
   {
-    "placdId": 818640,
+    "placeId": 818640,
     "placeName": "Crook",
     "placeGeoId": "1600000US0818640",
     "censusName": "Crook town, Colorado",
@@ -969,7 +969,7 @@ module.exports =[
     "pctArtsHumanities": 33.3
   },
   {
-    "placdId": 818750,
+    "placeId": 818750,
     "placeName": "Crowley",
     "placeGeoId": "1600000US0818750",
     "censusName": "Crowley town, Colorado",
@@ -986,7 +986,7 @@ module.exports =[
     "pctArtsHumanities": 7.7
   },
   {
-    "placdId": 819080,
+    "placeId": 819080,
     "placeName": "Dacono",
     "placeGeoId": "1600000US0819080",
     "censusName": "Dacono city, Colorado",
@@ -1003,7 +1003,7 @@ module.exports =[
     "pctArtsHumanities": 39.8
   },
   {
-    "placdId": 819355,
+    "placeId": 819355,
     "placeName": "De Beque",
     "placeGeoId": "1600000US0819355",
     "censusName": "De Beque town, Colorado",
@@ -1020,7 +1020,7 @@ module.exports =[
     "pctArtsHumanities": 27.3
   },
   {
-    "placdId": 819630,
+    "placeId": 819630,
     "placeName": "Deer Trail",
     "placeGeoId": "1600000US0819630",
     "censusName": "Deer Trail town, Colorado",
@@ -1037,7 +1037,7 @@ module.exports =[
     "pctArtsHumanities": 34.1
   },
   {
-    "placdId": 819795,
+    "placeId": 819795,
     "placeName": "Del Norte",
     "placeGeoId": "1600000US0819795",
     "censusName": "Del Norte town, Colorado",
@@ -1054,7 +1054,7 @@ module.exports =[
     "pctArtsHumanities": 13.7
   },
   {
-    "placdId": 819850,
+    "placeId": 819850,
     "placeName": "Delta",
     "placeGeoId": "1600000US0819850",
     "censusName": "Delta city, Colorado",
@@ -1071,7 +1071,7 @@ module.exports =[
     "pctArtsHumanities": 24.4
   },
   {
-    "placdId": 820000,
+    "placeId": 820000,
     "placeName": "Denver",
     "placeGeoId": "1600000US0820000",
     "censusName": "Denver city, Colorado",
@@ -1088,7 +1088,7 @@ module.exports =[
     "pctArtsHumanities": 28
   },
   {
-    "placdId": 820440,
+    "placeId": 820440,
     "placeName": "Dillon",
     "placeGeoId": "1600000US0820440",
     "censusName": "Dillon town, Colorado",
@@ -1105,7 +1105,7 @@ module.exports =[
     "pctArtsHumanities": 20.2
   },
   {
-    "placdId": 820495,
+    "placeId": 820495,
     "placeName": "Dinosaur",
     "placeGeoId": "1600000US0820495",
     "censusName": "Dinosaur town, Colorado",
@@ -1122,7 +1122,7 @@ module.exports =[
     "pctArtsHumanities": 9.1
   },
   {
-    "placdId": 820770,
+    "placeId": 820770,
     "placeName": "Dolores",
     "placeGeoId": "1600000US0820770",
     "censusName": "Dolores town, Colorado",
@@ -1139,7 +1139,7 @@ module.exports =[
     "pctArtsHumanities": 27
   },
   {
-    "placdId": 821265,
+    "placeId": 821265,
     "placeName": "Dove Creek",
     "placeGeoId": "1600000US0821265",
     "censusName": "Dove Creek town, Colorado",
@@ -1156,7 +1156,7 @@ module.exports =[
     "pctArtsHumanities": 19
   },
   {
-    "placdId": 822035,
+    "placeId": 822035,
     "placeName": "Durango",
     "placeGeoId": "1600000US0822035",
     "censusName": "Durango city, Colorado",
@@ -1173,7 +1173,7 @@ module.exports =[
     "pctArtsHumanities": 24.7
   },
   {
-    "placdId": 822145,
+    "placeId": 822145,
     "placeName": "Eads",
     "placeGeoId": "1600000US0822145",
     "censusName": "Eads town, Colorado",
@@ -1190,7 +1190,7 @@ module.exports =[
     "pctArtsHumanities": 25
   },
   {
-    "placdId": 822200,
+    "placeId": 822200,
     "placeName": "Eagle",
     "placeGeoId": "1600000US0822200",
     "censusName": "Eagle town, Colorado",
@@ -1207,7 +1207,7 @@ module.exports =[
     "pctArtsHumanities": 28.3
   },
   {
-    "placdId": 822860,
+    "placeId": 822860,
     "placeName": "Eaton",
     "placeGeoId": "1600000US0822860",
     "censusName": "Eaton town, Colorado",
@@ -1224,7 +1224,7 @@ module.exports =[
     "pctArtsHumanities": 20.9
   },
   {
-    "placdId": 823025,
+    "placeId": 823025,
     "placeName": "Eckley",
     "placeGeoId": "1600000US0823025",
     "censusName": "Eckley town, Colorado",
@@ -1241,7 +1241,7 @@ module.exports =[
     "pctArtsHumanities": 33.3
   },
   {
-    "placdId": 823135,
+    "placeId": 823135,
     "placeName": "Edgewater",
     "placeGeoId": "1600000US0823135",
     "censusName": "Edgewater city, Colorado",
@@ -1258,7 +1258,7 @@ module.exports =[
     "pctArtsHumanities": 48.9
   },
   {
-    "placdId": 823740,
+    "placeId": 823740,
     "placeName": "Elizabeth",
     "placeGeoId": "1600000US0823740",
     "censusName": "Elizabeth town, Colorado",
@@ -1275,7 +1275,7 @@ module.exports =[
     "pctArtsHumanities": 24.5
   },
   {
-    "placdId": 824620,
+    "placeId": 824620,
     "placeName": "Empire",
     "placeGeoId": "1600000US0824620",
     "censusName": "Empire town, Colorado",
@@ -1292,7 +1292,7 @@ module.exports =[
     "pctArtsHumanities": 38.3
   },
   {
-    "placdId": 824785,
+    "placeId": 824785,
     "placeName": "Englewood",
     "placeGeoId": "1600000US0824785",
     "censusName": "Englewood city, Colorado",
@@ -1309,7 +1309,7 @@ module.exports =[
     "pctArtsHumanities": 27.5
   },
   {
-    "placdId": 824950,
+    "placeId": 824950,
     "placeName": "Erie",
     "placeGeoId": "1600000US0824950",
     "censusName": "Erie town, Colorado",
@@ -1326,7 +1326,7 @@ module.exports =[
     "pctArtsHumanities": 23.3
   },
   {
-    "placdId": 825115,
+    "placeId": 825115,
     "placeName": "Estes Park",
     "placeGeoId": "1600000US0825115",
     "censusName": "Estes Park town, Colorado",
@@ -1343,7 +1343,7 @@ module.exports =[
     "pctArtsHumanities": 23.8
   },
   {
-    "placdId": 825280,
+    "placeId": 825280,
     "placeName": "Evans",
     "placeGeoId": "1600000US0825280",
     "censusName": "Evans city, Colorado",
@@ -1360,7 +1360,7 @@ module.exports =[
     "pctArtsHumanities": 26.5
   },
   {
-    "placdId": 825610,
+    "placeId": 825610,
     "placeName": "Fairplay",
     "placeGeoId": "1600000US0825610",
     "censusName": "Fairplay town, Colorado",
@@ -1377,7 +1377,7 @@ module.exports =[
     "pctArtsHumanities": 28.9
   },
   {
-    "placdId": 826270,
+    "placeId": 826270,
     "placeName": "Federal Heights",
     "placeGeoId": "1600000US0826270",
     "censusName": "Federal Heights city, Colorado",
@@ -1394,7 +1394,7 @@ module.exports =[
     "pctArtsHumanities": 30
   },
   {
-    "placdId": 826600,
+    "placeId": 826600,
     "placeName": "Firestone",
     "placeGeoId": "1600000US0826600",
     "censusName": "Firestone town, Colorado",
@@ -1411,7 +1411,7 @@ module.exports =[
     "pctArtsHumanities": 21.7
   },
   {
-    "placdId": 826765,
+    "placeId": 826765,
     "placeName": "Flagler",
     "placeGeoId": "1600000US0826765",
     "censusName": "Flagler town, Colorado",
@@ -1428,7 +1428,7 @@ module.exports =[
     "pctArtsHumanities": 7.3
   },
   {
-    "placdId": 826875,
+    "placeId": 826875,
     "placeName": "Fleming",
     "placeGeoId": "1600000US0826875",
     "censusName": "Fleming town, Colorado",
@@ -1445,7 +1445,7 @@ module.exports =[
     "pctArtsHumanities": 1.7
   },
   {
-    "placdId": 827040,
+    "placeId": 827040,
     "placeName": "Florence",
     "placeGeoId": "1600000US0827040",
     "censusName": "Florence city, Colorado",
@@ -1462,7 +1462,7 @@ module.exports =[
     "pctArtsHumanities": 19.1
   },
   {
-    "placdId": 827425,
+    "placeId": 827425,
     "placeName": "Fort Collins",
     "placeGeoId": "1600000US0827425",
     "censusName": "Fort Collins city, Colorado",
@@ -1479,7 +1479,7 @@ module.exports =[
     "pctArtsHumanities": 24.7
   },
   {
-    "placdId": 827700,
+    "placeId": 827700,
     "placeName": "Fort Lupton",
     "placeGeoId": "1600000US0827700",
     "censusName": "Fort Lupton city, Colorado",
@@ -1496,7 +1496,7 @@ module.exports =[
     "pctArtsHumanities": 11.9
   },
   {
-    "placdId": 827810,
+    "placeId": 827810,
     "placeName": "Fort Morgan",
     "placeGeoId": "1600000US0827810",
     "censusName": "Fort Morgan city, Colorado",
@@ -1513,7 +1513,7 @@ module.exports =[
     "pctArtsHumanities": 17.9
   },
   {
-    "placdId": 827865,
+    "placeId": 827865,
     "placeName": "Fountain",
     "placeGeoId": "1600000US0827865",
     "censusName": "Fountain city, Colorado",
@@ -1530,7 +1530,7 @@ module.exports =[
     "pctArtsHumanities": 27.1
   },
   {
-    "placdId": 827975,
+    "placeId": 827975,
     "placeName": "Fowler",
     "placeGeoId": "1600000US0827975",
     "censusName": "Fowler town, Colorado",
@@ -1547,7 +1547,7 @@ module.exports =[
     "pctArtsHumanities": 18.6
   },
   {
-    "placdId": 828105,
+    "placeId": 828105,
     "placeName": "Foxfield",
     "placeGeoId": "1600000US0828105",
     "censusName": "Foxfield town, Colorado",
@@ -1564,7 +1564,7 @@ module.exports =[
     "pctArtsHumanities": 17.1
   },
   {
-    "placdId": 828305,
+    "placeId": 828305,
     "placeName": "Fraser",
     "placeGeoId": "1600000US0828305",
     "censusName": "Fraser town, Colorado",
@@ -1581,7 +1581,7 @@ module.exports =[
     "pctArtsHumanities": 20.9
   },
   {
-    "placdId": 828360,
+    "placeId": 828360,
     "placeName": "Frederick",
     "placeGeoId": "1600000US0828360",
     "censusName": "Frederick town, Colorado",
@@ -1598,7 +1598,7 @@ module.exports =[
     "pctArtsHumanities": 21.7
   },
   {
-    "placdId": 828690,
+    "placeId": 828690,
     "placeName": "Frisco",
     "placeGeoId": "1600000US0828690",
     "censusName": "Frisco town, Colorado",
@@ -1615,7 +1615,7 @@ module.exports =[
     "pctArtsHumanities": 11.1
   },
   {
-    "placdId": 828745,
+    "placeId": 828745,
     "placeName": "Fruita",
     "placeGeoId": "1600000US0828745",
     "censusName": "Fruita city, Colorado",
@@ -1632,7 +1632,7 @@ module.exports =[
     "pctArtsHumanities": 10.3
   },
   {
-    "placdId": 829185,
+    "placeId": 829185,
     "placeName": "Garden City",
     "placeGeoId": "1600000US0829185",
     "censusName": "Garden City town, Colorado",
@@ -1649,7 +1649,7 @@ module.exports =[
     "pctArtsHumanities": 22.2
   },
   {
-    "placdId": 829680,
+    "placeId": 829680,
     "placeName": "Genoa",
     "placeGeoId": "1600000US0829680",
     "censusName": "Genoa town, Colorado",
@@ -1666,7 +1666,7 @@ module.exports =[
     "pctArtsHumanities": 40
   },
   {
-    "placdId": 829735,
+    "placeId": 829735,
     "placeName": "Georgetown",
     "placeGeoId": "1600000US0829735",
     "censusName": "Georgetown town, Colorado",
@@ -1683,7 +1683,7 @@ module.exports =[
     "pctArtsHumanities": 33.2
   },
   {
-    "placdId": 829955,
+    "placeId": 829955,
     "placeName": "Gilcrest",
     "placeGeoId": "1600000US0829955",
     "censusName": "Gilcrest town, Colorado",
@@ -1700,7 +1700,7 @@ module.exports =[
     "pctArtsHumanities": 8.1
   },
   {
-    "placdId": 830340,
+    "placeId": 830340,
     "placeName": "Glendale",
     "placeGeoId": "1600000US0830340",
     "censusName": "Glendale city, Colorado",
@@ -1717,7 +1717,7 @@ module.exports =[
     "pctArtsHumanities": 28
   },
   {
-    "placdId": 830780,
+    "placeId": 830780,
     "placeName": "Glenwood Springs",
     "placeGeoId": "1600000US0830780",
     "censusName": "Glenwood Springs city, Colorado",
@@ -1734,7 +1734,7 @@ module.exports =[
     "pctArtsHumanities": 27.5
   },
   {
-    "placdId": 830835,
+    "placeId": 830835,
     "placeName": "Golden",
     "placeGeoId": "1600000US0830835",
     "censusName": "Golden city, Colorado",
@@ -1751,7 +1751,7 @@ module.exports =[
     "pctArtsHumanities": 21.6
   },
   {
-    "placdId": 831550,
+    "placeId": 831550,
     "placeName": "Granada",
     "placeGeoId": "1600000US0831550",
     "censusName": "Granada town, Colorado",
@@ -1768,7 +1768,7 @@ module.exports =[
     "pctArtsHumanities": 25.5
   },
   {
-    "placdId": 831605,
+    "placeId": 831605,
     "placeName": "Granby",
     "placeGeoId": "1600000US0831605",
     "censusName": "Granby town, Colorado",
@@ -1785,7 +1785,7 @@ module.exports =[
     "pctArtsHumanities": 30.4
   },
   {
-    "placdId": 831660,
+    "placeId": 831660,
     "placeName": "Grand Junction",
     "placeGeoId": "1600000US0831660",
     "censusName": "Grand Junction city, Colorado",
@@ -1802,7 +1802,7 @@ module.exports =[
     "pctArtsHumanities": 27.1
   },
   {
-    "placdId": 831715,
+    "placeId": 831715,
     "placeName": "Grand Lake",
     "placeGeoId": "1600000US0831715",
     "censusName": "Grand Lake town, Colorado",
@@ -1819,7 +1819,7 @@ module.exports =[
     "pctArtsHumanities": 8.5
   },
   {
-    "placdId": 832155,
+    "placeId": 832155,
     "placeName": "Greeley",
     "placeGeoId": "1600000US0832155",
     "censusName": "Greeley city, Colorado",
@@ -1836,7 +1836,7 @@ module.exports =[
     "pctArtsHumanities": 26
   },
   {
-    "placdId": 832650,
+    "placeId": 832650,
     "placeName": "Green Mountain Falls",
     "placeGeoId": "1600000US0832650",
     "censusName": "Green Mountain Falls town, Colorado",
@@ -1853,7 +1853,7 @@ module.exports =[
     "pctArtsHumanities": 29.2
   },
   {
-    "placdId": 833035,
+    "placeId": 833035,
     "placeName": "Greenwood Village",
     "placeGeoId": "1600000US0833035",
     "censusName": "Greenwood Village city, Colorado",
@@ -1870,7 +1870,7 @@ module.exports =[
     "pctArtsHumanities": 21.3
   },
   {
-    "placdId": 833310,
+    "placeId": 833310,
     "placeName": "Grover",
     "placeGeoId": "1600000US0833310",
     "censusName": "Grover town, Colorado",
@@ -1887,7 +1887,7 @@ module.exports =[
     "pctArtsHumanities": 8.3
   },
   {
-    "placdId": 833640,
+    "placeId": 833640,
     "placeName": "Gunnison",
     "placeGeoId": "1600000US0833640",
     "censusName": "Gunnison city, Colorado",
@@ -1904,7 +1904,7 @@ module.exports =[
     "pctArtsHumanities": 30
   },
   {
-    "placdId": 833695,
+    "placeId": 833695,
     "placeName": "Gypsum",
     "placeGeoId": "1600000US0833695",
     "censusName": "Gypsum town, Colorado",
@@ -1921,7 +1921,7 @@ module.exports =[
     "pctArtsHumanities": 15.6
   },
   {
-    "placdId": 834520,
+    "placeId": 834520,
     "placeName": "Hartman",
     "placeGeoId": "1600000US0834520",
     "censusName": "Hartman town, Colorado",
@@ -1938,7 +1938,7 @@ module.exports =[
     "pctArtsHumanities": 100
   },
   {
-    "placdId": 834740,
+    "placeId": 834740,
     "placeName": "Haswell",
     "placeGeoId": "1600000US0834740",
     "censusName": "Haswell town, Colorado",
@@ -1955,7 +1955,7 @@ module.exports =[
     "pctArtsHumanities": 0
   },
   {
-    "placdId": 834960,
+    "placeId": 834960,
     "placeName": "Haxtun",
     "placeGeoId": "1600000US0834960",
     "censusName": "Haxtun town, Colorado",
@@ -1972,7 +1972,7 @@ module.exports =[
     "pctArtsHumanities": 4.2
   },
   {
-    "placdId": 835070,
+    "placeId": 835070,
     "placeName": "Hayden",
     "placeGeoId": "1600000US0835070",
     "censusName": "Hayden town, Colorado",
@@ -1989,7 +1989,7 @@ module.exports =[
     "pctArtsHumanities": 34.4
   },
   {
-    "placdId": 836610,
+    "placeId": 836610,
     "placeName": "Hillrose",
     "placeGeoId": "1600000US0836610",
     "censusName": "Hillrose town, Colorado",
@@ -2006,7 +2006,7 @@ module.exports =[
     "pctArtsHumanities": 17.4
   },
   {
-    "placdId": 837215,
+    "placeId": 837215,
     "placeName": "Holly",
     "placeGeoId": "1600000US0837215",
     "censusName": "Holly town, Colorado",
@@ -2023,7 +2023,7 @@ module.exports =[
     "pctArtsHumanities": 20.8
   },
   {
-    "placdId": 837270,
+    "placeId": 837270,
     "placeName": "Holyoke",
     "placeGeoId": "1600000US0837270",
     "censusName": "Holyoke city, Colorado",
@@ -2040,7 +2040,7 @@ module.exports =[
     "pctArtsHumanities": 33.4
   },
   {
-    "placdId": 837380,
+    "placeId": 837380,
     "placeName": "Hooper",
     "placeGeoId": "1600000US0837380",
     "censusName": "Hooper town, Colorado",
@@ -2057,7 +2057,7 @@ module.exports =[
     "pctArtsHumanities": 0
   },
   {
-    "placdId": 837545,
+    "placeId": 837545,
     "placeName": "Hotchkiss",
     "placeGeoId": "1600000US0837545",
     "censusName": "Hotchkiss town, Colorado",
@@ -2074,7 +2074,7 @@ module.exports =[
     "pctArtsHumanities": 38.5
   },
   {
-    "placdId": 837600,
+    "placeId": 837600,
     "placeName": "Hot Sulphur Springs",
     "placeGeoId": "1600000US0837600",
     "censusName": "Hot Sulphur Springs town, Colorado",
@@ -2091,7 +2091,7 @@ module.exports =[
     "pctArtsHumanities": 29.1
   },
   {
-    "placdId": 837820,
+    "placeId": 837820,
     "placeName": "Hudson",
     "placeGeoId": "1600000US0837820",
     "censusName": "Hudson town, Colorado",
@@ -2108,7 +2108,7 @@ module.exports =[
     "pctArtsHumanities": 16.8
   },
   {
-    "placdId": 837875,
+    "placeId": 837875,
     "placeName": "Hugo",
     "placeGeoId": "1600000US0837875",
     "censusName": "Hugo town, Colorado",
@@ -2125,7 +2125,7 @@ module.exports =[
     "pctArtsHumanities": 23.6
   },
   {
-    "placdId": 838370,
+    "placeId": 838370,
     "placeName": "Idaho Springs",
     "placeGeoId": "1600000US0838370",
     "censusName": "Idaho Springs city, Colorado",
@@ -2142,7 +2142,7 @@ module.exports =[
     "pctArtsHumanities": 24.9
   },
   {
-    "placdId": 838535,
+    "placeId": 838535,
     "placeName": "Ignacio",
     "placeGeoId": "1600000US0838535",
     "censusName": "Ignacio town, Colorado",
@@ -2159,7 +2159,7 @@ module.exports =[
     "pctArtsHumanities": 25.5
   },
   {
-    "placdId": 838590,
+    "placeId": 838590,
     "placeName": "Iliff",
     "placeGeoId": "1600000US0838590",
     "censusName": "Iliff town, Colorado",
@@ -2176,7 +2176,7 @@ module.exports =[
     "pctArtsHumanities": 25
   },
   {
-    "placdId": 839195,
+    "placeId": 839195,
     "placeName": "Jamestown",
     "placeGeoId": "1600000US0839195",
     "censusName": "Jamestown town, Colorado",
@@ -2193,7 +2193,7 @@ module.exports =[
     "pctArtsHumanities": 35.1
   },
   {
-    "placdId": 839855,
+    "placeId": 839855,
     "placeName": "Johnstown",
     "placeGeoId": "1600000US0839855",
     "censusName": "Johnstown town, Colorado",
@@ -2210,7 +2210,7 @@ module.exports =[
     "pctArtsHumanities": 23.9
   },
   {
-    "placdId": 839965,
+    "placeId": 839965,
     "placeName": "Julesburg",
     "placeGeoId": "1600000US0839965",
     "censusName": "Julesburg town, Colorado",
@@ -2227,7 +2227,7 @@ module.exports =[
     "pctArtsHumanities": 6.9
   },
   {
-    "placdId": 840185,
+    "placeId": 840185,
     "placeName": "Keenesburg",
     "placeGeoId": "1600000US0840185",
     "censusName": "Keenesburg town, Colorado",
@@ -2244,7 +2244,7 @@ module.exports =[
     "pctArtsHumanities": 23.3
   },
   {
-    "placdId": 840515,
+    "placeId": 840515,
     "placeName": "Kersey",
     "placeGeoId": "1600000US0840515",
     "censusName": "Kersey town, Colorado",
@@ -2261,7 +2261,7 @@ module.exports =[
     "pctArtsHumanities": 29.8
   },
   {
-    "placdId": 840570,
+    "placeId": 840570,
     "placeName": "Kim",
     "placeGeoId": "1600000US0840570",
     "censusName": "Kim town, Colorado",
@@ -2278,7 +2278,7 @@ module.exports =[
     "pctArtsHumanities": 11.8
   },
   {
-    "placdId": 840790,
+    "placeId": 840790,
     "placeName": "Kiowa",
     "placeGeoId": "1600000US0840790",
     "censusName": "Kiowa town, Colorado",
@@ -2295,7 +2295,7 @@ module.exports =[
     "pctArtsHumanities": 16.1
   },
   {
-    "placdId": 841010,
+    "placeId": 841010,
     "placeName": "Kit Carson",
     "placeGeoId": "1600000US0841010",
     "censusName": "Kit Carson town, Colorado",
@@ -2312,7 +2312,7 @@ module.exports =[
     "pctArtsHumanities": 44
   },
   {
-    "placdId": 841560,
+    "placeId": 841560,
     "placeName": "Kremmling",
     "placeGeoId": "1600000US0841560",
     "censusName": "Kremmling town, Colorado",
@@ -2329,7 +2329,7 @@ module.exports =[
     "pctArtsHumanities": 24.6
   },
   {
-    "placdId": 841835,
+    "placeId": 841835,
     "placeName": "Lafayette",
     "placeGeoId": "1600000US0841835",
     "censusName": "Lafayette city, Colorado",
@@ -2346,7 +2346,7 @@ module.exports =[
     "pctArtsHumanities": 24.7
   },
   {
-    "placdId": 842055,
+    "placeId": 842055,
     "placeName": "La Jara",
     "placeGeoId": "1600000US0842055",
     "censusName": "La Jara town, Colorado",
@@ -2363,7 +2363,7 @@ module.exports =[
     "pctArtsHumanities": 6.1
   },
   {
-    "placdId": 842110,
+    "placeId": 842110,
     "placeName": "La Junta",
     "placeGeoId": "1600000US0842110",
     "censusName": "La Junta city, Colorado",
@@ -2380,7 +2380,7 @@ module.exports =[
     "pctArtsHumanities": 18.8
   },
   {
-    "placdId": 842330,
+    "placeId": 842330,
     "placeName": "Lake City",
     "placeGeoId": "1600000US0842330",
     "censusName": "Lake City town, Colorado",
@@ -2397,7 +2397,7 @@ module.exports =[
     "pctArtsHumanities": 40.3
   },
   {
-    "placdId": 842495,
+    "placeId": 842495,
     "placeName": "Lakeside",
     "placeGeoId": "1600000US0842495",
     "censusName": "Lakeside town, Colorado",
@@ -2414,7 +2414,7 @@ module.exports =[
     "pctArtsHumanities": 66.7
   },
   {
-    "placdId": 843000,
+    "placeId": 843000,
     "placeName": "Lakewood",
     "placeGeoId": "1600000US0843000",
     "censusName": "Lakewood city, Colorado",
@@ -2431,7 +2431,7 @@ module.exports =[
     "pctArtsHumanities": 23.5
   },
   {
-    "placdId": 843110,
+    "placeId": 843110,
     "placeName": "Lamar",
     "placeGeoId": "1600000US0843110",
     "censusName": "Lamar city, Colorado",
@@ -2448,7 +2448,7 @@ module.exports =[
     "pctArtsHumanities": 10.5
   },
   {
-    "placdId": 843550,
+    "placeId": 843550,
     "placeName": "Larkspur",
     "placeGeoId": "1600000US0843550",
     "censusName": "Larkspur town, Colorado",
@@ -2465,7 +2465,7 @@ module.exports =[
     "pctArtsHumanities": 25.7
   },
   {
-    "placdId": 843605,
+    "placeId": 843605,
     "placeName": "La Salle",
     "placeGeoId": "1600000US0843605",
     "censusName": "La Salle town, Colorado",
@@ -2482,7 +2482,7 @@ module.exports =[
     "pctArtsHumanities": 16.3
   },
   {
-    "placdId": 843660,
+    "placeId": 843660,
     "placeName": "Las Animas",
     "placeGeoId": "1600000US0843660",
     "censusName": "Las Animas city, Colorado",
@@ -2499,7 +2499,7 @@ module.exports =[
     "pctArtsHumanities": 25.9
   },
   {
-    "placdId": 844100,
+    "placeId": 844100,
     "placeName": "La Veta",
     "placeGeoId": "1600000US0844100",
     "censusName": "La Veta town, Colorado",
@@ -2516,7 +2516,7 @@ module.exports =[
     "pctArtsHumanities": 20.2
   },
   {
-    "placdId": 844320,
+    "placeId": 844320,
     "placeName": "Leadville",
     "placeGeoId": "1600000US0844320",
     "censusName": "Leadville city, Colorado",
@@ -2533,7 +2533,7 @@ module.exports =[
     "pctArtsHumanities": 43.3
   },
   {
-    "placdId": 844980,
+    "placeId": 844980,
     "placeName": "Limon",
     "placeGeoId": "1600000US0844980",
     "censusName": "Limon town, Colorado",
@@ -2550,7 +2550,7 @@ module.exports =[
     "pctArtsHumanities": 9.5
   },
   {
-    "placdId": 845255,
+    "placeId": 845255,
     "placeName": "Littleton",
     "placeGeoId": "1600000US0845255",
     "censusName": "Littleton city, Colorado",
@@ -2567,7 +2567,7 @@ module.exports =[
     "pctArtsHumanities": 23.8
   },
   {
-    "placdId": 845530,
+    "placeId": 845530,
     "placeName": "Lochbuie",
     "placeGeoId": "1600000US0845530",
     "censusName": "Lochbuie town, Colorado",
@@ -2584,7 +2584,7 @@ module.exports =[
     "pctArtsHumanities": 21.1
   },
   {
-    "placdId": 845695,
+    "placeId": 845695,
     "placeName": "Log Lane Village",
     "placeGeoId": "1600000US0845695",
     "censusName": "Log Lane Village town, Colorado",
@@ -2601,7 +2601,7 @@ module.exports =[
     "pctArtsHumanities": 0
   },
   {
-    "placdId": 845955,
+    "placeId": 845955,
     "placeName": "Lone Tree",
     "placeGeoId": "1600000US0845955",
     "censusName": "Lone Tree city, Colorado",
@@ -2618,7 +2618,7 @@ module.exports =[
     "pctArtsHumanities": 16.9
   },
   {
-    "placdId": 845970,
+    "placeId": 845970,
     "placeName": "Longmont",
     "placeGeoId": "1600000US0845970",
     "censusName": "Longmont city, Colorado",
@@ -2635,7 +2635,7 @@ module.exports =[
     "pctArtsHumanities": 21.4
   },
   {
-    "placdId": 846355,
+    "placeId": 846355,
     "placeName": "Louisville",
     "placeGeoId": "1600000US0846355",
     "censusName": "Louisville city, Colorado",
@@ -2652,7 +2652,7 @@ module.exports =[
     "pctArtsHumanities": 25.2
   },
   {
-    "placdId": 846465,
+    "placeId": 846465,
     "placeName": "Loveland",
     "placeGeoId": "1600000US0846465",
     "censusName": "Loveland city, Colorado",
@@ -2669,7 +2669,7 @@ module.exports =[
     "pctArtsHumanities": 24.6
   },
   {
-    "placdId": 847070,
+    "placeId": 847070,
     "placeName": "Lyons",
     "placeGeoId": "1600000US0847070",
     "censusName": "Lyons town, Colorado",
@@ -2686,7 +2686,7 @@ module.exports =[
     "pctArtsHumanities": 28.1
   },
   {
-    "placdId": 848060,
+    "placeId": 848060,
     "placeName": "Manassa",
     "placeGeoId": "1600000US0848060",
     "censusName": "Manassa town, Colorado",
@@ -2703,7 +2703,7 @@ module.exports =[
     "pctArtsHumanities": 7.9
   },
   {
-    "placdId": 848115,
+    "placeId": 848115,
     "placeName": "Mancos",
     "placeGeoId": "1600000US0848115",
     "censusName": "Mancos town, Colorado",
@@ -2720,7 +2720,7 @@ module.exports =[
     "pctArtsHumanities": 37.6
   },
   {
-    "placdId": 848445,
+    "placeId": 848445,
     "placeName": "Manitou Springs",
     "placeGeoId": "1600000US0848445",
     "censusName": "Manitou Springs city, Colorado",
@@ -2737,7 +2737,7 @@ module.exports =[
     "pctArtsHumanities": 31.3
   },
   {
-    "placdId": 848500,
+    "placeId": 848500,
     "placeName": "Manzanola",
     "placeGeoId": "1600000US0848500",
     "censusName": "Manzanola town, Colorado",
@@ -2754,7 +2754,7 @@ module.exports =[
     "pctArtsHumanities": 17.6
   },
   {
-    "placdId": 848555,
+    "placeId": 848555,
     "placeName": "Marble",
     "placeGeoId": "1600000US0848555",
     "censusName": "Marble town, Colorado",
@@ -2771,7 +2771,7 @@ module.exports =[
     "pctArtsHumanities": 5.7
   },
   {
-    "placdId": 849600,
+    "placeId": 849600,
     "placeName": "Mead",
     "placeGeoId": "1600000US0849600",
     "censusName": "Mead town, Colorado",
@@ -2788,7 +2788,7 @@ module.exports =[
     "pctArtsHumanities": 20.8
   },
   {
-    "placdId": 849875,
+    "placeId": 849875,
     "placeName": "Meeker",
     "placeGeoId": "1600000US0849875",
     "censusName": "Meeker town, Colorado",
@@ -2805,7 +2805,7 @@ module.exports =[
     "pctArtsHumanities": 28.9
   },
   {
-    "placdId": 850040,
+    "placeId": 850040,
     "placeName": "Merino",
     "placeGeoId": "1600000US0850040",
     "censusName": "Merino town, Colorado",
@@ -2822,7 +2822,7 @@ module.exports =[
     "pctArtsHumanities": 18.8
   },
   {
-    "placdId": 850480,
+    "placeId": 850480,
     "placeName": "Milliken",
     "placeGeoId": "1600000US0850480",
     "censusName": "Milliken town, Colorado",
@@ -2839,7 +2839,7 @@ module.exports =[
     "pctArtsHumanities": 26
   },
   {
-    "placdId": 850920,
+    "placeId": 850920,
     "placeName": "Minturn",
     "placeGeoId": "1600000US0850920",
     "censusName": "Minturn town, Colorado",
@@ -2856,7 +2856,7 @@ module.exports =[
     "pctArtsHumanities": 27.5
   },
   {
-    "placdId": 851250,
+    "placeId": 851250,
     "placeName": "Moffat",
     "placeGeoId": "1600000US0851250",
     "censusName": "Moffat town, Colorado",
@@ -2873,7 +2873,7 @@ module.exports =[
     "pctArtsHumanities": 78.9
   },
   {
-    "placdId": 851635,
+    "placeId": 851635,
     "placeName": "Monte Vista",
     "placeGeoId": "1600000US0851635",
     "censusName": "Monte Vista city, Colorado",
@@ -2890,7 +2890,7 @@ module.exports =[
     "pctArtsHumanities": 36.1
   },
   {
-    "placdId": 851690,
+    "placeId": 851690,
     "placeName": "Montezuma",
     "placeGeoId": "1600000US0851690",
     "censusName": "Montezuma town, Colorado",
@@ -2907,7 +2907,7 @@ module.exports =[
     "pctArtsHumanities": 29.6
   },
   {
-    "placdId": 851745,
+    "placeId": 851745,
     "placeName": "Montrose",
     "placeGeoId": "1600000US0851745",
     "censusName": "Montrose city, Colorado",
@@ -2924,7 +2924,7 @@ module.exports =[
     "pctArtsHumanities": 17.1
   },
   {
-    "placdId": 851800,
+    "placeId": 851800,
     "placeName": "Monument",
     "placeGeoId": "1600000US0851800",
     "censusName": "Monument town, Colorado",
@@ -2941,7 +2941,7 @@ module.exports =[
     "pctArtsHumanities": 20.3
   },
   {
-    "placdId": 852075,
+    "placeId": 852075,
     "placeName": "Morrison",
     "placeGeoId": "1600000US0852075",
     "censusName": "Morrison town, Colorado",
@@ -2958,7 +2958,7 @@ module.exports =[
     "pctArtsHumanities": 40.1
   },
   {
-    "placdId": 852350,
+    "placeId": 852350,
     "placeName": "Mountain View",
     "placeGeoId": "1600000US0852350",
     "censusName": "Mountain View town, Colorado",
@@ -2975,7 +2975,7 @@ module.exports =[
     "pctArtsHumanities": 35.1
   },
   {
-    "placdId": 852550,
+    "placeId": 852550,
     "placeName": "Mountain Village",
     "placeGeoId": "1600000US0852550",
     "censusName": "Mountain Village town, Colorado",
@@ -2992,7 +2992,7 @@ module.exports =[
     "pctArtsHumanities": 29.9
   },
   {
-    "placdId": 852570,
+    "placeId": 852570,
     "placeName": "Mount Crested Butte",
     "placeGeoId": "1600000US0852570",
     "censusName": "Mount Crested Butte town, Colorado",
@@ -3009,7 +3009,7 @@ module.exports =[
     "pctArtsHumanities": 35.9
   },
   {
-    "placdId": 853120,
+    "placeId": 853120,
     "placeName": "Naturita",
     "placeGeoId": "1600000US0853120",
     "censusName": "Naturita town, Colorado",
@@ -3026,7 +3026,7 @@ module.exports =[
     "pctArtsHumanities": 21.6
   },
   {
-    "placdId": 853175,
+    "placeId": 853175,
     "placeName": "Nederland",
     "placeGeoId": "1600000US0853175",
     "censusName": "Nederland town, Colorado",
@@ -3043,7 +3043,7 @@ module.exports =[
     "pctArtsHumanities": 30.6
   },
   {
-    "placdId": 853395,
+    "placeId": 853395,
     "placeName": "New Castle",
     "placeGeoId": "1600000US0853395",
     "censusName": "New Castle town, Colorado",
@@ -3060,7 +3060,7 @@ module.exports =[
     "pctArtsHumanities": 34.5
   },
   {
-    "placdId": 854330,
+    "placeId": 854330,
     "placeName": "Northglenn",
     "placeGeoId": "1600000US0854330",
     "censusName": "Northglenn city, Colorado",
@@ -3077,7 +3077,7 @@ module.exports =[
     "pctArtsHumanities": 21.1
   },
   {
-    "placdId": 854880,
+    "placeId": 854880,
     "placeName": "Norwood",
     "placeGeoId": "1600000US0854880",
     "censusName": "Norwood town, Colorado",
@@ -3094,7 +3094,7 @@ module.exports =[
     "pctArtsHumanities": 38.6
   },
   {
-    "placdId": 854935,
+    "placeId": 854935,
     "placeName": "Nucla",
     "placeGeoId": "1600000US0854935",
     "censusName": "Nucla town, Colorado",
@@ -3111,7 +3111,7 @@ module.exports =[
     "pctArtsHumanities": 28.1
   },
   {
-    "placdId": 855045,
+    "placeId": 855045,
     "placeName": "Nunn",
     "placeGeoId": "1600000US0855045",
     "censusName": "Nunn town, Colorado",
@@ -3128,7 +3128,7 @@ module.exports =[
     "pctArtsHumanities": 16.7
   },
   {
-    "placdId": 855155,
+    "placeId": 855155,
     "placeName": "Oak Creek",
     "placeGeoId": "1600000US0855155",
     "censusName": "Oak Creek town, Colorado",
@@ -3145,7 +3145,7 @@ module.exports =[
     "pctArtsHumanities": 27.3
   },
   {
-    "placdId": 855540,
+    "placeId": 855540,
     "placeName": "Olathe",
     "placeGeoId": "1600000US0855540",
     "censusName": "Olathe town, Colorado",
@@ -3162,7 +3162,7 @@ module.exports =[
     "pctArtsHumanities": 7.3
   },
   {
-    "placdId": 855705,
+    "placeId": 855705,
     "placeName": "Olney Springs",
     "placeGeoId": "1600000US0855705",
     "censusName": "Olney Springs town, Colorado",
@@ -3179,7 +3179,7 @@ module.exports =[
     "pctArtsHumanities": 46.7
   },
   {
-    "placdId": 855870,
+    "placeId": 855870,
     "placeName": "Ophir",
     "placeGeoId": "1600000US0855870",
     "censusName": "Ophir town, Colorado",
@@ -3196,7 +3196,7 @@ module.exports =[
     "pctArtsHumanities": 51.8
   },
   {
-    "placdId": 855980,
+    "placeId": 855980,
     "placeName": "Orchard City",
     "placeGeoId": "1600000US0855980",
     "censusName": "Orchard City town, Colorado",
@@ -3213,7 +3213,7 @@ module.exports =[
     "pctArtsHumanities": 22.8
   },
   {
-    "placdId": 856145,
+    "placeId": 856145,
     "placeName": "Ordway",
     "placeGeoId": "1600000US0856145",
     "censusName": "Ordway town, Colorado",
@@ -3230,7 +3230,7 @@ module.exports =[
     "pctArtsHumanities": 19.8
   },
   {
-    "placdId": 856365,
+    "placeId": 856365,
     "placeName": "Otis",
     "placeGeoId": "1600000US0856365",
     "censusName": "Otis town, Colorado",
@@ -3247,7 +3247,7 @@ module.exports =[
     "pctArtsHumanities": 23.1
   },
   {
-    "placdId": 856420,
+    "placeId": 856420,
     "placeName": "Ouray",
     "placeGeoId": "1600000US0856420",
     "censusName": "Ouray city, Colorado",
@@ -3264,7 +3264,7 @@ module.exports =[
     "pctArtsHumanities": 16.3
   },
   {
-    "placdId": 856475,
+    "placeId": 856475,
     "placeName": "Ovid",
     "placeGeoId": "1600000US0856475",
     "censusName": "Ovid town, Colorado",
@@ -3281,7 +3281,7 @@ module.exports =[
     "pctArtsHumanities": 37.5
   },
   {
-    "placdId": 856860,
+    "placeId": 856860,
     "placeName": "Pagosa Springs",
     "placeGeoId": "1600000US0856860",
     "censusName": "Pagosa Springs town, Colorado",
@@ -3298,7 +3298,7 @@ module.exports =[
     "pctArtsHumanities": 17.9
   },
   {
-    "placdId": 856970,
+    "placeId": 856970,
     "placeName": "Palisade",
     "placeGeoId": "1600000US0856970",
     "censusName": "Palisade town, Colorado",
@@ -3315,7 +3315,7 @@ module.exports =[
     "pctArtsHumanities": 18.8
   },
   {
-    "placdId": 857025,
+    "placeId": 857025,
     "placeName": "Palmer Lake",
     "placeGeoId": "1600000US0857025",
     "censusName": "Palmer Lake town, Colorado",
@@ -3332,7 +3332,7 @@ module.exports =[
     "pctArtsHumanities": 37.7
   },
   {
-    "placdId": 857245,
+    "placeId": 857245,
     "placeName": "Paoli",
     "placeGeoId": "1600000US0857245",
     "censusName": "Paoli town, Colorado",
@@ -3349,7 +3349,7 @@ module.exports =[
     "pctArtsHumanities": "-"
   },
   {
-    "placdId": 857300,
+    "placeId": 857300,
     "placeName": "Paonia",
     "placeGeoId": "1600000US0857300",
     "censusName": "Paonia town, Colorado",
@@ -3366,7 +3366,7 @@ module.exports =[
     "pctArtsHumanities": 32.9
   },
   {
-    "placdId": 857400,
+    "placeId": 857400,
     "placeName": "Parachute",
     "placeGeoId": "1600000US0857400",
     "censusName": "Parachute town, Colorado",
@@ -3383,7 +3383,7 @@ module.exports =[
     "pctArtsHumanities": 15.6
   },
   {
-    "placdId": 857630,
+    "placeId": 857630,
     "placeName": "Parker",
     "placeGeoId": "1600000US0857630",
     "censusName": "Parker town, Colorado",
@@ -3400,7 +3400,7 @@ module.exports =[
     "pctArtsHumanities": 20.8
   },
   {
-    "placdId": 858235,
+    "placeId": 858235,
     "placeName": "Peetz",
     "placeGeoId": "1600000US0858235",
     "censusName": "Peetz town, Colorado",
@@ -3417,7 +3417,7 @@ module.exports =[
     "pctArtsHumanities": 33.3
   },
   {
-    "placdId": 859005,
+    "placeId": 859005,
     "placeName": "Pierce",
     "placeGeoId": "1600000US0859005",
     "censusName": "Pierce town, Colorado",
@@ -3434,7 +3434,7 @@ module.exports =[
     "pctArtsHumanities": 0
   },
   {
-    "placdId": 859830,
+    "placeId": 859830,
     "placeName": "Pitkin",
     "placeGeoId": "1600000US0859830",
     "censusName": "Pitkin town, Colorado",
@@ -3451,7 +3451,7 @@ module.exports =[
     "pctArtsHumanities": 3.1
   },
   {
-    "placdId": 860160,
+    "placeId": 860160,
     "placeName": "Platteville",
     "placeGeoId": "1600000US0860160",
     "censusName": "Platteville town, Colorado",
@@ -3468,7 +3468,7 @@ module.exports =[
     "pctArtsHumanities": 33.3
   },
   {
-    "placdId": 860600,
+    "placeId": 860600,
     "placeName": "Poncha Springs",
     "placeGeoId": "1600000US0860600",
     "censusName": "Poncha Springs town, Colorado",
@@ -3485,7 +3485,7 @@ module.exports =[
     "pctArtsHumanities": 42
   },
   {
-    "placdId": 861315,
+    "placeId": 861315,
     "placeName": "Pritchett",
     "placeGeoId": "1600000US0861315",
     "censusName": "Pritchett town, Colorado",
@@ -3502,7 +3502,7 @@ module.exports =[
     "pctArtsHumanities": 30.8
   },
   {
-    "placdId": 862000,
+    "placeId": 862000,
     "placeName": "Pueblo",
     "placeGeoId": "1600000US0862000",
     "censusName": "Pueblo city, Colorado",
@@ -3519,7 +3519,7 @@ module.exports =[
     "pctArtsHumanities": 20.9
   },
   {
-    "placdId": 862660,
+    "placeId": 862660,
     "placeName": "Ramah",
     "placeGeoId": "1600000US0862660",
     "censusName": "Ramah town, Colorado",
@@ -3536,7 +3536,7 @@ module.exports =[
     "pctArtsHumanities": 8.7
   },
   {
-    "placdId": 862880,
+    "placeId": 862880,
     "placeName": "Rangely",
     "placeGeoId": "1600000US0862880",
     "censusName": "Rangely town, Colorado",
@@ -3553,7 +3553,7 @@ module.exports =[
     "pctArtsHumanities": 31
   },
   {
-    "placdId": 863045,
+    "placeId": 863045,
     "placeName": "New Raymer",
     "placeGeoId": "1600000US0863045",
     "censusName": "Raymer (New Raymer) town, Colorado",
@@ -3570,7 +3570,7 @@ module.exports =[
     "pctArtsHumanities": 0
   },
   {
-    "placdId": 863265,
+    "placeId": 863265,
     "placeName": "Red Cliff",
     "placeGeoId": "1600000US0863265",
     "censusName": "Red Cliff town, Colorado",
@@ -3587,7 +3587,7 @@ module.exports =[
     "pctArtsHumanities": 37.5
   },
   {
-    "placdId": 864090,
+    "placeId": 864090,
     "placeName": "Rico",
     "placeGeoId": "1600000US0864090",
     "censusName": "Rico town, Colorado",
@@ -3604,7 +3604,7 @@ module.exports =[
     "pctArtsHumanities": 50
   },
   {
-    "placdId": 864200,
+    "placeId": 864200,
     "placeName": "Ridgway",
     "placeGeoId": "1600000US0864200",
     "censusName": "Ridgway town, Colorado",
@@ -3621,7 +3621,7 @@ module.exports =[
     "pctArtsHumanities": 34.9
   },
   {
-    "placdId": 864255,
+    "placeId": 864255,
     "placeName": "Rifle",
     "placeGeoId": "1600000US0864255",
     "censusName": "Rifle city, Colorado",
@@ -3638,7 +3638,7 @@ module.exports =[
     "pctArtsHumanities": 23.3
   },
   {
-    "placdId": 864970,
+    "placeId": 864970,
     "placeName": "Rockvale",
     "placeGeoId": "1600000US0864970",
     "censusName": "Rockvale town, Colorado",
@@ -3655,7 +3655,7 @@ module.exports =[
     "pctArtsHumanities": 22.6
   },
   {
-    "placdId": 865190,
+    "placeId": 865190,
     "placeName": "Rocky Ford",
     "placeGeoId": "1600000US0865190",
     "censusName": "Rocky Ford city, Colorado",
@@ -3672,7 +3672,7 @@ module.exports =[
     "pctArtsHumanities": 32.6
   },
   {
-    "placdId": 865740,
+    "placeId": 865740,
     "placeName": "Romeo",
     "placeGeoId": "1600000US0865740",
     "censusName": "Romeo town, Colorado",
@@ -3689,7 +3689,7 @@ module.exports =[
     "pctArtsHumanities": 0
   },
   {
-    "placdId": 866895,
+    "placeId": 866895,
     "placeName": "Rye",
     "placeGeoId": "1600000US0866895",
     "censusName": "Rye town, Colorado",
@@ -3706,7 +3706,7 @@ module.exports =[
     "pctArtsHumanities": 22.4
   },
   {
-    "placdId": 867005,
+    "placeId": 867005,
     "placeName": "Saguache",
     "placeGeoId": "1600000US0867005",
     "censusName": "Saguache town, Colorado",
@@ -3723,7 +3723,7 @@ module.exports =[
     "pctArtsHumanities": 47.6
   },
   {
-    "placdId": 867280,
+    "placeId": 867280,
     "placeName": "Salida",
     "placeGeoId": "1600000US0867280",
     "censusName": "Salida city, Colorado",
@@ -3740,7 +3740,7 @@ module.exports =[
     "pctArtsHumanities": 27.8
   },
   {
-    "placdId": 867830,
+    "placeId": 867830,
     "placeName": "Sanford",
     "placeGeoId": "1600000US0867830",
     "censusName": "Sanford town, Colorado",
@@ -3757,7 +3757,7 @@ module.exports =[
     "pctArtsHumanities": 30.8
   },
   {
-    "placdId": 868105,
+    "placeId": 868105,
     "placeName": "San Luis",
     "placeGeoId": "1600000US0868105",
     "censusName": "San Luis town, Colorado",
@@ -3774,7 +3774,7 @@ module.exports =[
     "pctArtsHumanities": 33
   },
   {
-    "placdId": 868655,
+    "placeId": 868655,
     "placeName": "Sawpit",
     "placeGeoId": "1600000US0868655",
     "censusName": "Sawpit town, Colorado",
@@ -3791,7 +3791,7 @@ module.exports =[
     "pctArtsHumanities": 46.2
   },
   {
-    "placdId": 868930,
+    "placeId": 868930,
     "placeName": "Sedgwick",
     "placeGeoId": "1600000US0868930",
     "censusName": "Sedgwick town, Colorado",
@@ -3808,7 +3808,7 @@ module.exports =[
     "pctArtsHumanities": 16.7
   },
   {
-    "placdId": 869040,
+    "placeId": 869040,
     "placeName": "Seibert",
     "placeGeoId": "1600000US0869040",
     "censusName": "Seibert town, Colorado",
@@ -3825,7 +3825,7 @@ module.exports =[
     "pctArtsHumanities": 22.2
   },
   {
-    "placdId": 869150,
+    "placeId": 869150,
     "placeName": "Severance",
     "placeGeoId": "1600000US0869150",
     "censusName": "Severance town, Colorado",
@@ -3842,7 +3842,7 @@ module.exports =[
     "pctArtsHumanities": 27
   },
   {
-    "placdId": 869645,
+    "placeId": 869645,
     "placeName": "Sheridan",
     "placeGeoId": "1600000US0869645",
     "censusName": "Sheridan city, Colorado",
@@ -3859,7 +3859,7 @@ module.exports =[
     "pctArtsHumanities": 23.9
   },
   {
-    "placdId": 869700,
+    "placeId": 869700,
     "placeName": "Sheridan Lake",
     "placeGeoId": "1600000US0869700",
     "censusName": "Sheridan Lake town, Colorado",
@@ -3876,7 +3876,7 @@ module.exports =[
     "pctArtsHumanities": 45.5
   },
   {
-    "placdId": 870195,
+    "placeId": 870195,
     "placeName": "Silt",
     "placeGeoId": "1600000US0870195",
     "censusName": "Silt town, Colorado",
@@ -3893,7 +3893,7 @@ module.exports =[
     "pctArtsHumanities": 34.8
   },
   {
-    "placdId": 870250,
+    "placeId": 870250,
     "placeName": "Silver Cliff",
     "placeGeoId": "1600000US0870250",
     "censusName": "Silver Cliff town, Colorado",
@@ -3910,7 +3910,7 @@ module.exports =[
     "pctArtsHumanities": 21
   },
   {
-    "placdId": 870360,
+    "placeId": 870360,
     "placeName": "Silver Plume",
     "placeGeoId": "1600000US0870360",
     "censusName": "Silver Plume town, Colorado",
@@ -3927,7 +3927,7 @@ module.exports =[
     "pctArtsHumanities": 38.9
   },
   {
-    "placdId": 870525,
+    "placeId": 870525,
     "placeName": "Silverthorne",
     "placeGeoId": "1600000US0870525",
     "censusName": "Silverthorne town, Colorado",
@@ -3944,7 +3944,7 @@ module.exports =[
     "pctArtsHumanities": 7.2
   },
   {
-    "placdId": 870580,
+    "placeId": 870580,
     "placeName": "Silverton",
     "placeGeoId": "1600000US0870580",
     "censusName": "Silverton town, Colorado",
@@ -3961,7 +3961,7 @@ module.exports =[
     "pctArtsHumanities": 47.6
   },
   {
-    "placdId": 870635,
+    "placeId": 870635,
     "placeName": "Simla",
     "placeGeoId": "1600000US0870635",
     "censusName": "Simla town, Colorado",
@@ -3978,7 +3978,7 @@ module.exports =[
     "pctArtsHumanities": 53.9
   },
   {
-    "placdId": 871755,
+    "placeId": 871755,
     "placeName": "Snowmass Village",
     "placeGeoId": "1600000US0871755",
     "censusName": "Snowmass Village town, Colorado",
@@ -3995,7 +3995,7 @@ module.exports =[
     "pctArtsHumanities": 22.2
   },
   {
-    "placdId": 872395,
+    "placeId": 872395,
     "placeName": "South Fork",
     "placeGeoId": "1600000US0872395",
     "censusName": "South Fork town, Colorado",
@@ -4012,7 +4012,7 @@ module.exports =[
     "pctArtsHumanities": 27.6
   },
   {
-    "placdId": 873330,
+    "placeId": 873330,
     "placeName": "Springfield",
     "placeGeoId": "1600000US0873330",
     "censusName": "Springfield town, Colorado",
@@ -4029,7 +4029,7 @@ module.exports =[
     "pctArtsHumanities": 1.5
   },
   {
-    "placdId": 873715,
+    "placeId": 873715,
     "placeName": "Starkville",
     "placeGeoId": "1600000US0873715",
     "censusName": "Starkville town, Colorado",
@@ -4046,7 +4046,7 @@ module.exports =[
     "pctArtsHumanities": 20
   },
   {
-    "placdId": 873825,
+    "placeId": 873825,
     "placeName": "Steamboat Springs",
     "placeGeoId": "1600000US0873825",
     "censusName": "Steamboat Springs city, Colorado",
@@ -4063,7 +4063,7 @@ module.exports =[
     "pctArtsHumanities": 24.2
   },
   {
-    "placdId": 873935,
+    "placeId": 873935,
     "placeName": "Sterling",
     "placeGeoId": "1600000US0873935",
     "censusName": "Sterling city, Colorado",
@@ -4080,7 +4080,7 @@ module.exports =[
     "pctArtsHumanities": 15.3
   },
   {
-    "placdId": 874485,
+    "placeId": 874485,
     "placeName": "Stratton",
     "placeGeoId": "1600000US0874485",
     "censusName": "Stratton town, Colorado",
@@ -4097,7 +4097,7 @@ module.exports =[
     "pctArtsHumanities": 17.3
   },
   {
-    "placdId": 874815,
+    "placeId": 874815,
     "placeName": "Sugar City",
     "placeGeoId": "1600000US0874815",
     "censusName": "Sugar City town, Colorado",
@@ -4114,7 +4114,7 @@ module.exports =[
     "pctArtsHumanities": 11.9
   },
   {
-    "placdId": 875640,
+    "placeId": 875640,
     "placeName": "Superior",
     "placeGeoId": "1600000US0875640",
     "censusName": "Superior town, Colorado",
@@ -4131,7 +4131,7 @@ module.exports =[
     "pctArtsHumanities": 19.4
   },
   {
-    "placdId": 875970,
+    "placeId": 875970,
     "placeName": "Swink",
     "placeGeoId": "1600000US0875970",
     "censusName": "Swink town, Colorado",
@@ -4148,7 +4148,7 @@ module.exports =[
     "pctArtsHumanities": 2.1
   },
   {
-    "placdId": 876795,
+    "placeId": 876795,
     "placeName": "Telluride",
     "placeGeoId": "1600000US0876795",
     "censusName": "Telluride town, Colorado",
@@ -4165,7 +4165,7 @@ module.exports =[
     "pctArtsHumanities": 28.7
   },
   {
-    "placdId": 877290,
+    "placeId": 877290,
     "placeName": "Thornton",
     "placeGeoId": "1600000US0877290",
     "censusName": "Thornton city, Colorado",
@@ -4182,7 +4182,7 @@ module.exports =[
     "pctArtsHumanities": 24.2
   },
   {
-    "placdId": 877510,
+    "placeId": 877510,
     "placeName": "Timnath",
     "placeGeoId": "1600000US0877510",
     "censusName": "Timnath town, Colorado",
@@ -4199,7 +4199,7 @@ module.exports =[
     "pctArtsHumanities": 15.9
   },
   {
-    "placdId": 878610,
+    "placeId": 878610,
     "placeName": "Trinidad",
     "placeGeoId": "1600000US0878610",
     "censusName": "Trinidad city, Colorado",
@@ -4216,7 +4216,7 @@ module.exports =[
     "pctArtsHumanities": 24.8
   },
   {
-    "placdId": 879270,
+    "placeId": 879270,
     "placeName": "Two Buttes",
     "placeGeoId": "1600000US0879270",
     "censusName": "Two Buttes town, Colorado",
@@ -4233,7 +4233,7 @@ module.exports =[
     "pctArtsHumanities": 0
   },
   {
-    "placdId": 880040,
+    "placeId": 880040,
     "placeName": "Vail",
     "placeGeoId": "1600000US0880040",
     "censusName": "Vail town, Colorado",
@@ -4250,7 +4250,7 @@ module.exports =[
     "pctArtsHumanities": 26.4
   },
   {
-    "placdId": 880865,
+    "placeId": 880865,
     "placeName": "Victor",
     "placeGeoId": "1600000US0880865",
     "censusName": "Victor city, Colorado",
@@ -4267,7 +4267,7 @@ module.exports =[
     "pctArtsHumanities": 11.2
   },
   {
-    "placdId": 881030,
+    "placeId": 881030,
     "placeName": "Vilas",
     "placeGeoId": "1600000US0881030",
     "censusName": "Vilas town, Colorado",
@@ -4284,7 +4284,7 @@ module.exports =[
     "pctArtsHumanities": 20
   },
   {
-    "placdId": 881690,
+    "placeId": 881690,
     "placeName": "Vona",
     "placeGeoId": "1600000US0881690",
     "censusName": "Vona town, Colorado",
@@ -4301,7 +4301,7 @@ module.exports =[
     "pctArtsHumanities": 13.3
   },
   {
-    "placdId": 882130,
+    "placeId": 882130,
     "placeName": "Walden",
     "placeGeoId": "1600000US0882130",
     "censusName": "Walden town, Colorado",
@@ -4318,7 +4318,7 @@ module.exports =[
     "pctArtsHumanities": 25
   },
   {
-    "placdId": 882350,
+    "placeId": 882350,
     "placeName": "Walsenburg",
     "placeGeoId": "1600000US0882350",
     "censusName": "Walsenburg city, Colorado",
@@ -4335,7 +4335,7 @@ module.exports =[
     "pctArtsHumanities": 23.3
   },
   {
-    "placdId": 882460,
+    "placeId": 882460,
     "placeName": "Walsh",
     "placeGeoId": "1600000US0882460",
     "censusName": "Walsh town, Colorado",
@@ -4352,7 +4352,7 @@ module.exports =[
     "pctArtsHumanities": 29.1
   },
   {
-    "placdId": 882735,
+    "placeId": 882735,
     "placeName": "Ward",
     "placeGeoId": "1600000US0882735",
     "censusName": "Ward town, Colorado",
@@ -4369,7 +4369,7 @@ module.exports =[
     "pctArtsHumanities": 31.3
   },
   {
-    "placdId": 883230,
+    "placeId": 883230,
     "placeName": "Wellington",
     "placeGeoId": "1600000US0883230",
     "censusName": "Wellington town, Colorado",
@@ -4386,7 +4386,7 @@ module.exports =[
     "pctArtsHumanities": 26.1
   },
   {
-    "placdId": 883450,
+    "placeId": 883450,
     "placeName": "Westcliffe",
     "placeGeoId": "1600000US0883450",
     "censusName": "Westcliffe town, Colorado",
@@ -4403,7 +4403,7 @@ module.exports =[
     "pctArtsHumanities": 30.2
   },
   {
-    "placdId": 883835,
+    "placeId": 883835,
     "placeName": "Westminster",
     "placeGeoId": "1600000US0883835",
     "censusName": "Westminster city, Colorado",
@@ -4420,7 +4420,7 @@ module.exports =[
     "pctArtsHumanities": 21.9
   },
   {
-    "placdId": 884440,
+    "placeId": 884440,
     "placeName": "Wheat Ridge",
     "placeGeoId": "1600000US0884440",
     "censusName": "Wheat Ridge city, Colorado",
@@ -4437,7 +4437,7 @@ module.exports =[
     "pctArtsHumanities": 27.3
   },
   {
-    "placdId": 884770,
+    "placeId": 884770,
     "placeName": "Wiggins",
     "placeGeoId": "1600000US0884770",
     "censusName": "Wiggins town, Colorado",
@@ -4454,7 +4454,7 @@ module.exports =[
     "pctArtsHumanities": 14.9
   },
   {
-    "placdId": 885045,
+    "placeId": 885045,
     "placeName": "Wiley",
     "placeGeoId": "1600000US0885045",
     "censusName": "Wiley town, Colorado",
@@ -4471,7 +4471,7 @@ module.exports =[
     "pctArtsHumanities": 15.5
   },
   {
-    "placdId": 885155,
+    "placeId": 885155,
     "placeName": "Williamsburg",
     "placeGeoId": "1600000US0885155",
     "censusName": "Williamsburg town, Colorado",
@@ -4488,7 +4488,7 @@ module.exports =[
     "pctArtsHumanities": 28.9
   },
   {
-    "placdId": 885485,
+    "placeId": 885485,
     "placeName": "Windsor",
     "placeGeoId": "1600000US0885485",
     "censusName": "Windsor town, Colorado",
@@ -4505,7 +4505,7 @@ module.exports =[
     "pctArtsHumanities": 20.9
   },
   {
-    "placdId": 885705,
+    "placeId": 885705,
     "placeName": "Winter Park",
     "placeGeoId": "1600000US0885705",
     "censusName": "Winter Park town, Colorado",
@@ -4522,7 +4522,7 @@ module.exports =[
     "pctArtsHumanities": 35.6
   },
   {
-    "placdId": 886090,
+    "placeId": 886090,
     "placeName": "Woodland Park",
     "placeGeoId": "1600000US0886090",
     "censusName": "Woodland Park city, Colorado",
@@ -4539,7 +4539,7 @@ module.exports =[
     "pctArtsHumanities": 14.4
   },
   {
-    "placdId": 886310,
+    "placeId": 886310,
     "placeName": "Wray",
     "placeGeoId": "1600000US0886310",
     "censusName": "Wray city, Colorado",
@@ -4556,7 +4556,7 @@ module.exports =[
     "pctArtsHumanities": 11.2
   },
   {
-    "placdId": 886475,
+    "placeId": 886475,
     "placeName": "Yampa",
     "placeGeoId": "1600000US0886475",
     "censusName": "Yampa town, Colorado",
@@ -4573,7 +4573,7 @@ module.exports =[
     "pctArtsHumanities": 12.5
   },
   {
-    "placdId": 886750,
+    "placeId": 886750,
     "placeName": "Yuma",
     "placeGeoId": "1600000US0886750",
     "censusName": "Yuma city, Colorado",
