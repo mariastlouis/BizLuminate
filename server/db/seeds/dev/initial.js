@@ -1,14 +1,35 @@
+const countyLookups = require('../../../data/countyLookup');
+const placeLookups = require('../../../data/placeLookup');
+const bachelorDegreeTypes = require('../../../data/bachelorDegreeTypes');
+const countyUnemployment = require('../../../data/countyUnemployment');
+const generalDemographics = require('../../../data/generalDemographics');
+const transportationWork = require('../../../data/transportationWork');
 
 exports.seed = function(knex, Promise) {
-  // Deletes ALL existing entries
-  console.log("sup"); 
-  return knex('table_name').del()
-    .then(function () {
-      // Inserts seed entries
-      return knex('table_name').insert([
-        {id: 1, colName: 'rowValue1'},
-        {id: 2, colName: 'rowValue2'},
-        {id: 3, colName: 'rowValue3'}
-      ]);
-    });
-};
+  return Promise.all([
+      knex('countyLookup').del()
+        .then(function () {
+            return knex('countyLookup').insert(countyLookups);
+        }),
+        knex('placeLookup').del()
+            .then(function () {
+                return knex('placeLookup').insert(placeLookups);
+            }),
+        knex('bachelorDegreeTypes').del()
+            .then(function () {
+                return knex('bachelorDegreeTypes').insert(bachelorDegreeTypes);
+            }),
+        knex('countyUnemployment').del()
+            .then(function () {
+                return knex('countyUnemployment').insert(countyUnemployment);
+            }),
+        knex('generalDemographics').del()
+            .then(function () {
+                return knex('generalDemographics').insert(generalDemographics);
+            }),
+        knex('transportationWork').del()
+            .then(function () {
+                return knex('transportationWork').insert(transportationWork);
+            })
+      ])
+}
