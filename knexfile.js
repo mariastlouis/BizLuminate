@@ -3,7 +3,7 @@
 module.exports = {
   development: {
     client: 'pg',
-    connection: 'postgres://localhost/DBNAME',
+    connection: 'postgres://localhost/bizluminate',
     useNullAsDefault: true,
     migrations: {
       directory: './server/db/migrations'
@@ -27,7 +27,7 @@ module.exports = {
 
   test: {
     client: 'pg',
-    connection: process.env.DATABASE_URL || 'postgres://localhost/DBNAME_test', 
+    connection: process.env.DATABASE_URL || 'postgres://localhost/bizluminate_test',
     useNullAsDefault: true,
     migrations: {
       directory: './server/db/migrations'
