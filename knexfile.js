@@ -6,10 +6,10 @@ module.exports = {
     connection: 'postgres://localhost/DBNAME',
     useNullAsDefault: true,
     migrations: {
-      directory: './db/migrations'
+      directory: './server/db/migrations'
     },
     seeds: {
-      directory: './db/seeds/dev'
+      directory: './server/db/seeds/dev'
     }
   },
 
@@ -18,10 +18,10 @@ module.exports = {
     connection: process.env.DATABASE_URL + '?ssl=true',
     useNullAsDefault: true,
     migrations: {
-      directory: './db/migrations'
+      directory: './server/db/migrations'
     },
     seeds: {
-      directory: './db/seeds/dev'
+      directory: './server/db/seeds/dev'
     }
   },
 
@@ -30,10 +30,10 @@ module.exports = {
     connection: process.env.DATABASE_URL || 'postgres://localhost/DBNAME_test', 
     useNullAsDefault: true,
     migrations: {
-      directory: './db/migrations'
+      directory: './server/db/migrations'
     },
     seeds: {
-      directory: './db/seeds/test'
+      directory: './server/db/seeds/test'
     }
   }
 };
