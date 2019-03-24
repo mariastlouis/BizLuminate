@@ -1,322 +1,322 @@
-module.exports =[
+module.exports = [
   {
     "countyName": "Adams County",
-    "countyId": "08001",
-    "countyShortId": "001"
+    "countyId": 8001,
+    "countyShortId": 1
   },
   {
     "countyName": "Alamosa County",
-    "countyId": "08003",
-    "countyShortId": "003"
+    "countyId": 8003,
+    "countyShortId": 3
   },
   {
     "countyName": "Arapahoe County",
-    "countyId": "08005",
-    "countyShortId": "005"
+    "countyId": 8005,
+    "countyShortId": 5
   },
   {
     "countyName": "Archuleta County",
-    "countyId": "08007",
-    "countyShortId": "007"
+    "countyId": 8007,
+    "countyShortId": 7
   },
   {
     "countyName": "Baca County",
-    "countyId": "08009",
-    "countyShortId": "009"
+    "countyId": 8009,
+    "countyShortId": 9
   },
   {
     "countyName": "Bent County",
-    "countyId": "08011",
-    "countyShortId": "011"
+    "countyId": 8011,
+    "countyShortId": 11
   },
   {
     "countyName": "Boulder County",
-    "countyId": "08013",
-    "countyShortId": "013"
+    "countyId": 8013,
+    "countyShortId": 13
   },
   {
     "countyName": "Broomfield County",
-    "countyId": "08014",
-    "countyShortId": "014"
+    "countyId": 8014,
+    "countyShortId": 14
   },
   {
     "countyName": "Chaffee County",
-    "countyId": "08015",
-    "countyShortId": "015"
+    "countyId": 8015,
+    "countyShortId": 15
   },
   {
     "countyName": "Cheyenne County",
-    "countyId": "08017",
-    "countyShortId": "017"
+    "countyId": 8017,
+    "countyShortId": 17
   },
   {
     "countyName": "Clear Creek County",
-    "countyId": "08019",
-    "countyShortId": "019"
+    "countyId": 8019,
+    "countyShortId": 19
   },
   {
     "countyName": "Conejos County",
-    "countyId": "08021",
-    "countyShortId": "021"
+    "countyId": 8021,
+    "countyShortId": 21
   },
   {
     "countyName": "Costilla County",
-    "countyId": "08023",
-    "countyShortId": "023"
+    "countyId": 8023,
+    "countyShortId": 23
   },
   {
     "countyName": "Crowley County",
-    "countyId": "08025",
-    "countyShortId": "025"
+    "countyId": 8025,
+    "countyShortId": 25
   },
   {
     "countyName": "Custer County",
-    "countyId": "08027",
-    "countyShortId": "027"
+    "countyId": 8027,
+    "countyShortId": 27
   },
   {
     "countyName": "Delta County",
-    "countyId": "08029",
-    "countyShortId": "029"
+    "countyId": 8029,
+    "countyShortId": 29
   },
   {
     "countyName": "Denver County",
-    "countyId": "08031",
-    "countyShortId": "031"
+    "countyId": 8031,
+    "countyShortId": 31
   },
   {
     "countyName": "Dolores County",
-    "countyId": "08033",
-    "countyShortId": "033"
+    "countyId": 8033,
+    "countyShortId": 33
   },
   {
     "countyName": "Douglas County",
-    "countyId": "08035",
-    "countyShortId": "035"
+    "countyId": 8035,
+    "countyShortId": 35
   },
   {
     "countyName": "Eagle County",
-    "countyId": "08037",
-    "countyShortId": "037"
+    "countyId": 8037,
+    "countyShortId": 37
   },
   {
     "countyName": "Elbert County",
-    "countyId": "08039",
-    "countyShortId": "039"
+    "countyId": 8039,
+    "countyShortId": 39
   },
   {
     "countyName": "El Paso County",
-    "countyId": "08041",
-    "countyShortId": "041"
+    "countyId": 8041,
+    "countyShortId": 41
   },
   {
     "countyName": "Fremont County",
-    "countyId": "08043",
-    "countyShortId": "043"
+    "countyId": 8043,
+    "countyShortId": 43
   },
   {
     "countyName": "Garfield County",
-    "countyId": "08045",
-    "countyShortId": "045"
+    "countyId": 8045,
+    "countyShortId": 45
   },
   {
     "countyName": "Gilpin County",
-    "countyId": "08047",
-    "countyShortId": "047"
+    "countyId": 8047,
+    "countyShortId": 47
   },
   {
     "countyName": "Grand County",
-    "countyId": "08049",
-    "countyShortId": "049"
+    "countyId": 8049,
+    "countyShortId": 49
   },
   {
     "countyName": "Gunnison County",
-    "countyId": "08051",
-    "countyShortId": "051"
+    "countyId": 8051,
+    "countyShortId": 51
   },
   {
     "countyName": "Hinsdale County",
-    "countyId": "08053",
-    "countyShortId": "053"
+    "countyId": 8053,
+    "countyShortId": 53
   },
   {
     "countyName": "Huerfano County",
-    "countyId": "08055",
-    "countyShortId": "055"
+    "countyId": 8055,
+    "countyShortId": 55
   },
   {
     "countyName": "Jackson County",
-    "countyId": "08057",
-    "countyShortId": "057"
+    "countyId": 8057,
+    "countyShortId": 57
   },
   {
     "countyName": "Jefferson County",
-    "countyId": "08059",
-    "countyShortId": "059"
+    "countyId": 8059,
+    "countyShortId": 59
   },
   {
     "countyName": "Kiowa County",
-    "countyId": "08061",
-    "countyShortId": "061"
+    "countyId": 8061,
+    "countyShortId": 61
   },
   {
     "countyName": "Kit Carson County",
-    "countyId": "08063",
-    "countyShortId": "063"
+    "countyId": 8063,
+    "countyShortId": 63
   },
   {
     "countyName": "Lake County",
-    "countyId": "08065",
-    "countyShortId": "065"
+    "countyId": 8065,
+    "countyShortId": 65
   },
   {
     "countyName": "La Plata County",
-    "countyId": "08067",
-    "countyShortId": "067"
+    "countyId": 8067,
+    "countyShortId": 67
   },
   {
     "countyName": "Larimer County",
-    "countyId": "08069",
-    "countyShortId": "069"
+    "countyId": 8069,
+    "countyShortId": 69
   },
   {
     "countyName": "Las Animas County",
-    "countyId": "08071",
-    "countyShortId": "071"
+    "countyId": 8071,
+    "countyShortId": 71
   },
   {
     "countyName": "Lincoln County",
-    "countyId": "08073",
-    "countyShortId": "073"
+    "countyId": 8073,
+    "countyShortId": 73
   },
   {
     "countyName": "Logan County",
-    "countyId": "08075",
-    "countyShortId": "075"
+    "countyId": 8075,
+    "countyShortId": 75
   },
   {
     "countyName": "Mesa County",
-    "countyId": "08077",
-    "countyShortId": "077"
+    "countyId": 8077,
+    "countyShortId": 77
   },
   {
     "countyName": "Mineral County",
-    "countyId": "08079",
-    "countyShortId": "079"
+    "countyId": 8079,
+    "countyShortId": 79
   },
   {
     "countyName": "Moffat County",
-    "countyId": "08081",
-    "countyShortId": "081"
+    "countyId": 8081,
+    "countyShortId": 81
   },
   {
     "countyName": "Montezuma County",
-    "countyId": "08083",
-    "countyShortId": "083"
+    "countyId": 8083,
+    "countyShortId": 83
   },
   {
     "countyName": "Montrose County",
-    "countyId": "08085",
-    "countyShortId": "085"
+    "countyId": 8085,
+    "countyShortId": 85
   },
   {
     "countyName": "Morgan County",
-    "countyId": "08087",
-    "countyShortId": "087"
+    "countyId": 8087,
+    "countyShortId": 87
   },
   {
     "countyName": "Otero County",
-    "countyId": "08089",
-    "countyShortId": "089"
+    "countyId": 8089,
+    "countyShortId": 89
   },
   {
     "countyName": "Ouray County",
-    "countyId": "08091",
-    "countyShortId": "091"
+    "countyId": 8091,
+    "countyShortId": 91
   },
   {
     "countyName": "Park County",
-    "countyId": "08093",
-    "countyShortId": "093"
+    "countyId": 8093,
+    "countyShortId": 93
   },
   {
     "countyName": "Phillips County",
-    "countyId": "08095",
-    "countyShortId": "095"
+    "countyId": 8095,
+    "countyShortId": 95
   },
   {
     "countyName": "Pitkin County",
-    "countyId": "08097",
-    "countyShortId": "097"
+    "countyId": 8097,
+    "countyShortId": 97
   },
   {
     "countyName": "Prowers County",
-    "countyId": "08099",
-    "countyShortId": "099"
+    "countyId": 8099,
+    "countyShortId": 99
   },
   {
     "countyName": "Pueblo County",
-    "countyId": "08101",
-    "countyShortId": "101"
+    "countyId": 8101,
+    "countyShortId": 101
   },
   {
     "countyName": "Rio Blanco County",
-    "countyId": "08103",
-    "countyShortId": "103"
+    "countyId": 8103,
+    "countyShortId": 103
   },
   {
     "countyName": "Rio Grande County",
-    "countyId": "08105",
-    "countyShortId": "105"
+    "countyId": 8105,
+    "countyShortId": 105
   },
   {
     "countyName": "Routt County",
-    "countyId": "08107",
-    "countyShortId": "107"
+    "countyId": 8107,
+    "countyShortId": 107
   },
   {
     "countyName": "Saguache County",
-    "countyId": "08109",
-    "countyShortId": "109"
+    "countyId": 8109,
+    "countyShortId": 109
   },
   {
     "countyName": "San Juan County",
-    "countyId": "08111",
-    "countyShortId": "111"
+    "countyId": 8111,
+    "countyShortId": 111
   },
   {
     "countyName": "San Miguel County",
-    "countyId": "08113",
-    "countyShortId": "113"
+    "countyId": 8113,
+    "countyShortId": 113
   },
   {
     "countyName": "Sedgwick County",
-    "countyId": "08115",
-    "countyShortId": "115"
+    "countyId": 8115,
+    "countyShortId": 115
   },
   {
     "countyName": "Summit County",
-    "countyId": "08117",
-    "countyShortId": "117"
+    "countyId": 8117,
+    "countyShortId": 117
   },
   {
     "countyName": "Teller County",
-    "countyId": "08119",
-    "countyShortId": "119"
+    "countyId": 8119,
+    "countyShortId": 119
   },
   {
     "countyName": "Washington County",
-    "countyId": "08121",
-    "countyShortId": "121"
+    "countyId": 8121,
+    "countyShortId": 121
   },
   {
     "countyName": "Weld County",
-    "countyId": "08123",
-    "countyShortId": "123"
+    "countyId": 8123,
+    "countyShortId": 123
   },
   {
     "countyName": "Yuma County",
-    "countyId": "08125",
-    "countyShortId": "125"
+    "countyId": 8125,
+    "countyShortId": 125
   }
 ]
