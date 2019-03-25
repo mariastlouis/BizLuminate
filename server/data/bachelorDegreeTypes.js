@@ -3338,15 +3338,15 @@ module.exports =[
     "censusName": "Paoli town, Colorado",
     "totalBachelorDegree": 0,
     "totalScienceEngineering": 0,
-    "pctScienceEngineering": "-",
+    "pctScienceEngineering": null,
     "totalScienceEngineeringRelated": 0,
-    "pctScienceEngineeringRelated": "-",
+    "pctScienceEngineeringRelated": null,
     "totalBusiness": 0,
-    "pctBusiness": "-",
+    "pctBusiness": null,
     "totalEducation": 0,
-    "pctEducation": "-",
+    "pctEducation": null,
     "totalArtsHumanities": 0,
-    "pctArtsHumanities": "-"
+    "pctArtsHumanities": null
   },
   {
     "placeId": 857300,
