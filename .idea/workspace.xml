@@ -124,7 +124,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="nginx server.nginx">
+  <component name="RunManager" selected="Compound.Start All">
     <configuration name="Start All" type="CompoundRunConfigurationType">
       <toRun name="Start FE" type="js.build_tools.npm" />
       <toRun name="server.js" type="NodeJSConfigurationType" />
@@ -157,7 +157,6 @@
     </configuration>
     <list>
       <item itemvalue="Compound.Start All" />
-      <item itemvalue="nginx server.nginx" />
       <item itemvalue="Node.js.server.js" />
       <item itemvalue="npm.Start FE" />
     </list>

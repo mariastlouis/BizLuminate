@@ -1,4 +1,4 @@
-[
+module.exports = [
   {
     "countyId": 8001,
     "countyName": "Adams County",

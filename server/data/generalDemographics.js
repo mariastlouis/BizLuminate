@@ -217,7 +217,7 @@ module.exports =[
     "totalpop": 11,
     "medianAge": 65.1,
     "totalHousehold": 11,
-    "medianIncomeDollars": "-"
+    "medianIncomeDollars": null
   },
   {
     "placeId": 807795,
@@ -503,7 +503,7 @@ module.exports =[
     "totalpop": 87,
     "medianAge": 49.1,
     "totalHousehold": 47,
-    "medianIncomeDollars": "-"
+    "medianIncomeDollars": null
   },
   {
     "placeId": 815605,
@@ -602,7 +602,7 @@ module.exports =[
     "totalpop": 55,
     "medianAge": 39.5,
     "totalHousehold": 31,
-    "medianIncomeDollars": "-"
+    "medianIncomeDollars": null
   },
   {
     "placeId": 818530,
@@ -1559,7 +1559,7 @@ module.exports =[
     "totalpop": 12,
     "medianAge": 59.5,
     "totalHousehold": 11,
-    "medianIncomeDollars": "-"
+    "medianIncomeDollars": null
   },
   {
     "placeId": 843000,
@@ -2164,7 +2164,7 @@ module.exports =[
     "totalpop": 72,
     "medianAge": 69.8,
     "totalHousehold": 30,
-    "medianIncomeDollars": "-"
+    "medianIncomeDollars": null
   },
   {
     "placeId": 857300,
@@ -2450,7 +2450,7 @@ module.exports =[
     "totalpop": 36,
     "medianAge": 43,
     "totalHousehold": 19,
-    "medianIncomeDollars": "-"
+    "medianIncomeDollars": null
   },
   {
     "placeId": 868930,
@@ -2615,7 +2615,7 @@ module.exports =[
     "totalpop": 60,
     "medianAge": 53.2,
     "totalHousehold": 24,
-    "medianIncomeDollars": "-"
+    "medianIncomeDollars": null
   },
   {
     "placeId": 873825,
@@ -2681,7 +2681,7 @@ module.exports =[
     "totalpop": 680,
     "medianAge": 33.6,
     "totalHousehold": 232,
-    "medianIncomeDollars": "-"
+    "medianIncomeDollars": null
   },
   {
     "placeId": 876795,
