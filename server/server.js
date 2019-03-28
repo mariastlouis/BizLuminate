@@ -32,4 +32,14 @@ app.get('/api/v1/places', function (request, response) {
         });
     });
 });
+app.get('/api/v1/places/:countyId', function (req, res) {
+    var countyId = req.params.countyId;
+    return database('placeLookup').where("countyId", countyId)
+        .then(function (places) {
+        return res.status(200).json({ places: places });
+    })
+        .catch(function (err) {
+        return res.status(500).json({ error: "Error while fetching places by county id. -> " + err });
+    });
+});
 module.exports = app;

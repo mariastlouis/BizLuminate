@@ -1,5 +1,7 @@
 import express from 'express';
 import bodyParser from 'body-parser';
+import Place from './api-objects/Place';
+import { any } from 'bluebird';
 // import knex from './db/config';
 
 
