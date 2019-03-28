@@ -1,5 +1,6 @@
 import express from 'express';
 import bodyParser from 'body-parser';
+import { any } from 'bluebird';
 // import knex from './db/config';
 
 
@@ -21,23 +22,18 @@ app.get('/api/v1/test', (req, res) => {
 });
 
 app.get('/api/v1/places', (request, response) => {
-
   database('placeLookup').select()
-
-    .then(places => {
+    .then((places: any) => {
       return response.status(200).json({
         places
       });
     })
-    .catch(error => {
+    .catch((error: any) => {
       return response.status(500).json({
         error
       });
     });
 });
-
-
-
 
 
 
