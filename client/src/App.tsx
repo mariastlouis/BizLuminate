@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
+import Place from '../../server/api-objects/Place';
 import './App.scss';
 
 class App extends Component {
@@ -8,11 +9,13 @@ class App extends Component {
   }
 
   componentDidMount() {
-    fetch('/api/v1/test')
-    .then(res => {
-      console.log(res);
-    });
+    fetch('/api/v1/places/8001')
+      .then(res => res.json())
+      .then((data: Array<Place>) => {
+        console.log(JSON.stringify(data, null, 2));
+      });
   }
+
   render() {
     return (
       <div className="App">
