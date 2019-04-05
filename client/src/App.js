@@ -1,18 +1,14 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
-import Place from '../../server/api-objects/Place';
 import './App.scss';
 import Map from './Map/Map'
 
-class App extends Component {
-  constructor(props: any) {
-    super(props);
-  }
 
+class App extends Component {
   componentDidMount() {
     fetch('/api/v1/places/8001')
       .then(res => res.json())
-      .then((data: Array<Place>) => {
+      .then((data) => {
         console.log(JSON.stringify(data, null, 2));
       });
   }
@@ -20,7 +16,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Map></Map>
+       <Map></Map>
       </div>
     );
   }

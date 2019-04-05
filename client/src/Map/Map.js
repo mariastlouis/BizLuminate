@@ -1,23 +1,18 @@
 import React, {Component} from 'react';
 import mapboxgl from 'mapbox-gl'
+import './Map.scss'
 
 mapboxgl.accessToken = 'pk.eyJ1IjoibXNhbnRyYSIsImEiOiIyVEZpamwwIn0.Yua2dJ6-MSK_OJCyGe-WEA'
 
-interface MapState {
-  lng?: number
-  lat?: number
-  zoom?: number
-}
 
-class Map extends Component <any, any>{
-mapContainer: any
+class Map extends Component {
 
-  constructor(props:any){
+  constructor(props){
     super(props)
       this.state = {
-        lng: 5,
-        lat: 34,
-        zoom: 1.5
+        lng: -104.9389,
+        lat: 39.2587,
+        zoom: 6
       }
   }
 
@@ -25,26 +20,21 @@ mapContainer: any
     const { lng, lat, zoom } = this.state;
     const map = new mapboxgl.Map({
       container: this.mapContainer,
-      style: 'mapbox://styles/mapbox/streets-v9',
+      style: 'mapbox://styles/msantra/cjts4mlvt1es21fp70le4t23j',
       center: [lng, lat],
       zoom
     });
   }
 
+
    render () {
     return (
       <div>
-        <div ref={el => this.mapContainer = el} />
+        <div className = "map-holder" ref={el => this.mapContainer = el} />
       </div>
     )
   }
 
 }
-
-
-
-
-
-
 
 export default Map
