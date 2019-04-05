@@ -1,8 +1,9 @@
 import React, {Component} from 'react';
 import mapboxgl from 'mapbox-gl'
 import './Map.scss'
+import key from '../mapKey'
 
-mapboxgl.accessToken = 'pk.eyJ1IjoibXNhbnRyYSIsImEiOiIyVEZpamwwIn0.Yua2dJ6-MSK_OJCyGe-WEA'
+mapboxgl.accessToken = key
 
 
 class Map extends Component {
