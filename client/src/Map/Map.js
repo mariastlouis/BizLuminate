@@ -30,8 +30,13 @@ class Map extends Component {
 
    render () {
     return (
-      <div>
-        <div className = "map-holder" ref={el => this.mapContainer = el} />
+      <div className = "county-map">
+        <div className = "map-sidebar">
+          <p> sidebar content goes here</p>
+        </div>
+        <div className = "main-map">
+          <div className = "map-holder" ref={el => this.mapContainer = el} />
+        </div>
       </div>
     )
   }

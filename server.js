@@ -41,3 +41,16 @@ app.get('/api/v1/places/:countyId', function (req, res) {
   });
 });
 
+app.get('/api/v1/unemployment', function (request, response) {
+  database('countyUnemployment').select()
+      .then(function (counties) {
+      return response.status(200).json({
+          counties: counties
+      });
+  })
+      .catch(function (error) {
+      return response.status(500).json({
+          error: error
+      });
+  });
+});
