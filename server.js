@@ -1,19 +1,12 @@
-import express from 'express';
-import bodyParser from 'body-parser';
-import Place from './api-objects/Place';
-
-import { any } from 'bluebird';
-// import knex from './db/config';
-
-
+const express = require('express');
 const environment = process.env.NODE_ENV || 'development';
-const config = require('../knexfile')[environment];
+const config = require('./knexfile')[environment];
 const database = require('knex')(config);
-const app: express.Application = express();
+const bodyParser = require('body-parser');
+const app = express();
 const path = require('path');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-
 const port = process.env.PORT || 5000;
 
 app.listen(port, () => console.log(`Listening on port ${port}`));
@@ -23,31 +16,28 @@ app.get('/api/v1/test', (req, res) => {
   return res.status(200).json({ status: 'success' });
 });
 
-app.get('/api/v1/places', (request, response) => {
+app.get('/api/v1/places', function (request, response) {
   database('placeLookup').select()
-    .then((places: any) => {
+      .then(function (places) {
       return response.status(200).json({
-        places
+          places: places
       });
-    })
-    .catch((error: any) => {
+  })
+      .catch(function (error) {
       return response.status(500).json({
-        error
+          error: error
       });
-    });
+  });
 });
 
 app.get('/api/v1/places/:countyId', function (req, res) {
   var countyId = req.params.countyId;
   return database('placeLookup').where("countyId", countyId)
-      .then(function (places:Array<Place>) {
+      .then(function (places) {
       return res.status(200).json({ places: places });
   })
-      .catch(function (err:any) {
+      .catch(function (err) {
       return res.status(500).json({ error: "Error while fetching places by county id. -> " + err });
   });
 });
 
-
-
-module.exports = app;
