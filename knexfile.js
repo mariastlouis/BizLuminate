@@ -6,10 +6,10 @@ module.exports = {
     connection: 'postgres://localhost/bizluminate',
     useNullAsDefault: true,
     migrations: {
-      directory: './server/db/migrations'
+      directory: './db/migrations'
     },
     seeds: {
-      directory: './server/db/seeds/dev'
+      directory: './db/seeds/dev'
     }
   },
 
@@ -18,10 +18,10 @@ module.exports = {
     connection: process.env.DATABASE_URL + '?ssl=true',
     useNullAsDefault: true,
     migrations: {
-      directory: './server/db/migrations'
+      directory: './db/migrations'
     },
     seeds: {
-      directory: './server/db/seeds/dev'
+      directory: './db/seeds/dev'
     }
   },
 
@@ -30,10 +30,10 @@ module.exports = {
     connection: process.env.DATABASE_URL || 'postgres://localhost/bizluminate_test',
     useNullAsDefault: true,
     migrations: {
-      directory: './server/db/migrations'
+      directory: './db/migrations'
     },
     seeds: {
-      directory: './server/db/seeds/test'
+      directory: './db/seeds/test'
     }
   }
 };

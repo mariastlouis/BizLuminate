@@ -1,4 +1,19 @@
-.map-holder {
-  height: 800px;
-  width: 800px;
+.county-map {
+  display: flex;
+  flex-direction: row;
+
+  .map-sidebar {
+    width: 30%;
+  }
+
+  .main-map {
+    width: 70%;
+  }
+
+  .map-holder {
+    height: 600px;
+    width: 100%;
+    position: unset;
+  }
 }
+
