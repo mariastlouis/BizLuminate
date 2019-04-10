@@ -2,9 +2,15 @@
   display: flex;
   flex-direction: row;
 
-  #map-sidebar {
+  .map-side {
     width: 30%;
+    display: flex;
+    flex-direction: column;
   }
+
+  // #map-sidebar {
+  //   width: 0%;
+  // }
 
   .main-map {
     width: 70%;

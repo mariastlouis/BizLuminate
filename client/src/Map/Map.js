@@ -6,19 +6,6 @@ import countydata from '../geographyData/countydata.json';
 
 mapboxgl.accessToken = key
 
-const mapLayers = [
-  {
-    id: 'unemploymentRate',
-    name: 'Unemployement Rate',
-    checked: true,
-  },
-  {
-    id: 'medianHouseholdIncome',
-    name: 'Median Household Income',
-    checked: false
-  }
-]
-
 const mapOptions = [
   {
     'name':'Unemployment Rate',
@@ -54,39 +41,18 @@ class Map extends Component {
   }
 
   componentDidUpdate() {
-    const oldMap = this.state.mapObj;
-    oldMap.remove()
-    const map = new mapboxgl.Map({
-      container: this.mapContainer,
-      style: 'mapbox://styles/msantra/cjubdei266aw11fpph8r7qkym',
-      // style: 'mapbox://styles/msantra/cju9br68i4r8w1gnq67cec8xs',
-      center: [-106.110198, 37.751359 ],
-      zoom: 6
-    });
-
-    map.on('load', function() {
-
-      map.addSource('counties', {
-        'type': 'geojson',
-        'data': countydata
-      });
-
-      map.addLayer({
-        'id': 'county-fill',
-        'type': 'fill',
-        'source': 'counties'
-      },'country-label');
-    })
-      this.setFill(map);
-
+    this.createMap();
   }
 
   componentDidMount() {
+    this.createMap();
+  }
+
+  createMap (){
     const map = new mapboxgl.Map({
       container: this.mapContainer,
       style: 'mapbox://styles/msantra/cjubdei266aw11fpph8r7qkym',
-      // style: 'mapbox://styles/msantra/cju9br68i4r8w1gnq67cec8xs',
-      center: [-106.110198, 37.751359 ],
+      center: [-105.5, 39 ],
       zoom: 6
     });
 
@@ -100,10 +66,13 @@ class Map extends Component {
       map.addLayer({
         'id': 'county-fill',
         'type': 'fill',
+        'paint':{
+          'fill-outline-color': 'white'
+        },
         'source': 'counties'
       },'country-label');
     })
-      this.setState({mapObj: map})
+
       this.setFill(map);
   }
 
@@ -131,8 +100,13 @@ class Map extends Component {
      }
     return (
       <div className = "county-map">
-        <div id = "map-sidebar">
-          {mapOptions.map(renderRadio)}
+        <div className = "map-side">
+          <div id = "map-sidebar">
+            {mapOptions.map(renderRadio)}
+          </div>
+          <div id="map-info">
+            <p>hello</p>
+          </div>
         </div>
         <div className = "main-map">
           <div className = "map-holder" ref={el => this.mapContainer = el} />
