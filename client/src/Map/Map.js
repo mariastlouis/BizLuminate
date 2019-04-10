@@ -18,7 +18,7 @@ const mapOptions = [
     ]
   },
   {
-    'name':'Median Family Income',
+    'name':'Median Household Income',
     'property': 'medianhouseholdincome',
     'stops': [
       [2900, '#f0f9e8'],
@@ -71,8 +71,25 @@ class Map extends Component {
         },
         'source': 'counties'
       },'country-label');
-    })
+    });
 
+    let selectedProperty = this.state.activeLayer.property
+    console.log(selectedProperty)
+    map.on('mousemove', function(e){
+      let selectedCounty = map.queryRenderedFeatures(e.point);
+      if(selectedCounty.length > 0) {
+        console.log(selectedCounty[0].properties[selectedProperty])
+
+        // console.log(selected)
+        // if(selectedProperty === 'unemploymentRate') {
+        //    console.log(selectedCounty[0].properties[selectedProperty])
+        // } else {
+        //   console.log(selectedCounty[0].properties.medianhouseholdincome)
+        // }
+
+      }
+
+    })
       this.setFill(map);
   }
 
