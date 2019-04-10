@@ -2,110 +2,90 @@ import React, {Component} from 'react';
 import mapboxgl from 'mapbox-gl'
 import './Map.scss'
 import key from '../mapKey'
-import countydata from '../geographyData/countydata.json'
-// import {countyUnemploymentFetch} from '../Helper/helper';
-// import countydatasimple from '../geographyData/countydatasimple.json'
-// import data from '../geographyData/data.json'
 
 mapboxgl.accessToken = key
 
-const options = [{
-  name: "unemployment",
-  description: 'Unemployment by Colorado County',
-  property: 'unemploymentRate',
-  stops: [
-    [0, '#f8d5cc'],
-    [3, '#f4bfb6'],
-    [4, '#ee8f9a'],
-    [90, '#9f43d7']
-  ]
-}]
+const mapLayers = [
+  {
+    id: 'unemploymentRate',
+    name: 'Unemployement Rate',
+    checked: true,
+  },
+  {
+    id: 'medianHouseholdIncome',
+    name: 'Median Household Income',
+    checked: false
+  }
+]
 
 class Map extends Component {
 
   constructor(props){
     super(props)
       this.state = {
-        active: options[0]
+        activeLayer: mapLayers[0],
+        previousLayer: ''
       }
   }
 
   componentDidMount() {
-    this.map = new mapboxgl.Map({
+     const map = new mapboxgl.Map({
       container: this.mapContainer,
       style: 'mapbox://styles/msantra/cju9br68i4r8w1gnq67cec8xs',
       center: [-106.110198, 37.751359 ],
       zoom: 6
     });
 
-    this.map.on('load', () => {
-      console.log(this.map.getStyle().sources)
-      console.log(this.map.style)
-      // this.map.addSource('counties', {
-      //   type: 'geojson',
-      //   data: countydata
-      // })
-
-      // this.map.addSource('counties', {
-      //   type: 'vector',
-      //   url: 'mapbox://msantra.7x1t01n6'
-      // })
-
-      console.log(this.map.getStyle().sources)
-      console.log(this.map.style)
-      // this.map.addLayer({
-      //   'id': 'countyData',
-      //   'type': 'fill',
-      //   'source': 'counties',
-      //   'paint':{
-      //     'fill-color':'#f8d5cc',
+    console.log(map.style)
 
 
-      //   }
-      // },'background');
+     map.on('mousemove', function(e) {
+        let counties = map.queryRenderedFeatures(e.point);
+        if(counties.length > 0) {
+          document.getElementById('map-sidebar').innerHTML= '<h2>'+counties[0].properties.NAMELSAD10 + '</h2>'
+          console.log(counties[0].properties.NAMELSAD10)
+        }
+       });
 
-    })
-  }
-    // setFill() {
-    //   const {property, stops} = this.state.active;
-    //   this.map.setPaintProperty('counties', 'fill-color', {
-    //     property,
-    //     stops
-    //   });
-    //   console.log(this.map.style)
-    // }
+
+
+
+
+}
     // this.map.on('load', () => {
-    //   this.map.addSource('counties', {
-    //     type: 'vector',
-    //     url: 'mapbox://countyMapData-9pozcu'
-    //   });
 
+      // mapLayers.forEach((layer)=>{
+        // let input = document.createElement('input');
+        // input.type = 'checkbox';
+        // input.id = layer.id;
+        // input.checked = true;
+        // mapSidebar.appendChild('input')
 
-      // this.map.addLayer({
-      //   id: 'counties',
-      //   type: 'fill',
-      //   source: 'countyMapData-9pozcu',
-      //   paint: {
-      //     "fill-color": '#9f43d7'
-      //   }
-      // }, 'country-label-lg');
+        // let label = document.createElement('label');
+        // label.setAttribute('for', layer.id);
+        // label.textContent = layer.name;
+        // mapSidebar.appendChild(label)
 
+      // })
     // })
 
 
-  // setFill() {
-  //   const { property, stops } = this.state.active;
-  //   this.map.setPaintProperty('countries', 'fill-color', {
-  //     property,
-  //     stops
-  //   });
-  // }
+  getCheckboxes = () => {
+    mapLayers.map((layer, index) => {
+      return (
+       <p>hello</p>
+        // <input type = "checkbox" name="layer-select" value = {layer.layerid} checked = {layer.checked}>
+        //   {layer.name}
+        // </input>
+      )
+    })
+  }
 
    render () {
     return (
       <div className = "county-map">
-        <div className = "map-sidebar">
-          <p> sidebar content goes here</p>
+        <div id = "map-sidebar">
+
         </div>
         <div className = "main-map">
           <div className = "map-holder" ref={el => this.mapContainer = el} />
