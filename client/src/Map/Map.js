@@ -3,6 +3,8 @@ import mapboxgl from 'mapbox-gl'
 import './Map.scss'
 import key from '../mapKey'
 import countydata from '../geographyData/countydata.json';
+import {countyIdFetch} from '../Helper/helper'
+
 
 mapboxgl.accessToken = key
 
@@ -30,6 +32,7 @@ const mapOptions = [
   }
 ]
 
+
 class Map extends Component {
 
   constructor(props){
@@ -42,10 +45,11 @@ class Map extends Component {
 
   componentDidUpdate() {
     this.createMap();
+    document.getElementById('map-info').innerHTML='<p>Hover over a county</p>'
   }
 
   componentDidMount() {
-    this.createMap();
+   this.createMap()
   }
 
   createMap (){
@@ -74,23 +78,33 @@ class Map extends Component {
     });
 
     let selectedProperty = this.state.activeLayer.property
-    console.log(selectedProperty)
-    map.on('mousemove', function(e){
+    let selectedName = this.state.activeLayer.name
+
+    map.on('mousemove', (e) => {
+      let selectedCounty = map.queryRenderedFeatures(e.point);
+      if(selectedCounty.length > 0 )  {
+        let selectedNumber = selectedCounty[0].properties[selectedProperty]
+        map.getCanvas().style.cursor = 'pointer'
+        if(typeof selectedNumber !== "undefined") {
+          document.getElementById('map-info').innerHTML='<h2>'+selectedName+'</h2> <p>'+selectedNumber+'</p>'
+        }
+      }
+    });
+
+    map.on('click', (e) => {
       let selectedCounty = map.queryRenderedFeatures(e.point);
       if(selectedCounty.length > 0) {
-        console.log(selectedCounty[0].properties[selectedProperty])
-
-        // console.log(selected)
-        // if(selectedProperty === 'unemploymentRate') {
-        //    console.log(selectedCounty[0].properties[selectedProperty])
-        // } else {
-        //   console.log(selectedCounty[0].properties.medianhouseholdincome)
-        // }
-
+        let countyId = '8' + selectedCounty[0].properties.COUNTYFP;
+        map.getCanvas().style.cursor = 'pointer'
+        this.fetchCountyInfo(countyId)
       }
-
     })
-      this.setFill(map);
+    this.setFill(map)
+  }
+
+  fetchCountyInfo = async(id) => {
+    const countyInfo = await countyIdFetch(id);
+    console.log(countyInfo)
   }
 
   setFill(map) {
@@ -106,8 +120,9 @@ class Map extends Component {
 
    render () {
      const {name, stops, property} = this.state.activeLayer;
+
+
      const renderRadio = (option, i) => {
-       console.log(mapOptions[i])
         return (
           <label key={i} className="radio-container">
             <input onChange={()=> this.setState({activeLayer: mapOptions[i]})} checked ={option.property === property} name="toggle" type="radio" />
@@ -122,7 +137,10 @@ class Map extends Component {
             {mapOptions.map(renderRadio)}
           </div>
           <div id="map-info">
-            <p>hello</p>
+            <p>Hover over a county. Click on the county to see additional details</p>
+          </div>
+          <div id="county-card">
+          <p> hello</p>
           </div>
         </div>
         <div className = "main-map">
