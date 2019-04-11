@@ -5,6 +5,7 @@ import key from '../mapKey'
 import countydata from '../geographyData/countydata.json';
 import {countyIdFetch} from '../Helper/helper'
 import {mapOptions} from '../geographyData/mapOptions.js'
+import { reduce } from 'bluebird';
 
 mapboxgl.accessToken = key
 
@@ -99,8 +100,15 @@ class Map extends Component {
   bgColor(property){
     const selectedProperty = this.state.activeLayer.property
     if(selectedProperty === property){
-      return '#5abdb7'
+      return '#6cdbd4'
     } return "";
+  }
+
+  textColor(property){
+    const selectedProperty = this.state.activeLayer.property
+    if(selectedProperty === property) {
+      return 'white'
+    } return ""
   }
 
    render () {
@@ -112,7 +120,7 @@ class Map extends Component {
 
           <label key={i} className="radio-container">
             <input onChange={()=> this.setState({activeLayer: mapOptions[i]})} checked ={option.property === property} name="toggle" type="radio" />
-            <div className = "radio-label" style ={{backgroundColor:this.bgColor(option.property)}}>{option.name}</div>
+            <div className = "radio-label" style ={{color:this.textColor(option.property), backgroundColor:this.bgColor(option.property)}}>{option.name}</div>
           </label>
 
        )
