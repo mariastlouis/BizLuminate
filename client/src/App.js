@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.scss';
-import Map from './Map/Map'
-
+import Map from './Map/Map';
+import Header from './Header/Header';
 
 class App extends Component {
   componentDidMount() {
@@ -16,6 +16,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+       <Header></Header>
        <Map></Map>
       </div>
     );

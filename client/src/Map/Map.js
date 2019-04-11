@@ -3,56 +3,39 @@ import mapboxgl from 'mapbox-gl'
 import './Map.scss'
 import key from '../mapKey'
 import countydata from '../geographyData/countydata.json';
+import {countyIdFetch} from '../Helper/helper'
+import {mapOptions} from '../geographyData/mapOptions.js'
+import { reduce } from 'bluebird';
 
 mapboxgl.accessToken = key
-
-const mapOptions = [
-  {
-    'name':'Unemployment Rate',
-    'property':'unemploymentRate',
-    'stops':[
-     [1.9, '#f0f9e8'],
-     [2.9, '#bae4bc'],
-     [3.9, '#7bccc4'],
-     [8.9, '#2b8cbe']
-    ]
-  },
-  {
-    'name':'Median Family Income',
-    'property': 'medianhouseholdincome',
-    'stops': [
-      [2900, '#f0f9e8'],
-      [2900, '#bae4bc'],
-      [49539, '#7bccc4'],
-      [70077, '#43a2ca'],
-      [111154, '#0868ac'],
-    ]
-  }
-]
 
 class Map extends Component {
 
   constructor(props){
     super(props)
       this.state = {
-        activeLayer: mapOptions[0],
-        mapObj: {}
+        activeLayer:{},
       }
   }
 
   componentDidUpdate() {
     this.createMap();
+    document.getElementById('map-info').innerHTML='<p>Hover over a county</p>'
+  }
+
+  componentWillMount(){
+    this.setState({activeLayer: mapOptions[0]})
   }
 
   componentDidMount() {
-    this.createMap();
+    this.createMap()
   }
 
   createMap (){
     const map = new mapboxgl.Map({
       container: this.mapContainer,
       style: 'mapbox://styles/msantra/cjubdei266aw11fpph8r7qkym',
-      center: [-105.5, 39 ],
+      center: [-104.5, 39.3 ],
       zoom: 6
     });
 
@@ -71,9 +54,36 @@ class Map extends Component {
         },
         'source': 'counties'
       },'country-label');
-    })
+    });
 
-      this.setFill(map);
+    let selectedProperty = this.state.activeLayer.property
+    let selectedName = this.state.activeLayer.name
+
+    map.on('mousemove', (e) => {
+      let selectedCounty = map.queryRenderedFeatures(e.point);
+      if(selectedCounty.length > 0 )  {
+        let selectedNumber = selectedCounty[0].properties[selectedProperty]
+        map.getCanvas().style.cursor = 'pointer'
+        if(typeof selectedNumber !== "undefined") {
+          document.getElementById('map-info').innerHTML='<h2>'+selectedName+'</h2> <p>'+selectedNumber+'</p>'
+        }
+      }
+    });
+
+    map.on('click', (e) => {
+      let selectedCounty = map.queryRenderedFeatures(e.point);
+      if(selectedCounty.length > 0) {
+        let countyId = '8' + selectedCounty[0].properties.COUNTYFP;
+        map.getCanvas().style.cursor = 'pointer'
+        this.fetchCountyInfo(countyId)
+      }
+    })
+    this.setFill(map)
+  }
+
+  fetchCountyInfo = async(id) => {
+    const countyInfo = await countyIdFetch(id);
+
   }
 
   setFill(map) {
@@ -87,34 +97,53 @@ class Map extends Component {
     })
   }
 
+  bgColor(property){
+    const selectedProperty = this.state.activeLayer.property
+    if(selectedProperty === property){
+      return '#6cdbd4'
+    } return "";
+  }
+
+  textColor(property){
+    const selectedProperty = this.state.activeLayer.property
+    if(selectedProperty === property) {
+      return 'white'
+    } return ""
+  }
+
    render () {
      const {name, stops, property} = this.state.activeLayer;
+
+
      const renderRadio = (option, i) => {
-       console.log(mapOptions[i])
         return (
+
           <label key={i} className="radio-container">
             <input onChange={()=> this.setState({activeLayer: mapOptions[i]})} checked ={option.property === property} name="toggle" type="radio" />
-            <div className = "radio-label">{option.name}</div>
+            <div className = "radio-label" style ={{color:this.textColor(option.property), backgroundColor:this.bgColor(option.property)}}>{option.name}</div>
           </label>
+
        )
      }
     return (
       <div className = "county-map">
         <div className = "map-side">
           <div id = "map-sidebar">
-            {mapOptions.map(renderRadio)}
-          </div>
-          <div id="map-info">
-            <p>hello</p>
+            <div className = "map-buttons">
+              {mapOptions.map(renderRadio)}
+            </div>
+
           </div>
         </div>
         <div className = "main-map">
           <div className = "map-holder" ref={el => this.mapContainer = el} />
+          <div id="map-info">
+            <p>Hover over a county. Click on the county to see additional details</p>
+          </div>
         </div>
       </div>
     )
   }
-
 }
 
 export default Map
