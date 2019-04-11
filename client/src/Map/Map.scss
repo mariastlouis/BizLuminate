@@ -1,25 +1,77 @@
 .county-map {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 
   .map-side {
-    width: 30%;
     display: flex;
     flex-direction: column;
   }
 
-  // #map-sidebar {
-  //   width: 0%;
-  // }
+  #map-info {
+    position: absolute;
+    top: 130px;
+    right: 0;
+    background: rgba(255, 255, 255, 0.8);
+    height: 100px;
+    width: 250px;
+    border-radius: 3px;
+    z-index: 999;
+    box-shadow: 0 3px 6px 0 hsla(0,0%,57%,.23);
+  }
 
   .main-map {
-    width: 70%;
+    width: 100%;
   }
 
   .map-holder {
     height: 600px;
     width: 100%;
-    position: unset;
+    position: absolute;
+    top: 88px;
   }
+
+  input[name=toggle]{
+    display: none;
+  }
+
+  .map-buttons {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 80px;
+    z-index: 800;
+  }
+
+  .map-buttons label {
+    padding: 5px;
+    margin: 0 10px 0 10px;
+    cursor: pointer;
+    border: 0;
+    // -webkit-appearance: button;
+    // /* WebKit */
+    // -moz-appearance: button;
+    // /* Mozilla */
+    // -o-appearance: button;
+    // /* Opera */
+    // -ms-appearance: button;
+    // /* Internet Explorer */
+    // appearance: button;
+    // /* CSS3 */
+  }
+
+  .radio-label {
+    background: white;
+    padding: 10px;
+    box-shadow: 0 3px 6px 0 hsla(0,0%,57%,.23);
+
+    &:hover{
+
+    }
+  }
+
+
+
+
 }
 

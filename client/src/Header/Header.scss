@@ -1,0 +1,12 @@
+.header {
+  height: 75px;
+  box-shadow: 0 3px 6px 0 hsla(0,0%,57%,.23);
+  width: 100%;
+  border-top: 10px solid #5abdb7;
+  z-index: 1000;
+  position: absolute;
+
+  img {
+    height: 65px;
+  }
+}
