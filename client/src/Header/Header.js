@@ -6,7 +6,7 @@ const Header = () => {
   return (
     <div className = "header">
       <div className = "logoDiv">
-        <img src = {bizLuminateLogo} alt = "biz luminate logo" />
+        {/* <img src = {bizLuminateLogo} alt = "biz luminate logo" /> */}
       </div>
     </div>
   );
