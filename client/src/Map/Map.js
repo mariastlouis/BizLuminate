@@ -35,6 +35,13 @@ class Map extends Component {
   }
 
   createMap (){
+
+    const type = this.state.activeLayer.type
+    const mapType = type === 'choropleth' ? this.choroplethMap() : this.clusterMap();
+    return mapType
+  }
+
+  choroplethMap(){
     const {property, name} = this.state.activeLayer;
 
     const map = new mapboxgl.Map({
@@ -63,12 +70,6 @@ class Map extends Component {
 
       });
 
-  //     let mapType = type === 'choropleth' ? this.choroplethMap(map) : this.clusterMap(map)
-
-  //     return mapType;
-  // }
-  // choroplethMap(map) {
-
     map.on('mousemove', (e) => {
       let selectedCounty = map.queryRenderedFeatures(e.point);
       if(selectedCounty.length > 0 && typeof selectedCounty !=='undefined')  {
@@ -92,17 +93,37 @@ class Map extends Component {
     this.setFill(map)
   }
 
-  // clusterMap(map){
+  clusterMap(){
+    let altFuel = this.state.stations;
+    let paintProp = this.state.activeLayer.paint
 
-  //   map.on('style.load', function(){
-  //     console.log(map.style)
-  //     map.setLayoutProperty('clusters', 'visibility', 'visible')
-  //   })
-  // }
+    const clusterMap = new mapboxgl.Map({
+      container: this.mapContainer,
+      style: 'mapbox://styles/msantra/cju6en7ni5ybz1fo9zqrcoynr',
+      center: [-104.5, 39.3 ],
+      zoom: 6
+    });
+  clusterMap.on('load', function(){
+    clusterMap.addSource('stations', {
+      'type':'geojson',
+      'data':altFuel,
+      'cluster':true,
+      'clusterMaxZoom':14,
+      'clusterRadius':50
+    });
 
-
-
-
+    clusterMap.addLayer({
+      'id':'clusters',
+      'type':'circle',
+      'source':'stations',
+      'filter':['has','point_count'],
+      'layout':{
+        'visibility':'visible'
+      },
+      paint: paintProp
+    });
+  })
+  }
 
 
   fetchCountyInfo = async(id) => {
@@ -111,57 +132,15 @@ class Map extends Component {
   }
 
   setFill(map) {
-    const {property, stops, type} = this.state.activeLayer;
-    let altFuel = this.state.stations;
-    if(type === 'choropleth') {
+    const {property, stops} = this.state.activeLayer;
+
+
       map.on('load', function() {
         map.setPaintProperty('county-fill', 'fill-color',{
           property,
           stops
         });
       })
-    } else {
-      map.on('load', function(){
-        map.addSource('stations', {
-          'type':'geojson',
-          'data':altFuel,
-          'cluster':true,
-          'clusterMaxZoom':14,
-          'clusterRadius':50
-        });
-
-        map.addLayer({
-          'id':'clusters',
-          'type':'circle',
-          'source':'stations',
-          'filter':['has','point_count'],
-          'layout':{
-            'visibility':'visible'
-          },
-          paint: {
-            "circle-color": [
-            "step",
-            ["get", "point_count"],
-            "#51bbd6",
-            100,
-            "#f1f075",
-            750,
-            "#f28cb1"
-            ],
-            "circle-radius": [
-            "step",
-            ["get", "point_count"],
-            20,
-            100,
-            30,
-            750,
-            40
-            ]
-            }
-        });
-
-      })
-    }
   }
 
   bgColor(property){
@@ -180,16 +159,12 @@ class Map extends Component {
 
    render () {
      const {name, stops, property} = this.state.activeLayer;
-
-
      const renderRadio = (option, i) => {
         return (
-
           <label key={i} className="radio-container">
             <input onChange={()=> this.setState({activeLayer: mapOptions[i]})} checked ={option.property === property} name="toggle" type="radio" />
             <div className = "radio-label" style ={{color:this.textColor(option.property), backgroundColor:this.bgColor(option.property)}}>{option.name}</div>
           </label>
-
        )
      }
     return (

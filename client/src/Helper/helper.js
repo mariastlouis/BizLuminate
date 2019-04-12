@@ -45,7 +45,10 @@ let fuelGeo = (locations) => {
             "coordinates": [location.longitude, location.latitude]
       },
       "properties":{
-        "city":location.city
+        "id": location.id,
+        "city":location.city,
+        "zip":location.zip,
+        "address":location.street_address
         }
       }
     )
