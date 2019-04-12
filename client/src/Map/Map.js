@@ -35,8 +35,8 @@ class Map extends Component {
   }
 
   createMap (){
-    const {property, name, type} = this.state.activeLayer;
-    let altFuel = this.state.stations;
+    const {property, name} = this.state.activeLayer;
+
     const map = new mapboxgl.Map({
       container: this.mapContainer,
       style: 'mapbox://styles/msantra/cjubdei266aw11fpph8r7qkym',
@@ -44,8 +44,7 @@ class Map extends Component {
       zoom: 6
     });
 
-    if (type === 'choropleth') {
-      map.on('load', function() {
+      map.on('load',() => {
 
         map.addSource('counties', {
           'type': 'geojson',
@@ -60,29 +59,69 @@ class Map extends Component {
           },
           'source': 'counties'
         },'country-label');
-      });
-      map.on('mousemove', (e) => {
-        let selectedCounty = map.queryRenderedFeatures(e.point);
-        if(selectedCounty.length > 0 )  {
-          let selectedNumber = selectedCounty[0].properties[property]
-          map.getCanvas().style.cursor = 'pointer'
-            if(typeof selectedNumber !== "undefined") {
-              document.getElementById('map-info').innerHTML='<h2>'+name+'</h2> <p>'+selectedNumber+'</p>'
-            }
-        }
+
+
       });
 
-      map.on('click', (e) => {
-        let selectedCounty = map.queryRenderedFeatures(e.point);
-        if(selectedCounty.length > 0) {
-          let countyId = '8' + selectedCounty[0].properties.COUNTYFP;
-          map.getCanvas().style.cursor = 'pointer'
-          this.fetchCountyInfo(countyId)
-        }
-      })
-      this.setFill(map)
-    } else {
+  //     let mapType = type === 'choropleth' ? this.choroplethMap(map) : this.clusterMap(map)
+
+  //     return mapType;
+  // }
+  // choroplethMap(map) {
+
+    map.on('mousemove', (e) => {
+      let selectedCounty = map.queryRenderedFeatures(e.point);
+      if(selectedCounty.length > 0 && typeof selectedCounty !=='undefined')  {
+        let selectedNumber = selectedCounty[0].properties[property]
+        map.getCanvas().style.cursor = 'pointer'
+          if(typeof selectedNumber !== "undefined") {
+            document.getElementById('map-info').innerHTML='<h2>'+name+'</h2> <p>'+selectedNumber+'</p>'
+          }
+      }
+    });
+
+    map.on('click', (e) => {
+      let selectedCounty = map.queryRenderedFeatures(e.point);
+      console.log(selectedCounty)
+      if(selectedCounty.length > 0) {
+        let countyId = '8' + selectedCounty[0].properties.COUNTYFP;
+        map.getCanvas().style.cursor = 'pointer'
+        this.fetchCountyInfo(countyId)
+      }
+    });
+    this.setFill(map)
+  }
+
+  // clusterMap(map){
+
+  //   map.on('style.load', function(){
+  //     console.log(map.style)
+  //     map.setLayoutProperty('clusters', 'visibility', 'visible')
+  //   })
+  // }
+
+
+
+
+
+
+  fetchCountyInfo = async(id) => {
+    const countyInfo = await countyIdFetch(id);
+
+  }
+
+  setFill(map) {
+    const {property, stops, type} = this.state.activeLayer;
+    let altFuel = this.state.stations;
+    if(type === 'choropleth') {
       map.on('load', function() {
+        map.setPaintProperty('county-fill', 'fill-color',{
+          property,
+          stops
+        });
+      })
+    } else {
+      map.on('load', function(){
         map.addSource('stations', {
           'type':'geojson',
           'data':altFuel,
@@ -120,30 +159,8 @@ class Map extends Component {
             ]
             }
         });
-      });
-    }
-  }
 
-
-
-  fetchCountyInfo = async(id) => {
-    const countyInfo = await countyIdFetch(id);
-
-  }
-
-  setFill(map) {
-    const {property, stops, type} = this.state.activeLayer;
-    if(type === 'choropleth') {
-      map.on('load', function() {
-        map.setPaintProperty('county-fill', 'fill-color',{
-          property,
-          stops
-        });
       })
-    } else {
-      // map.on('style.load', function(){
-      //   map.setLayoutProperty('clusters', 'visibility', 'visible')
-      // })
     }
   }
 
