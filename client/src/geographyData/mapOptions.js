@@ -26,6 +26,7 @@ export const mapOptions = [
     'name':'Electric Car Charging',
     'property': 'altfuel',
     'type': 'point',
+    'stops': [],
     'paint': {
       "circle-color": [
       "step",

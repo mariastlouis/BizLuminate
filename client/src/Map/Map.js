@@ -14,7 +14,6 @@ const bounds = [
   [-98.204833, 41.803789]
 ]
 
-
 class Map extends Component {
 
   constructor(props){
@@ -226,48 +225,56 @@ class Map extends Component {
           property,
           stops
         });
-      })
+      });
   }
 
-  bgColor(property){
-    const selectedProperty = this.state.activeLayer.property
-    if(selectedProperty === property){
-      return '#6cdbd4'
-    } return "";
-  }
-
-  textColor(property){
-    const selectedProperty = this.state.activeLayer.property
-    if(selectedProperty === property) {
-      return 'white'
-    } return ""
+  styles(property){
+    const selectedProperty = this.state.activeLayer.property;
+    const styleObj = {
+      borderBottom: '2px solid #fea946'
+    }
+    return selectedProperty === property ? styleObj : null
   }
 
    render () {
-     const {name, stops, property} = this.state.activeLayer;
+     const { stops,property, type, name} = this.state.activeLayer;
+
      const renderRadio = (option, i) => {
         return (
           <label key={i} className="radio-container">
             <input onChange={()=> this.setState({activeLayer: mapOptions[i]})} checked ={option.property === property} name="toggle" type="radio" />
-            <div className = "radio-label" style ={{color:this.textColor(option.property), backgroundColor:this.bgColor(option.property)}}>{option.name}</div>
+            <div className = "radio-label" style ={this.styles(option.property)}>{option.name}</div>
           </label>
        )
      }
+
+    const renderLegend = (stop = 0, i) => {
+      if(type === 'choropleth') {
+        return (
+          <div key = {i} className = 'legend-key'>
+            <div class = "legend-block">
+              <span className = "legend-color" style={{ backgroundColor: stop[1]}}></span>
+              <span className ="legend-value">{`${stop[0].toLocaleString()}`}</span>
+            </div>
+          </div>
+        )
+      }
+    }
     return (
       <div className = "county-map">
-        <div className = "map-side">
-          <div id = "map-sidebar">
-            <div className = "map-buttons">
-              {mapOptions.map(renderRadio)}
-            </div>
-
-          </div>
+        <div className = "map-buttons">
+          {mapOptions.map(renderRadio)}
         </div>
         <div className = "main-map">
           <div className = "map-holder" ref={el => this.mapContainer = el} />
-          <div id="map-info">
+          <div class = "map-sider">
+            <div id="map-info"></div>
+            <div id="map-legend">
+              {stops.map(renderLegend)}
+            </div>
           </div>
         </div>
+
       </div>
     )
   }
