@@ -9,19 +9,31 @@ import {mapOptions} from '../geographyData/mapOptions.js'
 
 mapboxgl.accessToken = mapKey
 
+const bounds = [
+  [ -110.795166, 36.703349],
+  [-98.204833, 41.803789]
+]
+
+
 class Map extends Component {
 
   constructor(props){
     super(props)
       this.state = {
         activeLayer:{},
-        stations: {}
+        stations: {},
+        mapObj: {}
       }
   }
 
   componentDidUpdate() {
     this.createMap();
-    document.getElementById('map-info').innerHTML='<p>Hover over a county</p>'
+    if(this.state.activeLayer.type === 'choropleth') {
+      document.getElementById('map-info').innerHTML='<p>Hover over a county</p>'
+    } else {
+      document.getElementById('map-info').innerHTML='<p>Zoom in and click to get information on locations</p>'
+
+    }
   }
 
   componentWillMount = async () => {
@@ -48,7 +60,9 @@ class Map extends Component {
       container: this.mapContainer,
       style: 'mapbox://styles/msantra/cjubdei266aw11fpph8r7qkym',
       center: [-104.5, 39.3 ],
-      zoom: 6
+      zoom: 6,
+      maxBounds: bounds
+
     });
 
       map.on('load',() => {
@@ -72,11 +86,13 @@ class Map extends Component {
 
     map.on('mousemove', (e) => {
       let selectedCounty = map.queryRenderedFeatures(e.point);
+
       if(selectedCounty.length > 0 && typeof selectedCounty !=='undefined')  {
+        let countyName = selectedCounty[0].properties.county_name
         let selectedNumber = selectedCounty[0].properties[property]
         map.getCanvas().style.cursor = 'pointer'
           if(typeof selectedNumber !== "undefined") {
-            document.getElementById('map-info').innerHTML='<h2>'+name+'</h2> <p>'+selectedNumber+'</p>'
+            document.getElementById('map-info').innerHTML='<h2>'+countyName+'</h2> <p>'+name+": "+selectedNumber+'</p>'
           }
       }
     });
@@ -90,6 +106,7 @@ class Map extends Component {
         this.fetchCountyInfo(countyId)
       }
     });
+
     this.setFill(map)
   }
 
@@ -97,34 +114,63 @@ class Map extends Component {
     let altFuel = this.state.stations;
     let paintProp = this.state.activeLayer.paint
 
+    this.mapContainer.innerHTML = null
+
     const clusterMap = new mapboxgl.Map({
       container: this.mapContainer,
-      style: 'mapbox://styles/msantra/cju6en7ni5ybz1fo9zqrcoynr',
+      style: 'mapbox://styles/msantra/cjuei1zod2ki91fmul8pz65wo',
       center: [-104.5, 39.3 ],
-      zoom: 6
-    });
-  clusterMap.on('load', function(){
-    clusterMap.addSource('stations', {
-      'type':'geojson',
-      'data':altFuel,
-      'cluster':true,
-      'clusterMaxZoom':14,
-      'clusterRadius':50
+      zoom: 6,
+      minZoom: 6,
+      maxBounds: bounds
     });
 
-    clusterMap.addLayer({
-      'id':'clusters',
-      'type':'circle',
-      'source':'stations',
-      'filter':['has','point_count'],
-      'layout':{
-        'visibility':'visible'
-      },
-      paint: paintProp
-    });
-  })
+    clusterMap.on('load', function(){
+      clusterMap.addSource('stations', {
+        'type':'geojson',
+        'data':altFuel,
+        'cluster':true,
+        'clusterMaxZoom':14,
+        'clusterRadius':50
+      });
+
+      clusterMap.addLayer({
+        'id':'clusters',
+        'type':'circle',
+        'source':'stations',
+        'filter':['has','point_count'],
+        'layout':{
+          'visibility':'visible'
+        },
+        paint: paintProp
+      });
+
+      clusterMap.addLayer({
+        id: "cluster-count",
+        type: "symbol",
+        source: "stations",
+        filter: ["has", "point_count"],
+        layout: {
+        "text-field": "{point_count_abbreviated}",
+        "text-font": ["DIN Offc Pro Medium", "Arial Unicode MS Bold"],
+        "text-size": 12
+        }
+        });
+
+        clusterMap.addLayer({
+        id: "unclustered-point",
+        type: "circle",
+        source: "stations",
+        filter: ["!", ["has", "point_count"]],
+        paint: {
+        "circle-color": "#5abdb7",
+        "circle-radius": 6,
+        "circle-stroke-width": 1,
+        "circle-stroke-color": "#fff"
+        }
+        });
+    })
   }
-
 
   fetchCountyInfo = async(id) => {
     const countyInfo = await countyIdFetch(id);
@@ -133,8 +179,6 @@ class Map extends Component {
 
   setFill(map) {
     const {property, stops} = this.state.activeLayer;
-
-
       map.on('load', function() {
         map.setPaintProperty('county-fill', 'fill-color',{
           property,
@@ -180,7 +224,6 @@ class Map extends Component {
         <div className = "main-map">
           <div className = "map-holder" ref={el => this.mapContainer = el} />
           <div id="map-info">
-            <p>Hover over a county. Click on the county to see additional details</p>
           </div>
         </div>
       </div>

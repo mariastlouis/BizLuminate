@@ -1,8 +1,11 @@
+@import '../assets/variable.scss';
+
+
 .header {
   height: 75px;
-  box-shadow: 0 3px 6px 0 hsla(0,0%,57%,.23);
+  box-shadow: $shadow;
   width: 100%;
-  border-top: 10px solid #5abdb7;
+  border-top: 10px solid $main-accent;
   z-index: 1000;
   position: absolute;
 

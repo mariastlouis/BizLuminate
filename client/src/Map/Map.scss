@@ -1,3 +1,6 @@
+@import '../assets/variable.scss';
+
+
 .county-map {
   display: flex;
   flex-direction: column;
@@ -15,8 +18,9 @@
     height: 100px;
     width: 250px;
     border-radius: 3px;
+    padding: 10px;
     z-index: 999;
-    box-shadow: 0 3px 6px 0 hsla(0,0%,57%,.23);
+    box-shadow: $shadow;
   }
 
   .main-map {
@@ -48,25 +52,15 @@
     margin: 0 10px 0 10px;
     cursor: pointer;
     border: 0;
-    // -webkit-appearance: button;
-    // /* WebKit */
-    // -moz-appearance: button;
-    // /* Mozilla */
-    // -o-appearance: button;
-    // /* Opera */
-    // -ms-appearance: button;
-    // /* Internet Explorer */
-    // appearance: button;
-    // /* CSS3 */
   }
 
   .radio-label {
     background: white;
     padding: 10px;
-    box-shadow: 0 3px 6px 0 hsla(0,0%,57%,.23);
+    box-shadow: $shadow;
 
     &:hover{
-
+      border-bottom: 2px solid $second-accent;
     }
   }
 

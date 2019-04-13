@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600');
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,500,600');
+
+$main-accent: #5abdb7;
+$second-accent: #fea946;
+$accent-off-white: #e2e4db;
+$font-gray: #707070;
+
+
+$body-font: 'Open Sans', sans-serif;
+$accent-font: 'Raleway', sans-serif;
+
+$shadow: 0 3px 6px 0 hsla(0,0%,57%,.23);
+
+body {
+  font-family: $body-font;
+  color: $font-gray;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+h1, h2, h3 {
+  font-family: $accent-font;
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+}
+
+h1 {
+  font-size: 40px;
+  font-weight: 400;
+}
+
+h2 {
+  font-weight: 300;
+}
+
+p {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+
+
+
+
+
+
