@@ -225,7 +225,7 @@ class Map extends Component {
           property,
           stops
         });
-      })
+      });
   }
 
   styles(property){
@@ -237,7 +237,7 @@ class Map extends Component {
   }
 
    render () {
-     const { stops,property, type} = this.state.activeLayer;
+     const { stops,property, type, name} = this.state.activeLayer;
 
      const renderRadio = (option, i) => {
         return (
@@ -250,32 +250,31 @@ class Map extends Component {
 
     const renderLegend = (stop = 0, i) => {
       if(type === 'choropleth') {
-        console.log(stop)
         return (
           <div key = {i} className = 'legend-key'>
-            <span className = "legend-color" style={{ backgroundColor: stop[1] }}></span>
-            <span>{`${stop[0].toLocaleString()}`}</span>
+            <div class = "legend-block">
+              <span className = "legend-color" style={{ backgroundColor: stop[1]}}></span>
+              <span className ="legend-value">{`${stop[0].toLocaleString()}`}</span>
+            </div>
           </div>
         )
       }
     }
     return (
       <div className = "county-map">
-        <div className = "map-side">
-          <div id = "map-sidebar">
-            <div className = "map-buttons">
-              {mapOptions.map(renderRadio)}
-            </div>
-
-          </div>
+        <div className = "map-buttons">
+          {mapOptions.map(renderRadio)}
         </div>
         <div className = "main-map">
           <div className = "map-holder" ref={el => this.mapContainer = el} />
-          <div id="map-info"></div>
-        </div>
-        <div id="map-legend">
-            {stops.map(renderLegend)}
+          <div class = "map-sider">
+            <div id="map-info"></div>
+            <div id="map-legend">
+              {stops.map(renderLegend)}
+            </div>
           </div>
+        </div>
+
       </div>
     )
   }
