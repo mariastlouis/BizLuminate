@@ -61,7 +61,7 @@ class Map extends Component {
       style: 'mapbox://styles/msantra/cjubdei266aw11fpph8r7qkym',
       center: [-104.5, 39.3 ],
       zoom: 6,
-      maxBounds: bounds
+
 
     });
 
@@ -121,8 +121,7 @@ class Map extends Component {
       style: 'mapbox://styles/msantra/cjuei1zod2ki91fmul8pz65wo',
       center: [-104.5, 39.3 ],
       zoom: 6,
-      minZoom: 6,
-      maxBounds: bounds
+      minZoom: 6
     });
 
     clusterMap.on('load', function(){
@@ -146,30 +145,73 @@ class Map extends Component {
       });
 
       clusterMap.addLayer({
-        id: "cluster-count",
-        type: "symbol",
-        source: "stations",
-        filter: ["has", "point_count"],
+        id: 'cluster-count',
+        type: 'symbol',
+        source: 'stations',
+        filter: ['has', 'point_count'],
         layout: {
-        "text-field": "{point_count_abbreviated}",
-        "text-font": ["DIN Offc Pro Medium", "Arial Unicode MS Bold"],
-        "text-size": 12
+        'text-field': '{point_count_abbreviated}',
+        'text-font': ['DIN Offc Pro Medium', 'Arial Unicode MS Bold'],
+        'text-size': 12
         }
         });
 
-        clusterMap.addLayer({
-        id: "unclustered-point",
-        type: "circle",
-        source: "stations",
-        filter: ["!", ["has", "point_count"]],
+      clusterMap.addLayer({
+        id: 'unclustered-point',
+        type: 'circle',
+        source: 'stations',
+        filter: ['!', ['has', 'point_count']],
         paint: {
-        "circle-color": "#5abdb7",
-        "circle-radius": 6,
-        "circle-stroke-width": 1,
-        "circle-stroke-color": "#fff"
+          'circle-color': '#ccebc5',
+          'circle-radius': 6,
+          'circle-stroke-width': 1,
+          'circle-stroke-color': '#fff'
         }
-        });
+      });
+    });
+
+    clusterMap.on('click', 'unclustered-point', (e) => {
+      let features = clusterMap.queryRenderedFeatures(e.point, { layers: ['unclustered-point'] });
+      if(features.length) {
+        let address = features[0].properties.address;
+        let city = features[0].properties.city
+        let zip = features[0].properties.zip
+          document.getElementById('map-info').innerHTML='<h2>'+city+'</h2> <p>'+address+" "+ zip+'</p>'
+      }
     })
+
+    clusterMap.on('click', 'clusters', (e) => {
+      let features = clusterMap.queryRenderedFeatures(e.point, { layers: ['clusters'] });
+
+      let clusterId = features[0].properties.cluster_id;
+
+      clusterMap.getSource('stations').getClusterExpansionZoom(clusterId, (err, zoom) => {
+        if (err)
+        return;
+
+        clusterMap.easeTo({
+        center: features[0].geometry.coordinates,
+        zoom: zoom
+        });
+      });
+    });
+
+    clusterMap.on('mouseenter', 'clusters', () => {
+      clusterMap.getCanvas().style.cursor = 'pointer';
+    });
+
+    clusterMap.on('mouseenter', 'unclustered-point',() => {
+      clusterMap.getCanvas().style.cursor = 'pointer';
+    });
+
+    clusterMap.on('mouseleave', 'clusters', () => {
+      clusterMap.getCanvas().style.cursor = '';
+    });
+
+    clusterMap.on('mouseleave', 'unclustered-point', () => {
+      clusterMap.getCanvas().style.cursor = '';
+
+    });
   }
 
   fetchCountyInfo = async(id) => {

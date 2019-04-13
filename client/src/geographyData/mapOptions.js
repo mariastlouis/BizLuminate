@@ -30,19 +30,19 @@ export const mapOptions = [
       "circle-color": [
       "step",
       ["get", "point_count"],
-      "#51bbd6",
-      100,
-      "#f1f075",
-      750,
-      "#f28cb1"
+      "#5abdb7",
+      50,
+      "#2b8cbe",
+      200,
+      "#08589e"
       ],
       "circle-radius": [
       "step",
       ["get", "point_count"],
       20,
-      100,
+      50,
       30,
-      750,
+      200,
       40
       ]
       }
