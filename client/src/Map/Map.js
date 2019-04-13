@@ -267,7 +267,7 @@ class Map extends Component {
         </div>
         <div className = "main-map">
           <div className = "map-holder" ref={el => this.mapContainer = el} />
-          <div class = "map-sider">
+          <div className = "map-sider">
             <div id="map-info"></div>
             <div id="map-legend">
               {stops.map(renderLegend)}
