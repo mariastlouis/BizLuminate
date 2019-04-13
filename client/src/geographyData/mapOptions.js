@@ -2,6 +2,7 @@ export const mapOptions = [
   {
     'name':'Unemployment Rate',
     'property':'unemploymentRate',
+    'type':'choropleth',
     'stops':[
      [1.9, '#f0f9e8'],
      [2.9, '#bae4bc'],
@@ -12,6 +13,7 @@ export const mapOptions = [
   {
     'name':'Median Household Income',
     'property': 'medianhouseholdincome',
+    'type': 'choropleth',
     'stops': [
       [2900, '#f0f9e8'],
       [2900, '#bae4bc'],
@@ -19,5 +21,30 @@ export const mapOptions = [
       [70077, '#43a2ca'],
       [111154, '#0868ac'],
     ]
+  },
+  {
+    'name':'Electric Car Charging',
+    'property': 'altfuel',
+    'type': 'point',
+    'paint': {
+      "circle-color": [
+      "step",
+      ["get", "point_count"],
+      "#5abdb7",
+      50,
+      "#2b8cbe",
+      200,
+      "#08589e"
+      ],
+      "circle-radius": [
+      "step",
+      ["get", "point_count"],
+      20,
+      50,
+      30,
+      200,
+      40
+      ]
+      }
   }
 ]
