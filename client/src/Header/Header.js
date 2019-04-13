@@ -1,6 +1,6 @@
 import React from 'react';
 import './Header.scss';
-import bizLuminateLogo from '../assets/images/bizLuminateLogo.jpg';
+import bizLuminateLogo from '../assets/images/biz-luminate-logo@2x.png';
 
 const Header = () => {
   return (

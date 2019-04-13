@@ -252,7 +252,7 @@ class Map extends Component {
       if(type === 'choropleth') {
         return (
           <div key = {i} className = 'legend-key'>
-            <div class = "legend-block">
+            <div className = "legend-block">
               <span className = "legend-color" style={{ backgroundColor: stop[1]}}></span>
               <span className ="legend-value">{`${stop[0].toLocaleString()}`}</span>
             </div>
