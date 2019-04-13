@@ -233,12 +233,12 @@ class Map extends Component {
     const styleObj = {
       borderBottom: '2px solid #fea946'
     }
-
     return selectedProperty === property ? styleObj : null
   }
 
    render () {
-     const { property} = this.state.activeLayer;
+     const { stops,property, type} = this.state.activeLayer;
+
      const renderRadio = (option, i) => {
         return (
           <label key={i} className="radio-container">
@@ -247,6 +247,18 @@ class Map extends Component {
           </label>
        )
      }
+
+    const renderLegend = (stop = 0, i) => {
+      if(type === 'choropleth') {
+        console.log(stop)
+        return (
+          <div key = {i} className = 'legend-key'>
+            <span className = "legend-color" style={{ backgroundColor: stop[1] }}></span>
+            <span>{`${stop[0].toLocaleString()}`}</span>
+          </div>
+        )
+      }
+    }
     return (
       <div className = "county-map">
         <div className = "map-side">
@@ -259,9 +271,11 @@ class Map extends Component {
         </div>
         <div className = "main-map">
           <div className = "map-holder" ref={el => this.mapContainer = el} />
-          <div id="map-info">
-          </div>
+          <div id="map-info"></div>
         </div>
+        <div id="map-legend">
+            {stops.map(renderLegend)}
+          </div>
       </div>
     )
   }
