@@ -14,7 +14,6 @@ const bounds = [
   [-98.204833, 41.803789]
 ]
 
-
 class Map extends Component {
 
   constructor(props){
@@ -229,27 +228,22 @@ class Map extends Component {
       })
   }
 
-  bgColor(property){
-    const selectedProperty = this.state.activeLayer.property
-    if(selectedProperty === property){
-      return '#6cdbd4'
-    } return "";
-  }
+  styles(property){
+    const selectedProperty = this.state.activeLayer.property;
+    const styleObj = {
+      borderBottom: '2px solid #fea946'
+    }
 
-  textColor(property){
-    const selectedProperty = this.state.activeLayer.property
-    if(selectedProperty === property) {
-      return 'white'
-    } return ""
+    return selectedProperty === property ? styleObj : null
   }
 
    render () {
-     const {name, stops, property} = this.state.activeLayer;
+     const { property} = this.state.activeLayer;
      const renderRadio = (option, i) => {
         return (
           <label key={i} className="radio-container">
             <input onChange={()=> this.setState({activeLayer: mapOptions[i]})} checked ={option.property === property} name="toggle" type="radio" />
-            <div className = "radio-label" style ={{color:this.textColor(option.property), backgroundColor:this.bgColor(option.property)}}>{option.name}</div>
+            <div className = "radio-label" style ={this.styles(option.property)}>{option.name}</div>
           </label>
        )
      }
