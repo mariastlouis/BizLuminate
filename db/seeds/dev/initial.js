@@ -32,7 +32,7 @@ exports.seed = function (knex, Promise) {
             .then(function () {
                 return knex('transportationWork').insert(transportationWork);
             }),
-        knex('transportationWork').del()
+        knex('educationAttainment').del()
             .then(function () {
                 return knex('educationAttainment').insert(educationAttainment);
             })
