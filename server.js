@@ -54,3 +54,20 @@ app.get('/api/v1/unemployment', function (request, response) {
       });
   });
 });
+
+app.get('/api/v1/demographics', function (request, response) {
+  database('generalDemographics').select()
+      .then(function (places) {
+      return response.status(200).json({
+          places: places
+      });
+  })
+      .catch(function (error) {
+      return response.status(500).json({
+          error: error
+      });
+  });
+});
+
+
+
