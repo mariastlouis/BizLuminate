@@ -4,6 +4,7 @@ const bachelorDegreeTypes = require('../../../data/bachelorDegreeTypes');
 const countyUnemployment = require('../../../data/countyUnemployment');
 const generalDemographics = require('../../../data/generalDemographics');
 const transportationWork = require('../../../data/transportationWork');
+const educationAttainment = require('../../../data/educationAttainment');
 
 exports.seed = function (knex, Promise) {
     return Promise.all([
@@ -30,6 +31,10 @@ exports.seed = function (knex, Promise) {
         knex('transportationWork').del()
             .then(function () {
                 return knex('transportationWork').insert(transportationWork);
+            }),
+        knex('educationAttainment').del()
+            .then(function () {
+                return knex('educationAttainment').insert(educationAttainment);
             })
     ])
 }

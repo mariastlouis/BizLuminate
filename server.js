@@ -54,3 +54,56 @@ app.get('/api/v1/unemployment', function (request, response) {
       });
   });
 });
+
+app.get('/api/v1/demographics', function (request, response) {
+  database('generalDemographics').select()
+      .then(function (places) {
+      return response.status(200).json({
+          places: places
+      });
+  })
+      .catch(function (error) {
+      return response.status(500).json({
+          error: error
+      });
+  });
+});
+
+app.get('/api/v1/demographics/:placeId', function (req, res) {
+    var placeId = req.params.placeId;
+    return database('generalDemographics').where("placeId", placeId)
+        .then(function (places) {
+        return res.status(200).json({ places: places });
+    })
+        .catch(function (err) {
+        return res.status(500).json({ error: "Error while fetching places by county id. -> " + err });
+    });
+  });
+
+  app.get('/api/v1/education', function (request, response) {
+    database('educationAttainment').select()
+        .then(function (places) {
+        return response.status(200).json({
+            places: places
+        });
+    })
+        .catch(function (error) {
+        return response.status(500).json({
+            error: error
+        });
+    });
+  });
+
+  app.get('/api/v1/education/:placeId', function (req, res) {
+    var placeId = req.params.placeId;
+    return database('educationAttainment').where("placeId", placeId)
+        .then(function (places) {
+        return res.status(200).json({ places: places });
+    })
+        .catch(function (err) {
+        return res.status(500).json({ error: "Error while fetching places by county id. -> " + err });
+    });
+  });
+
+
+

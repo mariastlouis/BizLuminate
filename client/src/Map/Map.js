@@ -3,9 +3,9 @@ import mapboxgl from 'mapbox-gl'
 import './Map.scss'
 import {mapKey} from '../mapKey'
 import countydata from '../geographyData/countydata.json';
-import {countyIdFetch, altFuelFetch} from '../Helper/helper'
+import {cardDataFetch, altFuelFetch} from '../Helper/helper'
 import {mapOptions} from '../geographyData/mapOptions.js'
-
+import Card from '../Card/Card'
 
 mapboxgl.accessToken = mapKey
 
@@ -21,9 +21,20 @@ class Map extends Component {
       this.state = {
         activeLayer:{},
         stations: {},
-        mapObj: {}
+        mapObj: {},
+        show: false,
+        cardData: {}
       }
   }
+
+  showCard = () => {
+    this.setState({show: true})
+  }
+
+  hideCard = () => {
+    this.setState({show: false})
+  }
+
 
   componentDidUpdate() {
     this.createMap();
@@ -31,7 +42,6 @@ class Map extends Component {
       document.getElementById('map-info').innerHTML='<p>Hover over a county</p>'
     } else {
       document.getElementById('map-info').innerHTML='<p>Zoom in and click to get information on locations</p>'
-
     }
   }
 
@@ -46,10 +56,8 @@ class Map extends Component {
   }
 
   createMap (){
-
     const type = this.state.activeLayer.type
-    const mapType = type === 'choropleth' ? this.choroplethMap() : this.clusterMap();
-    return mapType
+    return type === 'choropleth' ? this.choroplethMap() : this.clusterMap();
   }
 
   choroplethMap(){
@@ -84,6 +92,7 @@ class Map extends Component {
       });
 
     map.on('mousemove', (e) => {
+
       let selectedCounty = map.queryRenderedFeatures(e.point);
 
       if(selectedCounty.length > 0 && typeof selectedCounty !=='undefined')  {
@@ -98,11 +107,11 @@ class Map extends Component {
 
     map.on('click', (e) => {
       let selectedCounty = map.queryRenderedFeatures(e.point);
-      console.log(selectedCounty)
       if(selectedCounty.length > 0) {
         let countyId = '8' + selectedCounty[0].properties.COUNTYFP;
         map.getCanvas().style.cursor = 'pointer'
         this.fetchCountyInfo(countyId)
+
       }
     });
 
@@ -214,8 +223,9 @@ class Map extends Component {
   }
 
   fetchCountyInfo = async(id) => {
-    const countyInfo = await countyIdFetch(id);
-
+    const countyInfo = await cardDataFetch(id);
+    this.setState({cardData:countyInfo});
+    this.showCard();
   }
 
   setFill(map) {
@@ -234,6 +244,13 @@ class Map extends Component {
       borderBottom: '2px solid #fea946'
     }
     return selectedProperty === property ? styleObj : null
+  }
+
+  setActive(index){
+    console.log('hello')
+    // if (this.state.activeLayer.type === 'point'){
+    //   this.setState({show: false})
+    // }
   }
 
    render () {
@@ -267,17 +284,18 @@ class Map extends Component {
         </div>
         <div className = "main-map">
           <div className = "map-holder" ref={el => this.mapContainer = el} />
-          <div class = "map-sider">
+          <Card show = {this.state.show} handleClose ={this.hideCard} data={this.state.cardData}></Card>
+          <div className = "map-sider">
             <div id="map-info"></div>
             <div id="map-legend">
               {stops.map(renderLegend)}
             </div>
           </div>
         </div>
-
       </div>
     )
   }
 }
+
 
 export default Map
