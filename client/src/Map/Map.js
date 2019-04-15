@@ -42,7 +42,6 @@ class Map extends Component {
       document.getElementById('map-info').innerHTML='<p>Hover over a county</p>'
     } else {
       document.getElementById('map-info').innerHTML='<p>Zoom in and click to get information on locations</p>'
-
     }
   }
 
@@ -93,6 +92,7 @@ class Map extends Component {
       });
 
     map.on('mousemove', (e) => {
+
       let selectedCounty = map.queryRenderedFeatures(e.point);
 
       if(selectedCounty.length > 0 && typeof selectedCounty !=='undefined')  {
@@ -225,7 +225,6 @@ class Map extends Component {
   fetchCountyInfo = async(id) => {
     const countyInfo = await cardDataFetch(id);
     this.setState({cardData:countyInfo});
-    console.log('fetching county running')
     this.showCard();
   }
 
@@ -245,6 +244,13 @@ class Map extends Component {
       borderBottom: '2px solid #fea946'
     }
     return selectedProperty === property ? styleObj : null
+  }
+
+  setActive(index){
+    console.log('hello')
+    // if (this.state.activeLayer.type === 'point'){
+    //   this.setState({show: false})
+    // }
   }
 
    render () {
@@ -278,8 +284,8 @@ class Map extends Component {
         </div>
         <div className = "main-map">
           <div className = "map-holder" ref={el => this.mapContainer = el} />
+          <Card show = {this.state.show} handleClose ={this.hideCard} data={this.state.cardData}></Card>
           <div className = "map-sider">
-            <Card show = {this.state.show} handleClose ={this.hideCard} data={this.state.cardData}></Card>
             <div id="map-info"></div>
             <div id="map-legend">
               {stops.map(renderLegend)}
