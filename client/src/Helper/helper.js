@@ -21,6 +21,47 @@ export const countyIdFetch = async(id) => {
   }
 }
 
+export const cardDataFetch = async(id) => {
+  try {
+    const demographicFetch = await fetch (`/api/v1/demographics/${id}`);
+    const demographicResponse = await demographicFetch.json();
+    const educationFetch = await fetch(`api/v1/education/${id}`);
+    const educationResponse = await educationFetch.json();
+    return Object.assign({}, demographicResponse.places[0], educationResponse.places[0])
+
+  }catch(error){
+    throw error;
+  }
+}
+
+const getCardData = async(places, id) => {
+  console.log(Object.keys(places).map(async(place)=>{
+    return place
+  }))
+  // const unresolvedPromises = places.map(async(place) => {
+
+  //   return {
+  //     place: place.placeDisplayName,
+  //     population: place.totalpop,
+  //     age: place.medianAge,
+  //     income: place.medianIncomeDollars,
+  //     // bachelor: educationPromises
+  //   }
+
+  // })
+
+  // let educationPromises = Promise.all( getEducationData(id));
+  // return Promise.all(unresolvedPromises)
+}
+
+const getEducationData = async(id)=> {
+
+  const educationFetch = await fetch (`/api/v1/education/${id}`);
+  const educationFetchResponse = educationFetch.json();
+  console.log(educationFetchResponse)
+  return educationFetchResponse.bachelorHigher
+}
+
 export const altFuelFetch = async() => {
   try {
     const initialFetch = await fetch(`https://developer.nrel.gov/api/alt-fuel-stations/v1.json?api_key=${nrelKey}&fuel_type=ELEC&state=CO`)
@@ -33,7 +74,7 @@ export const altFuelFetch = async() => {
 
 
 let fuelGeo = (locations) => {
-  let fuelgeojson = {}
+  let fuelgeojson = {};
   fuelgeojson['type']="FeatureCollection";
   fuelgeojson['features']=[];
   locations.forEach((location)=> {
@@ -52,7 +93,7 @@ let fuelGeo = (locations) => {
         }
       }
     )
-  })
+  });
   return fuelgeojson
 }
 
