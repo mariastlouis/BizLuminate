@@ -97,7 +97,7 @@ class Map extends Component {
 
       if(selectedCounty.length > 0 && typeof selectedCounty !=='undefined')  {
         let countyName = selectedCounty[0].properties.county_name
-        let selectedNumber = selectedCounty[0].properties[property]
+        let selectedNumber = this.format(selectedCounty[0].properties[property])
         map.getCanvas().style.cursor = 'pointer'
           if(typeof selectedNumber !== "undefined") {
             document.getElementById('map-info').innerHTML='<h2>'+countyName+'</h2> <p>'+name+": "+selectedNumber+'</p>'
@@ -246,11 +246,16 @@ class Map extends Component {
     return selectedProperty === property ? styleObj : null
   }
 
-  setActive(index){
-    console.log('hello')
-    // if (this.state.activeLayer.type === 'point'){
-    //   this.setState({show: false})
-    // }
+  format(number){
+    const {property} = this.state.activeLayer
+      if(property === 'medianhouseholdincome') {
+        return number.toLocaleString('en-US', { style: 'currency', currency: 'USD', minimumFractionDigits:0 })
+      } else if (property === 'unemploymentRate') {
+        return number + "%"
+      }
+      else {
+        return number;
+      }
   }
 
    render () {
@@ -271,7 +276,7 @@ class Map extends Component {
           <div key = {i} className = 'legend-key'>
             <div className = "legend-block">
               <span className = "legend-color" style={{ backgroundColor: stop[1]}}></span>
-              <span className ="legend-value">{`${stop[0].toLocaleString()}`}</span>
+              <span className ="legend-value">{this.format(stop[0])}</span>
             </div>
           </div>
         )
