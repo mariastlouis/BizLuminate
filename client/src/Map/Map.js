@@ -6,6 +6,7 @@ import countydata from '../geographyData/countydata.json';
 import {cardDataFetch, altFuelFetch} from '../Helper/helper'
 import {mapOptions} from '../geographyData/mapOptions.js'
 import Card from '../Card/Card'
+import mapMarker from '../assets/images/mapMarker.png'
 
 mapboxgl.accessToken = mapKey
 
@@ -187,7 +188,7 @@ class Map extends Component {
         let address = features[0].properties.address;
         let city = features[0].properties.city
         let zip = features[0].properties.zip
-          document.getElementById('map-info').innerHTML='<h2>'+city+'</h2> <p>'+address+", "+ zip+'</p>'
+          document.getElementById('map-info').innerHTML='<div class="cluster-title"> <img class ="cluster-marker" src="'+mapMarker+' alt="marker" /><h2>'+city+'</h2></div> <p class="cluster-info">'+address+", "+ zip+'</p>'
       }
     })
 

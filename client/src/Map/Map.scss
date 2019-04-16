@@ -95,5 +95,19 @@
       border-bottom: 2px solid $second-accent;
     }
   }
+
+  .cluster-title {
+    display: flex;
+  }
+
+  .cluster-info {
+    margin-left: 10px;
+  }
+
+  .cluster-marker {
+    height: 38px;
+    width: 26px;
+    margin-right: 10px;
+  }
 }
 
