@@ -16,10 +16,20 @@ export const mapOptions = [
     'type': 'choropleth',
     'stops': [
       [2900, '#f0f9e8'],
-      [2900, '#bae4bc'],
       [49539, '#7bccc4'],
       [70077, '#43a2ca'],
-      [111154, '#0868ac'],
+      [111154, '#0868ac']
+    ]
+  },
+  {
+    'name':'County Sales Tax',
+    'property': 'countySalesTaxRate',
+    'type': 'choropleth',
+    'stops': [
+      [0, '#f0f9e8'],
+      [1, '#bae4bc'],
+      [3, '#7bccc4'],
+      [6, '#43a2ca']
     ]
   },
   {

@@ -87,8 +87,6 @@ class Map extends Component {
           },
           'source': 'counties'
         },'country-label');
-
-
       });
 
     map.on('mousemove', (e) => {
@@ -256,7 +254,9 @@ class Map extends Component {
         return number + "%"
       }
       else {
-        return number;
+        if (number === 0) {
+          return 'Not available'
+        } return number + "%"
       }
   }
 
