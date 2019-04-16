@@ -10,7 +10,11 @@ class App extends Component {
   constructor(props) {
     super(props)
     this.state ={
-      selectedPlace: {}
+      selectedPlace: {
+        placeName: 'Boulder',
+        placeIncome: 0,
+        stateIncome: 0
+      }
     }
   }
 
@@ -25,7 +29,7 @@ class App extends Component {
       <div className="App">
         <Header></Header>
         <Map getPlace = {this.setPlace}></Map>
-        <Details data={[5,10,1,3]} size={[500,500]}></Details>
+        <Details data={this.state.selectedPlace} ></Details>
       </div>
     );
   }
