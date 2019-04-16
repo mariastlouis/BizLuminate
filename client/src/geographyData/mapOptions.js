@@ -15,7 +15,7 @@ export const mapOptions = [
     'property': 'medianhouseholdincome',
     'type': 'choropleth',
     'stops': [
-      [2900, '#f0f9e8'],
+      [29000, '#f0f9e8'],
       [49539, '#7bccc4'],
       [70077, '#43a2ca'],
       [111154, '#0868ac']
@@ -41,11 +41,11 @@ export const mapOptions = [
       "circle-color": [
       "step",
       ["get", "point_count"],
-      "#5abdb7",
+      "#F9CC1A",
       50,
       "#2b8cbe",
       200,
-      "#08589e"
+      "#FE9D2B"
       ],
       "circle-radius": [
       "step",

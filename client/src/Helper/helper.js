@@ -27,7 +27,7 @@ export const cardDataFetch = async(id) => {
     const demographicResponse = await demographicFetch.json();
     const educationFetch = await fetch(`api/v1/education/${id}`);
     const educationResponse = await educationFetch.json();
-    return Object.assign({}, demographicResponse.places[0], educationResponse.places[0])
+    return Object.assign({}, educationResponse.places[0], demographicResponse.places[0])
 
   }catch(error){
     throw error;

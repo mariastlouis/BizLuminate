@@ -100,7 +100,7 @@ class Map extends Component {
 
           if(typeof selectedNumber !== "undefined") {
             let formattedNumber = this.format(selectedNumber)
-            document.getElementById('map-info').innerHTML='<h2>'+countyName+'</h2> <p>'+name+": "+formattedNumber+'</p>'
+            document.getElementById('map-info').innerHTML='<h2>'+countyName+'</h2> <p><strong>'+name+": </strong>"+formattedNumber+'</p>'
           }
       }
     });
