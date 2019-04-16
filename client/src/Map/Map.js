@@ -160,7 +160,10 @@ class Map extends Component {
         layout: {
         'text-field': '{point_count_abbreviated}',
         'text-font': ['DIN Offc Pro Medium', 'Arial Unicode MS Bold'],
-        'text-size': 12
+        'text-size': 12,
+        },
+        paint:{
+          'text-color':'#fff'
         }
         });
 
@@ -170,10 +173,10 @@ class Map extends Component {
         source: 'stations',
         filter: ['!', ['has', 'point_count']],
         paint: {
-          'circle-color': '#ccebc5',
-          'circle-radius': 6,
+          'circle-color': '#edf8fb',
+          'circle-radius': 8,
           'circle-stroke-width': 1,
-          'circle-stroke-color': '#fff'
+          'circle-stroke-color': '#707070'
         }
       });
     });
@@ -184,7 +187,7 @@ class Map extends Component {
         let address = features[0].properties.address;
         let city = features[0].properties.city
         let zip = features[0].properties.zip
-          document.getElementById('map-info').innerHTML='<h2>'+city+'</h2> <p>'+address+" "+ zip+'</p>'
+          document.getElementById('map-info').innerHTML='<h2>'+city+'</h2> <p>'+address+", "+ zip+'</p>'
       }
     })
 
