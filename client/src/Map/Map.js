@@ -97,10 +97,12 @@ class Map extends Component {
 
       if(selectedCounty.length > 0 && typeof selectedCounty !=='undefined')  {
         let countyName = selectedCounty[0].properties.county_name
-        let selectedNumber = this.format(selectedCounty[0].properties[property])
+        let selectedNumber = selectedCounty[0].properties[property]
         map.getCanvas().style.cursor = 'pointer'
+
           if(typeof selectedNumber !== "undefined") {
-            document.getElementById('map-info').innerHTML='<h2>'+countyName+'</h2> <p>'+name+": "+selectedNumber+'</p>'
+            let formattedNumber = this.format(selectedNumber)
+            document.getElementById('map-info').innerHTML='<h2>'+countyName+'</h2> <p>'+name+": "+formattedNumber+'</p>'
           }
       }
     });
