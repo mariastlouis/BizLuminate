@@ -2,22 +2,30 @@ import React, { Component } from 'react';
 import './App.scss';
 import Map from './Map/Map';
 import Header from './Header/Header';
+import Details from './Details/Details';
+import {selectPlace} from './Helper/helper';
 
 class App extends Component {
-  componentDidMount() {
-    fetch('/api/v1/places/8001')
-      .then(res => res.json())
-      .then((data) => {
-        // console.log(JSON.stringify(data, null, 2));
-        JSON.stringify(data, null, 2);
-      });
+
+  constructor(props) {
+    super(props)
+    this.state ={
+      selectedPlace: {}
+    }
   }
+
+  setPlace = async(id) => {
+    const placeInfo = await selectPlace(id);
+    this.setState({selectedPlace:placeInfo})
+  }
+
 
   render() {
     return (
       <div className="App">
-       <Header></Header>
-       <Map></Map>
+        <Header></Header>
+        <Map getPlace = {this.setPlace}></Map>
+        <Details data={[5,10,1,3]} size={[500,500]}></Details>
       </div>
     );
   }

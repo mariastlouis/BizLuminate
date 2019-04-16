@@ -15,7 +15,7 @@ const formatNum = (number = 0, type ='comma') => {
 
 export const  Map =(props) => {
   const showHideClassName = props.show ? "card display-block" : "card display-none";
-  const {totalpop, medianIncomeDollars, bachelorHigher, placeDisplayName} = props.data
+  const {placeId, totalpop, medianIncomeDollars, bachelorHigher, placeDisplayName} = props.data
 
   return (
     <div>
@@ -32,7 +32,7 @@ export const  Map =(props) => {
           <li><strong>Median income:</strong> {formatNum(medianIncomeDollars, 'currency')}</li>
           <li><strong>Bachelors degrees:</strong> {formatNum(bachelorHigher, 'percentage')}</li>
         </ul>
-        <button onClick={props.handleClose}>close</button>
+        <button onClick={() => props.getPlace(placeId)}>Learn More</button>
       </div>
     </div>
   );

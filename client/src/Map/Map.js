@@ -295,7 +295,11 @@ class Map extends Component {
         </div>
         <div className = "main-map">
           <div className = "map-holder" ref={el => this.mapContainer = el} />
-          <Card show = {this.state.show} handleClose ={this.hideCard} data={this.state.cardData}></Card>
+          <Card show = {this.state.show}
+                handleClose ={this.hideCard}
+                getPlace ={this.props.getPlace}
+                data={this.state.cardData}>
+          </Card>
           <div className = "map-sider">
             <div id="map-info"></div>
             <div id="map-legend">
