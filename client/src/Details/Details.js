@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './Details.scss';
 import BarChart from '../BarChart/BarChart';
 import mapMarker from '../assets/images/mapMarker.png';
-
+import DoughnutChart from '../DoughnutChart/DoughnutChart';
 
 const Details =(props) => {
     return (
@@ -14,6 +14,10 @@ const Details =(props) => {
           <BarChart data={props.data.income}></BarChart>
           <BarChart data={props.data.age}></BarChart>
         </div>
+        <div className ="doughnut-charts">
+          <DoughnutChart></DoughnutChart>
+        </div>
+
       </div>
     );
 }

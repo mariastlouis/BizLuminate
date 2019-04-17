@@ -337,7 +337,7 @@ module.exports =[
     "pctBicycle": 0,
     "pctTaxiMotorcycle": 18.2,
     "pctWorkedAtHome": 0,
-    "meanTravelTimeWork": null
+    "meanTravelTimeWork": 0
   },
   {
     "placeId": 807795,
@@ -932,7 +932,7 @@ module.exports =[
     "pctBicycle": 0,
     "pctTaxiMotorcycle": 0,
     "pctWorkedAtHome": 20,
-    "meanTravelTimeWork": null
+    "meanTravelTimeWork": 0
   },
   {
     "placeId": 818530,
@@ -2870,7 +2870,7 @@ module.exports =[
     "pctBicycle": 0,
     "pctTaxiMotorcycle": 0,
     "pctWorkedAtHome": 12.1,
-    "meanTravelTimeWork": null
+    "meanTravelTimeWork": 0
   },
   {
     "placeId": 851635,
@@ -3346,7 +3346,7 @@ module.exports =[
     "pctBicycle": 0,
     "pctTaxiMotorcycle": 0,
     "pctWorkedAtHome": 0,
-    "meanTravelTimeWork": null
+    "meanTravelTimeWork": 0
   },
   {
     "placeId": 857300,
@@ -3788,7 +3788,7 @@ module.exports =[
     "pctBicycle": 0,
     "pctTaxiMotorcycle": 0,
     "pctWorkedAtHome": 32.1,
-    "meanTravelTimeWork": null
+    "meanTravelTimeWork": 0
   },
   {
     "placeId": 868930,
@@ -4043,7 +4043,7 @@ module.exports =[
     "pctBicycle": 0,
     "pctTaxiMotorcycle": 0,
     "pctWorkedAtHome": 14.8,
-    "meanTravelTimeWork": null
+    "meanTravelTimeWork": 0
   },
   {
     "placeId": 873825,
