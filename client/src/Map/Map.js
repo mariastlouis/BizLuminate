@@ -11,13 +11,13 @@ import mapMarker from '../assets/images/mapMarker.png'
 
 mapboxgl.accessToken = mapKey
 
+
 const bounds = [
   [ -110.795166, 36.703349],
   [-98.204833, 41.803789]
 ]
 
 class Map extends Component {
-
   constructor(props){
     super(props)
       this.state = {
@@ -39,7 +39,7 @@ class Map extends Component {
 
 
   componentDidUpdate() {
-    this.createMap();
+    this.createMap()
     if(this.state.activeLayer.type === 'choropleth') {
       document.getElementById('map-info').innerHTML='<p>Hover over a county</p>'
     } else {
@@ -70,8 +70,6 @@ class Map extends Component {
       style: 'mapbox://styles/msantra/cjubdei266aw11fpph8r7qkym',
       center: [-104.5, 39.3 ],
       zoom: 6,
-
-
     });
 
       map.on('load',() => {
@@ -89,8 +87,10 @@ class Map extends Component {
           },
           'source': 'counties'
         },'country-label');
-      });
 
+
+      });
+    this.setFill(map)
     map.on('mousemove', (e) => {
 
       let selectedCounty = map.queryRenderedFeatures(e.point);
@@ -117,7 +117,6 @@ class Map extends Component {
       }
     });
 
-    this.setFill(map)
   }
 
   clusterMap(){
@@ -235,12 +234,14 @@ class Map extends Component {
 
   setFill(map) {
     const {property, stops} = this.state.activeLayer;
-      map.on('load', function() {
+
+      map.on('load',() => {
+
         map.setPaintProperty('county-fill', 'fill-color',{
-          property,
-          stops
-        });
-      });
+           property,
+           stops
+         });
+       });
   }
 
   styles(property){

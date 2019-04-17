@@ -22,7 +22,7 @@ class App extends Component {
     const placeInfo = await selectPlace(id);
     this.setState({selectedPlace:placeInfo})
     this.setState({showDetails: true})
-    window.scrollTo(0, this.detailsRef.current.offsetTop)
+    window.scrollTo(20, this.detailsRef.current.offsetTop)
 
   }
 

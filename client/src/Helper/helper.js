@@ -81,13 +81,15 @@ export const selectPlace = async (id) => {
       chartName: 'Median household income',
       placeName: demographicResponse.places[0].placeDisplayName,
       stateData: coloTotals[0].medianIncomeDollars,
-      placeData: demographicResponse.places[0].medianIncomeDollars
+      placeData: demographicResponse.places[0].medianIncomeDollars,
+      dataStart: 15000
     },
     age:{
       chartName: 'Median age',
       placeName: demographicResponse.places[0].placeDisplayName,
       placeData: demographicResponse.places[0].medianAge,
-      stateData: coloTotals[0].medianAge
+      stateData: coloTotals[0].medianAge,
+      dataStart: 30
     }
   }
 }
