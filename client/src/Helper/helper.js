@@ -77,8 +77,10 @@ export const selectPlace = async (id) => {
   const demographicResponse = await demographicFetch.json();
 
   return {
-    placeName: demographicResponse.places[0].placeDisplayName,
-    stateIncome: coloTotals[0].medianIncomeDollars,
-    placeIncome: demographicResponse.places[0].medianIncomeDollars
+    income: {
+      placeName: demographicResponse.places[0].placeDisplayName,
+      stateData: coloTotals[0].medianIncomeDollars,
+      placeData: demographicResponse.places[0].medianIncomeDollars
+    }
   }
 }

@@ -3,6 +3,8 @@ import './App.scss';
 import Map from './Map/Map';
 import Header from './Header/Header';
 import Details from './Details/Details';
+// import Bar from './Details/Bar';
+import BarChart from './BarChart/BarChart';
 import {selectPlace} from './Helper/helper';
 
 class App extends Component {
@@ -10,17 +12,22 @@ class App extends Component {
   constructor(props) {
     super(props)
     this.state ={
-      selectedPlace: {
-        placeName: 'Boulder',
-        placeIncome: 0,
-        stateIncome: 0
-      }
+      selectedPlace: {},
     }
   }
 
   setPlace = async(id) => {
     const placeInfo = await selectPlace(id);
     this.setState({selectedPlace:placeInfo})
+    this.setState({showDetails: true})
+  }
+
+  showDetails = () => {
+    this.setState({showDetails: true})
+  }
+
+  hideDetails = () => {
+    this.setState({showDetials: false})
   }
 
 
@@ -29,7 +36,8 @@ class App extends Component {
       <div className="App">
         <Header></Header>
         <Map getPlace = {this.setPlace}></Map>
-        <Details data={this.state.selectedPlace} ></Details>
+        {this.state.showDetails && <Details data ={this.state.selectedPlace}></Details>}
+
       </div>
     );
   }
