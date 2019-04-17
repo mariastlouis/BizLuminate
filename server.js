@@ -105,5 +105,56 @@ app.get('/api/v1/demographics/:placeId', function (req, res) {
     });
   });
 
+  app.get('/api/v1/degrees', function (request, response) {
+    database('bachelorDegreeTypes').select()
+        .then(function (places) {
+        return response.status(200).json({
+            places: places
+        });
+    })
+        .catch(function (error) {
+        return response.status(500).json({
+            error: error
+        });
+    });
+  });
+
+  app.get('/api/v1/degrees/:placeId', function (req, res) {
+    var placeId = req.params.placeId;
+    return database('bachelorDegreeTypes').where("placeId", placeId)
+        .then(function (places) {
+        return res.status(200).json({ places: places });
+    })
+        .catch(function (err) {
+        return res.status(500).json({ error: "Error while fetching places by county id. -> " + err });
+    });
+  });
+
+  app.get('/api/v1/transportation', function (request, response) {
+    database('transportationWork').select()
+        .then(function (places) {
+        return response.status(200).json({
+            places: places
+        });
+    })
+        .catch(function (error) {
+        return response.status(500).json({
+            error: error
+        });
+    });
+  });
+
+  app.get('/api/v1/transportation/:placeId', function (req, res) {
+    var placeId = req.params.placeId;
+    return database('transportationWork').where("placeId", placeId)
+        .then(function (places) {
+        return res.status(200).json({ places: places });
+    })
+        .catch(function (err) {
+        return res.status(500).json({ error: "Error while fetching places by county id. -> " + err });
+    });
+  });
+
+
 
 
