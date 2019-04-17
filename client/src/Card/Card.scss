@@ -11,7 +11,7 @@
 
 .card {
   position: absolute;
-  top: 130px;
+  bottom: 10px;
   right: 5%;
   background: rgba(255, 255, 255, 0.7);
   border-radius: 3px;
@@ -20,3 +20,64 @@
   box-shadow: $shadow;
   width: 250px;
 }
+
+.card-title {
+  display: flex;
+  align-items:center;
+  margin-bottom: 20px;
+}
+
+.marker {
+  width: 25px;
+  margin-right: 10px;
+}
+
+.card-list {
+  list-style-type: none;
+  padding-left: 10px;
+}
+
+.card-list li {
+  padding: 7px 5px;
+}
+
+.card-list li:nth-child(odd){
+  background: $lt-gray;
+}
+
+.close-card {
+  height: 15px;
+  width: 20px;
+  position: absolute;
+  right: 5px;
+  background-image:url('../assets/images/close-icon-hover.svg');
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.close-card:hover{
+  background-image:url('../assets/images/close-icon.svg');
+}
+
+.btn-holder {
+  display: flex;
+  justify-content:center;
+}
+
+.place-btn {
+  background-color: $main-accent;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: 800;
+  border-radius: 5px;
+}
+
+.place-btn:hover {
+  background-color: $accent-hover;
+}
+
+
+

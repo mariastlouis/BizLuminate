@@ -6,6 +6,8 @@ import countydata from '../geographyData/countydata.json';
 import {cardDataFetch, altFuelFetch} from '../Helper/helper'
 import {mapOptions} from '../geographyData/mapOptions.js'
 import Card from '../Card/Card'
+import mapMarker from '../assets/images/mapMarker.png'
+
 
 mapboxgl.accessToken = mapKey
 
@@ -87,8 +89,6 @@ class Map extends Component {
           },
           'source': 'counties'
         },'country-label');
-
-
       });
 
     map.on('mousemove', (e) => {
@@ -99,8 +99,10 @@ class Map extends Component {
         let countyName = selectedCounty[0].properties.county_name
         let selectedNumber = selectedCounty[0].properties[property]
         map.getCanvas().style.cursor = 'pointer'
+
           if(typeof selectedNumber !== "undefined") {
-            document.getElementById('map-info').innerHTML='<h2>'+countyName+'</h2> <p>'+name+": "+selectedNumber+'</p>'
+            let formattedNumber = this.format(selectedNumber)
+            document.getElementById('map-info').innerHTML='<h2>'+countyName+'</h2> <p><strong>'+name+": </strong>"+formattedNumber+'</p>'
           }
       }
     });
@@ -160,7 +162,10 @@ class Map extends Component {
         layout: {
         'text-field': '{point_count_abbreviated}',
         'text-font': ['DIN Offc Pro Medium', 'Arial Unicode MS Bold'],
-        'text-size': 12
+        'text-size': 12,
+        },
+        paint:{
+          'text-color':'#fff'
         }
         });
 
@@ -170,10 +175,10 @@ class Map extends Component {
         source: 'stations',
         filter: ['!', ['has', 'point_count']],
         paint: {
-          'circle-color': '#ccebc5',
-          'circle-radius': 6,
+          'circle-color': '#edf8fb',
+          'circle-radius': 8,
           'circle-stroke-width': 1,
-          'circle-stroke-color': '#fff'
+          'circle-stroke-color': '#707070'
         }
       });
     });
@@ -184,7 +189,7 @@ class Map extends Component {
         let address = features[0].properties.address;
         let city = features[0].properties.city
         let zip = features[0].properties.zip
-          document.getElementById('map-info').innerHTML='<h2>'+city+'</h2> <p>'+address+" "+ zip+'</p>'
+          document.getElementById('map-info').innerHTML='<div class="cluster-title"> <img class ="cluster-marker" src="'+mapMarker+' alt="marker" /><h2>'+city+'</h2></div> <p class="cluster-info">'+address+", "+ zip+'</p>'
       }
     })
 
@@ -246,11 +251,18 @@ class Map extends Component {
     return selectedProperty === property ? styleObj : null
   }
 
-  setActive(index){
-    console.log('hello')
-    // if (this.state.activeLayer.type === 'point'){
-    //   this.setState({show: false})
-    // }
+  format(number){
+    const {property} = this.state.activeLayer
+      if(property === 'medianhouseholdincome') {
+        return number.toLocaleString('en-US', { style: 'currency', currency: 'USD', minimumFractionDigits:0 })
+      } else if (property === 'unemploymentRate') {
+        return number + "%"
+      }
+      else {
+        if (number === 0) {
+          return 'Not available'
+        } return number + "%"
+      }
   }
 
    render () {
@@ -271,7 +283,7 @@ class Map extends Component {
           <div key = {i} className = 'legend-key'>
             <div className = "legend-block">
               <span className = "legend-color" style={{ backgroundColor: stop[1]}}></span>
-              <span className ="legend-value">{`${stop[0].toLocaleString()}`}</span>
+              <span className ="legend-value">{this.format(stop[0])}</span>
             </div>
           </div>
         )
@@ -284,13 +296,17 @@ class Map extends Component {
         </div>
         <div className = "main-map">
           <div className = "map-holder" ref={el => this.mapContainer = el} />
-          <Card show = {this.state.show} handleClose ={this.hideCard} data={this.state.cardData}></Card>
           <div className = "map-sider">
             <div id="map-info"></div>
             <div id="map-legend">
               {stops.map(renderLegend)}
             </div>
           </div>
+          <Card show = {this.state.show}
+                handleClose ={this.hideCard}
+                getPlace ={this.props.getPlace}
+                data={this.state.cardData}>
+          </Card>
         </div>
       </div>
     )

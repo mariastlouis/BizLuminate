@@ -2,9 +2,11 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:300,400,500,600');
 
 $main-accent: #5abdb7;
+$accent-hover: #66d5ce;
 $second-accent: #fea946;
 $accent-off-white: #e2e4db;
 $font-gray: #707070;
+$lt-gray: #ebe8e8;
 
 
 $body-font: 'Open Sans', sans-serif;
@@ -20,7 +22,7 @@ body {
 }
 
 h1, h2, h3 {
-  font-family: $accent-font;
+  font-family: $body-font;
   -webkit-margin-before: 0;
   -webkit-margin-after: 0;
   -webkit-margin-start: 0px;
@@ -30,10 +32,6 @@ h1, h2, h3 {
 h1 {
   font-size: 40px;
   font-weight: 400;
-}
-
-h2 {
-  font-weight: 300;
 }
 
 p {

@@ -1,4 +1,6 @@
 import {nrelKey} from '../mapKey'
+import {coloTotals} from '../geographyData/coloradoTotals';
+import { isConstructorDeclaration } from 'typescript';
 
 export const countyUnemploymentFetch = async() => {
   try {
@@ -27,40 +29,13 @@ export const cardDataFetch = async(id) => {
     const demographicResponse = await demographicFetch.json();
     const educationFetch = await fetch(`api/v1/education/${id}`);
     const educationResponse = await educationFetch.json();
-    return Object.assign({}, demographicResponse.places[0], educationResponse.places[0])
+    return Object.assign({}, educationResponse.places[0], demographicResponse.places[0])
 
   }catch(error){
     throw error;
   }
 }
 
-const getCardData = async(places, id) => {
-  console.log(Object.keys(places).map(async(place)=>{
-    return place
-  }))
-  // const unresolvedPromises = places.map(async(place) => {
-
-  //   return {
-  //     place: place.placeDisplayName,
-  //     population: place.totalpop,
-  //     age: place.medianAge,
-  //     income: place.medianIncomeDollars,
-  //     // bachelor: educationPromises
-  //   }
-
-  // })
-
-  // let educationPromises = Promise.all( getEducationData(id));
-  // return Promise.all(unresolvedPromises)
-}
-
-const getEducationData = async(id)=> {
-
-  const educationFetch = await fetch (`/api/v1/education/${id}`);
-  const educationFetchResponse = educationFetch.json();
-  console.log(educationFetchResponse)
-  return educationFetchResponse.bachelorHigher
-}
 
 export const altFuelFetch = async() => {
   try {
@@ -97,4 +72,22 @@ let fuelGeo = (locations) => {
   return fuelgeojson
 }
 
-
+export const selectPlace = async (id) => {
+  const demographicFetch = await fetch (`/api/v1/demographics/${id}`);
+  const demographicResponse = await demographicFetch.json();
+  console.log(demographicResponse)
+  return {
+    income: {
+      chartName: 'Median household income',
+      placeName: demographicResponse.places[0].placeDisplayName,
+      stateData: coloTotals[0].medianIncomeDollars,
+      placeData: demographicResponse.places[0].medianIncomeDollars
+    },
+    age:{
+      chartName: 'Median age',
+      placeName: demographicResponse.places[0].placeDisplayName,
+      placeData: demographicResponse.places[0].medianAge,
+      stateData: coloTotals[0].medianAge
+    }
+  }
+}
