@@ -3,9 +3,8 @@ import './App.scss';
 import Map from './Map/Map';
 import Header from './Header/Header';
 import Details from './Details/Details';
-// import Bar from './Details/Bar';
 import BarChart from './BarChart/BarChart';
-import {selectPlace} from './Helper/helper';
+import {selectPlace, getTransportation} from './Helper/helper';
 
 
 class App extends Component {
@@ -14,16 +13,21 @@ class App extends Component {
     super(props)
     this.state ={
       selectedPlace: {},
+      transportation: {}
     }
     this.detailsRef = React.createRef();
   }
 
   setPlace = async(id) => {
     const placeInfo = await selectPlace(id);
-    this.setState({selectedPlace:placeInfo})
+    this.setState({selectedPlace: placeInfo})
     this.setState({showDetails: true})
     window.scrollTo(20, this.detailsRef.current.offsetTop)
+  }
 
+  componentWillMount = async () => {
+    const transportationInfo = await getTransportation(8043);
+    console.log(transportationInfo)
   }
 
   showDetails = () => {
