@@ -32,18 +32,22 @@ const BarChart = (props) => {
         <div className = "chart-container">
         <HorizontalBar
           data={mapData}
-          width={125}
-          height={100}
+          width={300}
+          height={150}
           options={{
+            responsive: false,
             legend: {
-              display: false
+              position: 'bottom'
             },
             scales: {
               xAxes:[{
                 ticks:{
                   min: dataStart
-                }
-              }]
+                },
+              }],
+              yAxes:[{
+                display: false
+              }],
             },
             maintainAspectRatio: false,
           }}

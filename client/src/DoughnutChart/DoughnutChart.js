@@ -1,31 +1,40 @@
 import React from 'react';
 import {Doughnut} from 'react-chartjs-2';
+import './DoughnutChart.scss';
+const DoughnutChart = (props) => {
+  const {placeName, placeData, labels, chartName} = props.data
 
-const DoughnutChart = () => {
-  const data = {
-    labels: [
-      'Red',
-      'Green',
-      'Yellow'
-    ],
+  const mapData = {
+    labels: labels,
     datasets: [{
-      data: [300, 50, 100],
+      data: placeData,
       backgroundColor: [
       '#FF6384',
       '#36A2EB',
-      '#FFCE56'
+      '#FFCE56',
+      '#5abdb7',
+      '#fea946'
       ],
       hoverBackgroundColor: [
       '#FF6384',
       '#36A2EB',
-      '#FFCE56'
+      '#FFCE56',
+      '#5abdb7',
+      '#fea946'
       ]
     }]
   };
       return (
-        <div>
-          <h2>Doughnut Example</h2>
-          <Doughnut data={data} />
+        <div className = "doughnut-chart">
+          <h3>{chartName}</h3>
+          <div className ="short-line"></div>
+          <Doughnut
+           data={mapData}
+           options={{
+             legend: {
+               position: 'right'
+             }
+           }} />
         </div>
       );
 

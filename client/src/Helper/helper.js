@@ -76,7 +76,8 @@ export const selectPlace = async(id) => {
   try {
     const demographicFetch = await fetch (`/api/v1/demographics/${id}`);
     const demographicResponse = await demographicFetch.json();
-    const transportationPromises = await getTransportation(id)
+    const transportationPromises = await getTransportation(id);
+    const educationPromises = await getEducationData(id);
     return {
       income: {
         chartName: 'Median household income',
@@ -92,7 +93,8 @@ export const selectPlace = async(id) => {
         stateData: coloTotals[0].medianAge,
         dataStart: 30
       },
-      transportation: transportationPromises
+      transportation: transportationPromises,
+      education: educationPromises
     }
   } catch (error){
     throw (error)
@@ -110,14 +112,17 @@ export const getTransportation = async(id) => {
         chartName: 'Average commute time',
         placeName: transportationResponse.places[0].placeDisplayName,
         placeData: transportationResponse.places[0].meanTravelTimeWork,
-        stateData: coloTotals[0].meanTravelTimeWork
+        stateData: coloTotals[0].meanTravelTimeWork,
+        dataStart: 10
       },
       travel:{
         chartName: 'Transportation to work',
         placeName: transportationResponse.places[0].placeDisplayName,
+        labels: ['Bike', 'Drive van or car alone', 'Walk'],
         placeData: [
-          {bicycle: transportationResponse.places[0].pctBicycle },
-          {carVan: transportationResponse.places[0].pctCarTruckVanAlone}
+        transportationResponse.places[0].pctBicycle,
+        transportationResponse.places[0].pctCarTruckVanAlone,
+        transportationResponse.places[0].pctWalked
         ]
       }
     }
@@ -126,41 +131,33 @@ export const getTransportation = async(id) => {
   }
 }
 
-
-export const selectPlaced = async (id) => {
-  const demographicFetch = await fetch (`/api/v1/demographics/${id}`);
-  const demographicResponse = await demographicFetch.json();
-  const transportationFetch = await fetch (`/api/v1/transportation/${id}`)
-  const transportationResponse = await transportationFetch.json();
-
-  return {
-    income: {
-      chartName: 'Median household income',
-      placeName: demographicResponse.places[0].placeDisplayName,
-      stateData: coloTotals[0].medianIncomeDollars,
-      placeData: demographicResponse.places[0].medianIncomeDollars,
-      dataStart: 15000
-    },
-    age:{
-      chartName: 'Median age',
-      placeName: demographicResponse.places[0].placeDisplayName,
-      placeData: demographicResponse.places[0].medianAge,
-      stateData: coloTotals[0].medianAge,
-      dataStart: 30
-    },
-    commute: {
-      chartName: 'Average commute time',
-      placeName: transportationResponse[0].placeDisplayName,
-      placeData: transportationResponse[0].placeDisplayName,
-      stateData: coloTotals[0].meanTravelTimeWork
-    },
-    travel:{
-      chartName: 'Transportation to work',
-      placeName: transportationResponse[0].placeDisplayName,
-      placeData: [
-        {bicycle: transportationResponse[0].pctBicycle },
-        {carVan: transportationResponse[0].pctCarTruckVanAlone}
-      ]
+  const getEducationData = async(id) => {
+    try {
+      const educationFetch = await fetch(`api/v1/education/${id}`);
+      const educationResponse = await educationFetch.json();
+      return {
+        level: {
+          chartName: 'Education levels',
+          placeName: educationResponse.places[0].placeDisplayName,
+          labels: [
+            'Less than 9th grade',
+            'High school graduate',
+            'Some college',
+            "Associate's degree",
+            "Bachelor's degree",
+            "Graduate or professional degree"
+          ],
+          placeData: [
+            educationResponse.places[0].less9th,
+            educationResponse.places[0].hsgrad,
+            educationResponse.places[0].somecollege,
+            educationResponse.places[0].associates,
+            educationResponse.places[0].bachelors,
+            educationResponse.places[0].graduateprofessional,
+          ]
+        }
+      }
+    } catch (error){
+      throw (error)
     }
   }
-}

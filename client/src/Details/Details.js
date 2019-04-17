@@ -10,12 +10,26 @@ const Details =(props) => {
         <div className  = "details-head">
           <h2>{props.data.income.placeName}</h2>
         </div>
-        <div className = "top-bar">
+        <div className = "chart-section">
+          <div class ="chart-head">
+            <h2>Getting around</h2>
+            <div className ="short-line"></div>
+          </div>
+          <div className ="chart-holder">
+            <div className ="chart-subhead">
+              <h3>{props.data.transportation.chartName}</h3>
+              <div className ="short-line"></div>
+            </div>
+            <DoughnutChart data= {props.data.transportation.travel}></DoughnutChart>
+            <BarChart data={props.data.transportation.commute}></BarChart>
+          </div>
+        </div>
+        <div className ="chart-section">
           <BarChart data={props.data.income}></BarChart>
           <BarChart data={props.data.age}></BarChart>
         </div>
-        <div className ="doughnut-charts">
-          <DoughnutChart></DoughnutChart>
+        <div className ="chart-section">
+          <DoughnutChart data= {props.data.education.level}></DoughnutChart>
         </div>
 
       </div>
