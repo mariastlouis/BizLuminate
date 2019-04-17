@@ -1,15 +1,14 @@
 .details-section {
   margin-top: 200px;
+  padding: 0 40px;
 }
 
-.chart-container {
-  width: 50%;
+.details-head {
+  display: flex;
+  justify-content: center;
 }
 
-.display-block {
-  visibility: visible;
-}
-
-.display-none {
-  visibility: hidden;
+.top-bar {
+  display: flex;
+  justify-content: space-between;
 }

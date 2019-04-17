@@ -32,7 +32,9 @@ export const  Map =(props) => {
           <li><strong>Median income:</strong> {formatNum(medianIncomeDollars, 'currency')}</li>
           <li><strong>Bachelors degrees:</strong> {formatNum(bachelorHigher, 'percentage')}</li>
         </ul>
-        <button onClick={() => props.getPlace(placeId)}>Learn More</button>
+        <div className = "btn-holder">
+          <button className ="place-btn" onClick={() => props.getPlace(placeId)}>Learn More</button>
+        </div>
       </div>
     </div>
   );

@@ -9,7 +9,7 @@
     display: flex;
     flex-direction:column;
     position: absolute;
-    bottom: 130px;
+    top: 130px;
     right: 5%;
     background: rgba(255, 255, 255, 0.7);
     border-radius: 3px;
@@ -18,7 +18,6 @@
     box-shadow: $shadow;
     width: 250px;
   }
-
 
   #map-legend {
     display: flex;

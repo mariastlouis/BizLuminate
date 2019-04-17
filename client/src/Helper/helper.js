@@ -75,12 +75,19 @@ let fuelGeo = (locations) => {
 export const selectPlace = async (id) => {
   const demographicFetch = await fetch (`/api/v1/demographics/${id}`);
   const demographicResponse = await demographicFetch.json();
-
+  console.log(demographicResponse)
   return {
     income: {
+      chartName: 'Median household income',
       placeName: demographicResponse.places[0].placeDisplayName,
       stateData: coloTotals[0].medianIncomeDollars,
       placeData: demographicResponse.places[0].medianIncomeDollars
+    },
+    age:{
+      chartName: 'Median age',
+      placeName: demographicResponse.places[0].placeDisplayName,
+      placeData: demographicResponse.places[0].medianAge,
+      stateData: coloTotals[0].medianAge
     }
   }
 }

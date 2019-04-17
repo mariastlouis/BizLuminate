@@ -3,9 +3,9 @@ import {HorizontalBar} from 'react-chartjs-2';
 import './BarChart.scss';
 
 const BarChart = (props) => {
-  const {placeName, placeData, stateData} = props.data
+  const {placeName, placeData, stateData, chartName} = props.data
   const mapData = {
-      labels: ['Median income'],
+      labels: [chartName],
       datasets: [
         {
           label: placeName,
@@ -28,19 +28,22 @@ const BarChart = (props) => {
       ]
     };
       return (
-      <div className = "bar-chart-section">
+
         <div className = "chart-container">
         <HorizontalBar
           data={mapData}
           width={125}
           height={100}
           options={{
+            legend: {
+              display: false
+            },
             maintainAspectRatio: false,
           }}
         />
 
         </div>
-      </div>
+
     );
 }
 
