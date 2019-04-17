@@ -6,7 +6,7 @@ import BarChart from '../BarChart/BarChart';
 
 const Details =(props) => {
     return (
-      <div className = "details-section">
+      <div className = "details-section" id="detailsContainer">
         <div className  = "details-head">
           <h2>{props.data.income.placeName}</h2>
         </div>

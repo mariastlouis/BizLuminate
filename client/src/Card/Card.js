@@ -21,7 +21,6 @@ export const  Map =(props) => {
     <div>
       <div className = {showHideClassName} id="map-card">
         <div className = "close-card" onClick={props.handleClose}>
-
         </div>
         <div className = "card-title">
           <img className ="marker" src={mapMarker} alt ="map marker"/>

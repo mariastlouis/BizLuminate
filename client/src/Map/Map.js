@@ -8,6 +8,7 @@ import {mapOptions} from '../geographyData/mapOptions.js'
 import Card from '../Card/Card'
 import mapMarker from '../assets/images/mapMarker.png'
 
+
 mapboxgl.accessToken = mapKey
 
 const bounds = [
