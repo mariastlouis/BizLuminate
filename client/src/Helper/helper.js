@@ -78,6 +78,7 @@ export const selectPlace = async(id) => {
     const demographicResponse = await demographicFetch.json();
     const transportationPromises = await getTransportation(id);
     const educationPromises = await getEducationData(id);
+    const unemploymentPromises = await getUnemployment(id);
     return {
       income: {
         chartName: 'Median household income',
@@ -94,7 +95,8 @@ export const selectPlace = async(id) => {
         dataStart: 30
       },
       transportation: transportationPromises,
-      education: educationPromises
+      education: educationPromises,
+      unemployment: unemploymentPromises
     }
   } catch (error){
     throw (error)
@@ -118,11 +120,14 @@ export const getTransportation = async(id) => {
       travel:{
         chartName: 'Transportation to work',
         placeName: transportationResponse.places[0].placeDisplayName,
-        labels: ['Bike', 'Drive van or car alone', 'Walk'],
+        labels: ['Bike', 'Drive own car', 'Carpool', 'Walk', 'Public transportation', 'Work at home'],
         placeData: [
         transportationResponse.places[0].pctBicycle,
         transportationResponse.places[0].pctCarTruckVanAlone,
-        transportationResponse.places[0].pctWalked
+        transportationResponse.places[0].pctCarTruckVanCarpooled,
+        transportationResponse.places[0].pctWalked,
+        transportationResponse.places[0].pctPublicTransportation,
+        transportationResponse.places[0].pctWorkedAtHome,
         ]
       }
     }
@@ -160,4 +165,23 @@ export const getTransportation = async(id) => {
     } catch (error){
       throw (error)
     }
+  }
+
+  const getUnemployment = async(id) => {
+    try{
+      const unemploymentFetch = await fetch(`api/v1/unemployment/${id}`);
+      const unemploymentResponse = await unemploymentFetch.json();
+      return {
+        rate:{
+          chartName: 'Unemployment Rate',
+          placeName: unemploymentResponse.places[0].countyName,
+          placeData: unemploymentResponse.places[0].UnemploymentRate,
+          stateData: coloTotals[0].UnemploymentRate,
+          dataStart: 0
+        }
+      }
+    } catch (error) {
+      throw(error)
+    }
+
   }

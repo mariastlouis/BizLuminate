@@ -13,17 +13,30 @@
 .chart-section {
   padding: 20px 0;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+
 }
 
 .chart-subhead {
-  display: flex;
-  flex-direction: row;
+  margin-bottom: 20px;
 }
-
 
 .chart-holder {
-  display: flex;
-  justify-content: space-between;
+  width: 50%;
+  margin: 20px;
 }
+
+// .chart-larger {
+//   width: 80%;
+// }
+
+// .chart-smaller {
+//   width: 20%;
+// }
+
+.multi-charts {
+  // display: flex;
+  // flex-direction: row;
+}
+
 

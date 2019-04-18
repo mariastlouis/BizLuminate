@@ -26,8 +26,6 @@ const DoughnutChart = (props) => {
   };
       return (
         <div className = "doughnut-chart">
-          <h3>{chartName}</h3>
-          <div className ="short-line"></div>
           <Doughnut
            data={mapData}
            options={{

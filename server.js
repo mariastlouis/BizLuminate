@@ -55,6 +55,17 @@ app.get('/api/v1/unemployment', function (request, response) {
   });
 });
 
+app.get('/api/v1/unemployment/:countyId', function (req, res) {
+    var countyId = req.params.countyId;
+    return database('countyUnemployment').where("countyId", countyId)
+        .then(function (places) {
+        return res.status(200).json({ places: places });
+    })
+        .catch(function (err) {
+        return res.status(500).json({ error: "Error while fetching places by county id. -> " + err });
+    });
+  });
+
 app.get('/api/v1/demographics', function (request, response) {
   database('generalDemographics').select()
       .then(function (places) {
