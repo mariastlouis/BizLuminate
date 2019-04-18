@@ -28,10 +28,12 @@ const DoughnutChart = (props) => {
         <div className = "doughnut-chart">
           <Doughnut
            data={mapData}
+           width ={400}
            options={{
              legend: {
                position: 'right'
-             }
+             },
+             responsive: false
            }} />
         </div>
       );

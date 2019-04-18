@@ -68,7 +68,7 @@ const Details =(props) => {
                 <h3>{props.data.degreeTypes.level.chartName}</h3>
                 <div className ="short-line"></div>
               </div>
-              <BarChart data={props.data.degreeTypes.level}></BarChart>
+              <VertBar data={props.data.degreeTypes.level}></VertBar>
             </div>
         </div>
       </div>
