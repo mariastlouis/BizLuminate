@@ -9,18 +9,18 @@ const VertBar = (props) => {
     datasets: [{
       data: placeData,
       backgroundColor: [
-      '#FF6384',
-      '#36A2EB',
-      '#FFCE56',
-      '#5abdb7',
-      '#fea946'
+        '#bfc1c1',
+        '#a8ddb5',
+        '#7bccc4',
+        '#43a2ca',
+        '#0868ac'
       ],
       hoverBackgroundColor: [
-      '#FF6384',
-      '#36A2EB',
-      '#FFCE56',
-      '#5abdb7',
-      '#fea946'
+        '#bfc1c1',
+        '#a8ddb5',
+        '#7bccc4',
+        '#43a2ca',
+        '#0868ac'
       ]
     }]
   };
