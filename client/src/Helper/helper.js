@@ -79,6 +79,7 @@ export const selectPlace = async(id) => {
     const transportationPromises = await getTransportation(id);
     const educationPromises = await getEducationData(id);
     const unemploymentPromises = await getUnemployment(id);
+    const degreePromises = await getDegreeData(id);
     return {
       income: {
         chartName: 'Median household income',
@@ -96,7 +97,8 @@ export const selectPlace = async(id) => {
       },
       transportation: transportationPromises,
       education: educationPromises,
-      unemployment: unemploymentPromises
+      unemployment: unemploymentPromises,
+      degreeTypes: degreePromises
     }
   } catch (error){
     throw (error)
@@ -159,6 +161,35 @@ export const getTransportation = async(id) => {
             educationResponse.places[0].associates,
             educationResponse.places[0].bachelors,
             educationResponse.places[0].graduateprofessional,
+          ]
+        }
+      }
+    } catch (error){
+      throw (error)
+    }
+  }
+
+  const getDegreeData = async(id) => {
+    try {
+      const degreeFetch = await fetch(`api/v1/degrees/${id}`);
+      const degreeResponse = await degreeFetch.json();
+      return {
+        level: {
+          chartName: "Types of bachelor's degrees",
+          placeName: degreeResponse.places[0].placeDisplayName,
+          labels: [
+            'Science and engineering',
+            'Science and engineering related',
+            'Business',
+            "Education",
+            "Arts and humanities",
+          ],
+          placeData: [
+            degreeResponse.places[0].totalScienceEngineering,
+            degreeResponse.places[0].totalScienceEngineeringRelated,
+            degreeResponse.places[0].totalBusiness,
+            degreeResponse.places[0].totalEducation,
+            degreeResponse.places[0].totalArtsHumanities,
           ]
         }
       }

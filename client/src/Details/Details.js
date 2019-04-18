@@ -3,6 +3,7 @@ import './Details.scss';
 import BarChart from '../BarChart/BarChart';
 import mapMarker from '../assets/images/mapMarker.png';
 import DoughnutChart from '../DoughnutChart/DoughnutChart';
+import VertBar from '../VertBar/VertBar';
 
 const Details =(props) => {
     return (
@@ -50,14 +51,26 @@ const Details =(props) => {
               <BarChart data={props.data.unemployment.rate}></BarChart>
             </div>
         </div>
-        <div className ="chart-section">
-
-          <BarChart data={props.data.age}></BarChart>
+        <div className ="chart-head">
+          <h2>Education Breakdown</h2>
+          <div className ="short-line"></div>
         </div>
-        <div className ="chart-section">
-          <DoughnutChart data= {props.data.education.level}></DoughnutChart>
+        <div className = "chart-section">
+          <div className ="chart-holder">
+            <div className ="chart-subhead">
+              <h3>{props.data.education.level.chartName}</h3>
+              <div className ="short-line"></div>
+            </div>
+            <DoughnutChart data= {props.data.education.level}></DoughnutChart>
+          </div>
+            <div className ="chart-holder">
+              <div className = "chart-subhead">
+                <h3>{props.data.degreeTypes.level.chartName}</h3>
+                <div className ="short-line"></div>
+              </div>
+              <BarChart data={props.data.degreeTypes.level}></BarChart>
+            </div>
         </div>
-
       </div>
     );
 }
