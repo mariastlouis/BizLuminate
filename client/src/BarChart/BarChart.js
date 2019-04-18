@@ -3,7 +3,7 @@ import {HorizontalBar} from 'react-chartjs-2';
 import './BarChart.scss';
 
 const BarChart = (props) => {
-  const {placeName, placeData, stateData, chartName} = props.data
+  const {placeName, placeData, stateData, chartName, dataStart} = props.data
   const mapData = {
       labels: [chartName],
       datasets: [
@@ -32,11 +32,22 @@ const BarChart = (props) => {
         <div className = "chart-container">
         <HorizontalBar
           data={mapData}
-          width={125}
-          height={100}
+          width={300}
+          height={150}
           options={{
+            responsive: false,
             legend: {
-              display: false
+              position: 'bottom'
+            },
+            scales: {
+              xAxes:[{
+                ticks:{
+                  min: dataStart
+                },
+              }],
+              yAxes:[{
+                display: false
+              }],
             },
             maintainAspectRatio: false,
           }}

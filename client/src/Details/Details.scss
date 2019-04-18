@@ -1,6 +1,8 @@
+@import '../assets/variable.scss';
+
 .details-section {
-  margin-top: 200px;
-  padding: 0 40px;
+  margin-top: 150px;
+  padding: 0 80px;
 }
 
 .details-head {
@@ -8,7 +10,33 @@
   justify-content: center;
 }
 
-.top-bar {
+.chart-section {
+  padding: 20px 0;
   display: flex;
   justify-content: space-between;
+
 }
+
+.chart-subhead {
+  margin-bottom: 20px;
+}
+
+.chart-holder {
+  width: 50%;
+  margin: 20px;
+}
+
+// .chart-larger {
+//   width: 80%;
+// }
+
+// .chart-smaller {
+//   width: 20%;
+// }
+
+.multi-charts {
+  // display: flex;
+  // flex-direction: row;
+}
+
+
