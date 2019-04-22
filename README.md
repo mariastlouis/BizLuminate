@@ -1,3 +1,5 @@
+See a video of this [app in action:](https://www.loom.com/share/f69f4842a186486d9114c875392fb3db)
+
 This project is a React/Node/Express project. To get up and running:
 
 1. The database is Postgres. To start locally, there needs to be a local Postgres database created called bizluminate. Once Postgres is installed on your computer start Postgres in your terminal by typing `psql` then create the database with `CREATE DATABASE bizluminate;`
