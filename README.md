@@ -1,3 +1,5 @@
+![BizLuminate logo](https://github.com/GoCodeColorado/BizLuminate/blob/master/client/src/assets/images/biz-luminate-logo%402x.png)
+
 See a video of this [app in action:](https://www.loom.com/share/f69f4842a186486d9114c875392fb3db)
 
 This project is a React/Node/Express project. To get up and running:
